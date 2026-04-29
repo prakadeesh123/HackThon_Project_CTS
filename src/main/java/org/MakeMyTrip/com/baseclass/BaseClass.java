@@ -28,9 +28,11 @@ public class BaseClass {
         }
         else if(browser.equals("edge")){
             driver = new EdgeDriver();
+            driver.manage().window().maximize();
         }
         else if(browser.equals("firefox")){
             driver = new FirefoxDriver();
+            driver.manage().window().maximize();
         }
         driver.get(url);
     }
