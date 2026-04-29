@@ -24,6 +24,7 @@ public class BaseClass {
         options.addArguments("--headless=new");
         if(browser.equals("chrome")){
             driver = new ChromeDriver(options);
+            driver.manage().window().maximize();
         }
         else if(browser.equals("edge")){
             driver = new EdgeDriver();
