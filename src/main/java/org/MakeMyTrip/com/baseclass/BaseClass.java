@@ -23,7 +23,7 @@ public class BaseClass {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
         if(browser.equals("chrome")){
-            driver = new ChromeDriver(options);
+            driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
         else if(browser.equals("edge")){
