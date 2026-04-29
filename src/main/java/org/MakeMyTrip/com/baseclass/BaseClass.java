@@ -48,9 +48,10 @@ public class BaseClass {
             e.printStackTrace();
         }
         finally {
-            if(driver != null){
-//                driver.quit();
-            }
+            driver.quit();
+//            if(driver != null){
+////                driver.quit();
+//            }
 
         }
     }

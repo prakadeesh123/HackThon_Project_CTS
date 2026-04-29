@@ -4,7 +4,9 @@
 <suite name="Minimum Suite">
     <test name="All Automations">
         <classes>
-
+            <class name="org.MakeMyTripTest.com.Yaswanth.SearchHotelTest"/>
+            <class name="org.MakeMyTripTest.com.Sagar.TC_01_ApplyFilter"/>
+            <class name="org.MakeMyTripTest.com.Prakadeesh.TC01CruiseTest"/>
         </classes>
     </test>
 </suite>
