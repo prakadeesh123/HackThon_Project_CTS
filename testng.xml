@@ -4,6 +4,7 @@
 <suite name="Minimum Suite">
     <test name="All Automations">
         <classes>
+
         </classes>
     </test>
 </suite>
