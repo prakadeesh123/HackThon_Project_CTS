@@ -22,11 +22,15 @@ public class BaseClass {
         String url = ConfigReader.getProperties("baseurl");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
-        if(browser.equals("chrome")) {
-            driver = new ChromeDriver();
+        if(browser.equals("chrome")){
+            driver = new ChromeDriver(options);
+            driver.manage().window().maximize();
         }
         else if(browser.equals("edge")){
             driver = new EdgeDriver();
+        }
+        else if(browser.equals("firefox")){
+            driver = new FirefoxDriver();
         }
         driver.get(url);
     }
