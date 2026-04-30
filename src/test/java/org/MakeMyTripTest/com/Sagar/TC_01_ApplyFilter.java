@@ -1,9 +1,6 @@
 package org.MakeMyTripTest.com.Sagar;
 
 import org.MakeMyTrip.com.baseclass.BaseClass;
-import org.MakeMyTrip.com.pages.Sagar.Page_01_ApplyFilter;
-import org.MakeMyTrip.com.pages.Yaswanth.SearchHotel;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
