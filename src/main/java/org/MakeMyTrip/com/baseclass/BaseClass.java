@@ -24,13 +24,13 @@ public class BaseClass {
         options.addArguments("--headless=new");
         if(browser.equals("chrome")){
             driver = new ChromeDriver();
-            driver.manage().window().maximize();
+//            driver.manage().window().maximize();
         }
         else if(browser.equals("edge")){
             driver = new EdgeDriver();
             driver.manage().window().maximize();
         }
-        else if(browser.equals("firefox")){
+        else{
             driver = new FirefoxDriver();
             driver.manage().window().maximize();
         }
@@ -50,7 +50,6 @@ public class BaseClass {
             e.printStackTrace();
         }
         finally {
-            driver.quit();
 //            if(driver != null){
 ////                driver.quit();
 //            }

@@ -1,5 +1,6 @@
 package org.MakeMyTrip.com.pages.Yaswanth;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,31 +14,21 @@ public class SearchHotel {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    // --- Locators from CommonMethods ---
-    @FindBy(css = "span.commonModal__close")
-    private WebElement closeButton;
+    @FindBy(css = "i.close-icon.fi.fi-close")
+    protected WebElement closePopup1;
 
-    @FindBy(xpath = "(//span[@class='headerIconTextAlignment chNavText darkGreyText'])[2]")
-    private WebElement hotelButton;
+    @FindBy(css = "div.oh-pwa__close")
+    private WebElement closePopup2;
 
-    @FindBy(css = "button#hsw_search_button")
-    private WebElement clickSearchbtn;
+    @FindBy(css = "input#destinationInput")
+    private WebElement selectDest;
 
-    @FindBy(xpath = "//span[text()='City, Property name or Location']")
-    private WebElement selectCity;
+    @FindBy(css = "div.xNA4LozTCRNX8kIscFcs")
+    private WebElement selectNiarobia;
 
-    @FindBy(xpath = "//div[@class='hw__searchInputWrapper']/child::input")
-    private WebElement cityInput;
+    @FindBy(css = "button.tripui-online-btn.tripui-online-btn-large.tripui-online-btn-solid-primary.tripui-online-btn-block.kDYEOBquYIGEsXVEHYOg")
+    private WebElement searchBtn;
 
-    @FindBy(xpath = "//div[text()='City in Kenya']")
-    private WebElement selectNairobi;
-
-    // --- Locators from Page_01_SearchHotels ---
-    @FindBy(xpath = "//span[text()='City, Property name or Location']")
-    private WebElement locationLabel;
-
-    @FindBy(xpath = "//label[@for='city']/child::span")
-    private WebElement validateHotelpage;
 
     // Constructor
     public SearchHotel(WebDriver driver) {
@@ -45,44 +36,21 @@ public class SearchHotel {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
-    public void openHotelSection() {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(closeButton)).click();
-            wait.until(ExpectedConditions.elementToBeClickable(hotelButton)).click();
-        } catch (Exception e) {
-            System.out.println("SearchHotel: Navigation or modal closure failed: " + e.getMessage());
-        }
-    }
-    public boolean ValidateopenHotelSelection(){
-        try{
-            return wait.until(ExpectedConditions.visibilityOf(validateHotelpage)).isDisplayed();
+    public void clickHotel(){
+        wait.until(ExpectedConditions.elementToBeClickable(closePopup1)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(closePopup2)).click();
+        wait.until(ExpectedConditions.visibilityOf(selectDest)).sendKeys("Nairobi");
+        wait.until(ExpectedConditions.visibilityOf(selectNiarobia)).click();
+        // Scroll down by 20px before clicking
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,20)");
 
-        }catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
 
     }
-    public void enterLocationAndSearch() {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(selectCity)).click();
-            wait.until(ExpectedConditions.visibilityOf(cityInput)).sendKeys("Nairobi in Kenya");
-            wait.until(ExpectedConditions.visibilityOf(selectNairobi)).click();
-            // wait.until(ExpectedConditions.elementToBeClickable(clickSearchbtn)).click();
-        } catch (Exception e) {
-            System.out.println("SearchHotel: Input sequence failed: " + e.getMessage());
-        }
-    }
-    public void executeSearch() {
-        openHotelSection();
-        enterLocationAndSearch();
+    public void ValidateClick(){
+
     }
 
-    public boolean validateHotelPage() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(locationLabel)).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
+
 }

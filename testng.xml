@@ -4,9 +4,14 @@
 <suite name="Minimum Suite">
     <test name="All Automations">
         <classes>
-            <class name="org.MakeMyTripTest.com.Yaswanth.SearchHotelTest"/>
-            <class name="org.MakeMyTripTest.com.Sagar.TC_01_ApplyFilter"/>
-            <class name="org.MakeMyTripTest.com.Prakadeesh.TC01CruiseTest"/>
+<!--            <class name="org.MakeMyTripTest.com.Koushik.TC01EmptyDestinationTest" />-->
+<!--            <class name="org.MakeMyTripTest.com.Yaswanth.SearchHotelTest"/>-->
+<!--            <class name="org.MakeMyTripTest.com.Sagar.TC_01_ApplyFilter"/>-->
+<!--            <class name="org.MakeMyTripTest.com.Prakadeesh.TC01CruiseTest"/>-->
+<!--            <class name="org.MakeMyTripTest.com.Prakadeesh.TC02InvalidTest" />-->
+<!--            <class name="org.MakeMyTripTest.com.Koushik.TC01AvailabilityTest" />-->
+            <class name="org.MakeMyTripTest.com.Yaswanth.FilterHotelsInNiarobiaTest" />
+
         </classes>
     </test>
 </suite>

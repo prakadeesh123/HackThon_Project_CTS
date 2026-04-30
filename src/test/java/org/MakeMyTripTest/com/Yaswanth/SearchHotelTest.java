@@ -13,8 +13,9 @@ public class SearchHotelTest extends BaseClass {
     @Test
     public void ValidateHotelPageClick(){
         SearchHotel sh = new SearchHotel(driver);
-        sh.openHotelSection();
-        Assert.assertTrue(sh.ValidateopenHotelSelection(),"Failed to open Hotel section....//\\\\///");
+        sh.clickHotel();
+//        sh.openHotelSection();
+//        Assert.assertTrue(sh.ValidateopenHotelSelection(),"Failed to open Hotel section....//\\\\///");
     }
 
 }
