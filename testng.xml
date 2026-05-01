@@ -4,6 +4,8 @@
 <suite name="Minimum Suite">
     <test name="All Automations">
         <classes>
+            <class name="org.MakeMyTripTest.com.Sagar.TC_01_RatingFilter"/>
+            <class name="org.MakeMyTripTest.com.Sagar.TC_02_Guestrating"/>
         </classes>
     </test>
 </suite>
