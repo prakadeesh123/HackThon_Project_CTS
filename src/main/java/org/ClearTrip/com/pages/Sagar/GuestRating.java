@@ -6,12 +6,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
 
 public class GuestRating {
     public WebDriver driver;
     public WebDriverWait wait;
+//    private static final Logger log = LogManager.getLogManager().getLogger(GuestRating.class);
     @FindBy(xpath = "//p[text()='Guest ratings']")
     private WebElement guestrating;
     @FindBy(xpath = "//p[text()='4.5 & above']")
