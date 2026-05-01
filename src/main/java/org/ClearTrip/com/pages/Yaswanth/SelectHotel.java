@@ -13,35 +13,49 @@ import java.util.Set;
 public class SelectHotel {
     protected WebDriver driver;
     protected WebDriverWait wait;
-    public SelectHotel(WebDriver driver){
+
+    private String expectedHotelName;
+    private String expectedHotelPrice;
+
+    String actualHotelName ;
+    String actualHotelPrice;
+
+    public SelectHotel(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
+
     }
 
     @FindBy(xpath = "(//div[@class='sc-aXZVg gvuMKO c-pointer p-relative'])[1]")
     private WebElement firstHotel;
 
-    @FindBy(xpath = "(//span[text()='Hob House'])")
+    @FindBy(xpath = "//span[contains(text(),'Hob House')]")
     private WebElement firstEleNameText;
 
-    @FindBy(xpath = "//div[text()='₹7,907\n" +
-            "+ ₹2,020 taxes & fees\n" +
-            "\n" +
-            "/ night']")
+    // Using contains for price to be more flexible with formatting/whitespace
+    @FindBy(xpath = "//p[contains(text(),'₹7,907')]")
     private WebElement firstElePriceText;
 
-    @FindBy(xpath = "//h1[text()='Hob House']")
+    @FindBy(xpath = "//h1[contains(text(),'Hob House')]")
     private WebElement openedHotelNameText;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg hKtzvB flex flex-baseline'])[1]")
+    @FindBy(xpath = "//h2[contains(text(),'₹7,907')]']")
     private WebElement openedHotelPriceText;
 
+    public SelectHotel(){
+        expectedHotelName = firstEleNameText.getText();
+        expectedHotelPrice = firstElePriceText.getText();
+        actualHotelName = openedHotelNameText.getText();
+        actualHotelPrice = openedHotelPriceText.getText();
+    }
+    public void clickHotel() {
+        try {
 
-    public void clickHotel(){
-        try{
             String parentWindow = driver.getWindowHandle();
+
             wait.until(ExpectedConditions.elementToBeClickable(firstHotel)).click();
+
             Set<String> allWindows = driver.getWindowHandles();
             for (String handle : allWindows) {
                 if (!handle.equals(parentWindow)) {
@@ -49,31 +63,31 @@ public class SelectHotel {
                     break;
                 }
             }
-            System.out.println("New window title: " + driver.getTitle());
-//            driver.close();
-//            driver.switchTo().window(parentWindow);
 
-        }catch (Exception e){
-            e.printStackTrace();
-            return;
+            System.out.println("Switched focus to: " + driver.getTitle());
+
+        } catch (Exception e) {
+            System.err.println("Failed to click hotel or switch window: " + e.getMessage());
         }
     }
-    public boolean validateOpenedHotel(){
-        try{
 
-            String hotelName = wait.until(ExpectedConditions.visibilityOf(firstEleNameText)).getText();
-            String hotelPrice = wait.until(ExpectedConditions.visibilityOf(firstElePriceText)).getText();
-            String OpenedHotelName = wait.until(ExpectedConditions.visibilityOf(openedHotelNameText)).getText();
-            String OpenedHotelPrice = wait.until(ExpectedConditions.visibilityOf(openedHotelPriceText)).getText();
+    public boolean validateOpenedHotel() {
+        try {
+            // 4. Capture info from the detailed hotel page (new window)
 
-            return (hotelName.equals(OpenedHotelName) && hotelPrice.equals(OpenedHotelPrice));
+            System.out.println("expectedname: "+expectedHotelName+"expectedprice :"+expectedHotelPrice);
 
+            System.out.println("actualname: "+actualHotelName+"actualprice :"+actualHotelPrice);
+            boolean a = expectedHotelName == actualHotelName ? true:false;
+            boolean b = expectedHotelPrice == actualHotelPrice ? true:false;
+            if(a==b){
+                return true;
+            }
+            return false;
 
-        }catch (Exception e){
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.err.println("Validation failed: " + e.getMessage());
             return false;
         }
     }
-
 }
-
