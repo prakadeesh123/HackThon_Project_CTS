@@ -1,7 +1,7 @@
-package org.MakeMyTrip.com.baseclass;
+package org.ClearTrip.com.baseclass;
 
-import org.MakeMyTrip.com.utility.ConfigReader;
-import org.MakeMyTrip.com.utility.Screenshot;
+import org.ClearTrip.com.utility.ConfigReader;
+import org.ClearTrip.com.utility.Screenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,8 +10,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
-import javax.script.ScriptEngine;
 
 public class BaseClass {
 
