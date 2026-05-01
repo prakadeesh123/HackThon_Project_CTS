@@ -1,8 +1,8 @@
 package org.MakeMyTripTest.com.Yaswanth;
 
-import org.MakeMyTrip.com.baseclass.BaseClass;
-import org.MakeMyTrip.com.pages.Yaswanth.FilterHotelsInNiarobia;
-import org.MakeMyTrip.com.pages.Yaswanth.SelectHotel;
+import org.ClearTrip.com.baseclass.BaseClass;
+import org.ClearTrip.com.pages.Yaswanth.FilterHotelsInNiarobia;
+import org.ClearTrip.com.pages.Yaswanth.SelectHotel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
