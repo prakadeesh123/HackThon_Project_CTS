@@ -1,4 +1,4 @@
-package org.MakeMyTrip.com.utility;
+package org.ClearTrip.com.utility;
 
 import java.io.File;
 import java.time.Duration;

@@ -1,4 +1,4 @@
-package org.MakeMyTrip.com.pages.Yaswanth;
+package org.ClearTrip.com.pages.Yaswanth;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

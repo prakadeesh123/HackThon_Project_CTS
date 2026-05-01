@@ -1,4 +1,4 @@
-package org.MakeMyTrip.com.pages.Prakadeesh;
+package org.ClearTrip.com.pages.Prakadeesh;
 
 
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package org.MakeMyTrip.com.pages.Koushik;
+package org.ClearTrip.com.pages.Koushik;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

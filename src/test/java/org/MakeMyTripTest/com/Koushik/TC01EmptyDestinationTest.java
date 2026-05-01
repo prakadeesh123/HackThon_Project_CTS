@@ -1,8 +1,8 @@
 package org.MakeMyTripTest.com.Koushik;
 
-import org.MakeMyTrip.com.baseclass.BaseClass;
-import org.MakeMyTrip.com.pages.Koushik.Page_02_CruisePage;
-import org.MakeMyTrip.com.pages.Koushik.Page_01_HomePage;
+import org.ClearTrip.com.baseclass.BaseClass;
+import org.ClearTrip.com.pages.Koushik.Page_02_CruisePage;
+import org.ClearTrip.com.pages.Koushik.Page_01_HomePage;
 import org.testng.annotations.Test;
 
 public class TC01EmptyDestinationTest extends BaseClass {
