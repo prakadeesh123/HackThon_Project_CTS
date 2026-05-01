@@ -8,26 +8,36 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 
 public class FilterHotelsInNiarobia {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    @FindBy(css = "i.close-icon.fi.fi-close")
-    protected WebElement closePopup1;
+    @FindBy(xpath = "(//div[@data-testid='loginPopup']/div/div)[2]")
+    private WebElement closePopUp;
 
-    @FindBy(css = "div.oh-pwa__close")
-    private WebElement closePopup2;
+    @FindBy(xpath = "//p[text()='Hotels']")
+    private WebElement hotelBtn;
 
-    @FindBy(css = "input#destinationInput")
-    private WebElement selectDest;
+    @FindBy(xpath = "//div[@class='sc-aXZVg dhukqX']/input")
+    private WebElement destination;
 
-    @FindBy(css = "div.xNA4LozTCRNX8kIscFcs")
-    private WebElement selectNiarobia;
+    @FindBy(xpath = "//div[@class='sc-eDPEul flPszU c-inherit place__name ']/p[text()='Nairobi County, Kenya']")
+    private WebElement clickDestination;
 
-    @FindBy(css = "button.tripui-online-btn.tripui-online-btn-large.tripui-online-btn-solid-primary.tripui-online-btn-block.kDYEOBquYIGEsXVEHYOg")
+    @FindBy(css = "p.sc-gEvEer.dtOwVR")
     private WebElement searchBtn;
+
+    @FindBy(css = "span.sc-fqkvVR.bwtGcK")
+    private WebElement validLocation;
+
+    @FindBy(xpath = "//h1[text()='Showing hotels in Nairobi']")
+    private WebElement validResult;
+
+    @FindBy(css = "div.sc-aXZVg.gvuMKO.c-pointer.p-relative")
+    private List<WebElement> listedOutput;
 
 
     // Constructor
@@ -36,20 +46,22 @@ public class FilterHotelsInNiarobia {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
-    public void clickHotel(){
-        wait.until(ExpectedConditions.elementToBeClickable(closePopup1)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(closePopup2)).click();
-        wait.until(ExpectedConditions.visibilityOf(selectDest)).sendKeys("Nairobi");
-        wait.until(ExpectedConditions.visibilityOf(selectNiarobia)).click();
-        // Scroll down by 20px before clicking
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,20)");
-
+    public void filterHotel(){
+        wait.until(ExpectedConditions.elementToBeClickable(closePopUp)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(hotelBtn)).click();
+        wait.until(ExpectedConditions.visibilityOf(destination)).sendKeys("Nairobi");
+        wait.until(ExpectedConditions.elementToBeClickable(clickDestination)).click();
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
 
     }
-    public void ValidateClick(){
-
+    public boolean ValidateFilter(){
+        boolean a = wait.until(ExpectedConditions.visibilityOf(validLocation)).isDisplayed();
+        boolean b = wait.until(ExpectedConditions.visibilityOf(validResult)).isDisplayed();
+        boolean c = listedOutput.size() > 0 ? true:false;
+        if(a==true && b == true && c == true){
+            return true;
+        }
+        return false;
     }
 
 
