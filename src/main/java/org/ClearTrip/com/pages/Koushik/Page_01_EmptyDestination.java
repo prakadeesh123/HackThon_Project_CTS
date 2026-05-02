@@ -31,17 +31,27 @@ public class Page_01_EmptyDestination {
         PageFactory.initElements(driver, this);
     }
 
-
-
-    public void destination_error() {
+    //HomePage PopUp Button
+    public void closePopUp()
+    {
         wait.until(ExpectedConditions.elementToBeClickable(closePopUp)).click();
-        //wait.until(ExpectedConditions.elementToBeClickable(search_btn)).click();
+    }
+
+    //HomePage Search Button
+    public void click_search_btn()
+    {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(search_btn)).click();
         } catch (ElementClickInterceptedException e) {
             // Fallback: force click with JS
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", search_btn);
         }
+    }
+
+    //Empty Destination Error method
+    public void destination_error() {
+        closePopUp();
+        click_search_btn();
         try
         {
             // If error appears, print it
@@ -49,7 +59,7 @@ public class Page_01_EmptyDestination {
             System.out.println("Error shown: " + errorMsg);
         } catch (Exception e) {
             // If no error, continue with normal flow
-            System.out.println("No error, continuing with cruise booking...");
+            System.out.println("No error, continuing with the booking...");
         }
     }
 }
