@@ -1,4 +1,4 @@
 package org.MakeMyTripTest.com.Koushik;
 
-public class TC01AvailabilityTest {
+public class TC02AvailabilityTest {
 }
