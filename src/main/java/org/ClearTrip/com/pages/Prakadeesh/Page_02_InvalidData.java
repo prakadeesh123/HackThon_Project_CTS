@@ -19,47 +19,29 @@ public class Page_02_InvalidData {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
     }
-    @FindBy(xpath = "//span[@class='commonModal__close']")
-    private WebElement PopUp;
 
-    @FindBy(xpath = "//li[@class='menu_Cruise']")
-    private WebElement CruiseClick;
+    @FindBy(xpath = "//input[@placeholder='Where from?']")
+    private WebElement Source;
 
-    @FindBy(xpath = "//input[@type='text' and  @placeholder='Select Destination']")
+    @FindBy(xpath = "//input[@placeholder='Where to?']")
     private WebElement Destination;
 
-    @FindBy(xpath = "//input[@placeholder='Enter Destination']")
-    private WebElement TextBox;
+    @FindBy(xpath = "(//div[@class='sc-aXZVg ibgoAF'])[2]")
+    private WebElement Button;
 
-    @FindBy(xpath = "//div[@class='no-data-found']")
+    @FindBy(xpath = "//span[contains(text(),'Enter departure and arrival airports / cities')]")
     private WebElement Text;
 
-    @FindBy(xpath = "//button[@class='ctaCardCloseBtn']")
-    private WebElement Pop;
-
-    public void ClosePopUp(){
-        wait.until(ExpectedConditions.elementToBeClickable(PopUp)).click();
+    public void Source(){
+        wait.until(ExpectedConditions.elementToBeClickable(Source)).sendKeys("Kerala");
     }
-
-    public void ClickCruise(){
-        wait.until(ExpectedConditions.elementToBeClickable(CruiseClick)).click();
+    public void Destination(){
+        wait.until(ExpectedConditions.elementToBeClickable(Destination)).sendKeys("Chennai");
     }
-
-    public void ClickPop(){
-        wait.until(ExpectedConditions.elementToBeClickable(Pop)).click();
+    public void Button(){
+        wait.until(ExpectedConditions.elementToBeClickable(Button)).click();
     }
-
-    public void SelectDestination(){
-        wait.until(ExpectedConditions.elementToBeClickable(Destination)).click();
-    }
-
-    public void ClickText(){
-        wait.until(ExpectedConditions.elementToBeClickable(TextBox)).sendKeys("Delhi");
-    }
-
-    public boolean PrintResult(){
-        return wait
-                .until(ExpectedConditions.visibilityOf(Text))
-                .isDisplayed();
+    public Boolean Text(){
+        return wait.until(ExpectedConditions.visibilityOf(Text)).isDisplayed();
     }
 }
