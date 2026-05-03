@@ -1,26 +1,29 @@
 package org.MakeMyTripTest.com.Prakadeesh;
 
-
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.Prakadeesh.Page_01_FlightValidation;
+import org.ClearTrip.com.pages.Prakadeesh.Page_03_FlightSearch;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC01_FlightValidationTest extends BaseClass {
-
+public class TC03_FlightSearchTest extends BaseClass {
 
     @Test
-    public void FlightPageValidation() throws InterruptedException {
+    public void FlightValidation() throws InterruptedException {
 
         Page_01_FlightValidation p1 = new Page_01_FlightValidation(driver);
+
         p1.closePopUp();
         p1.PopUp();
-        p1.ClickHotel();
-        p1.Flight();
-        p1.slowScrollDown();
+
+
+        Page_03_FlightSearch p3 = new Page_03_FlightSearch(driver);
+
+        p3.RoundTrip();
+
         Assert.assertTrue(
-                p1.Text(),
-                "Flight Page is not visible"
+                p3.isIconDisplayed(),
+                "Icon button is NOT visible on the page"
         );
 
     }

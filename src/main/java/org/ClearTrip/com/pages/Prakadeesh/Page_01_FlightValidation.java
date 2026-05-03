@@ -25,7 +25,7 @@ public class Page_01_FlightValidation {
     }
 
     @FindBy(xpath = "//*[local-name()='svg' and @data-testid='closeIcon']")
-    private WebElement closePopUp;
+    public WebElement closePopUp;
 
     @FindBy(xpath = "//div[@class='closeit']")
     private WebElement PopUP;

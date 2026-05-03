@@ -18,15 +18,11 @@ public class TC02_InvalidDataTest extends BaseClass {
         Page_02_InvalidData p2 = new Page_02_InvalidData(driver);
 
         p2.Source();
-        //Thread.sleep(7000);
         p2.Destination();
-        //Thread.sleep(7000);
         p2.Button();
-
         Assert.assertTrue(
                 p2.Text(),
                 "Text Is Not Visible"
         );
-        System.out.println("NO Data Found");
     }
 }
