@@ -1,5 +1,6 @@
 package org.ClearTrip.com.pages.Koushik;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,11 +49,19 @@ public class Page_02_TravellersCount {
     @FindBy(xpath = "//span[contains(text(),'Adult')]/following-sibling::span//*[local-name()='svg']")
     private WebElement travellers_dropdown;
 
-    @FindBy(xpath = "//p[contains(text(),'Chennai, IN - Chennai Airport (MAA)')]")
-    private WebElement chennai;
+//    @FindBy(xpath = "//p[contains(text(),'Chennai, IN - Chennai Airport (MAA)')]")
+//    private WebElement chennai;
+//
+//    @FindBy(xpath = "//p[contains(text(),'Pune, IN - Lohegaon (PNQ)')]")
+//    private WebElement pune;
 
-    @FindBy(xpath = "//p[contains(text(),'Pune, IN - Lohegaon (PNQ)')]")
-    private WebElement pune;
+    @FindBy(xpath = "//div[@data-testid='dateSelectOnward']")
+    private WebElement date_onward;
+
+    @FindBy(xpath = "//div[@data-testid='dateSelectReturn']")
+    private WebElement date_return;
+
+
 
     public void increase_travellers_count(int adult, int child, int infant) {
         wait.until(ExpectedConditions.elementToBeClickable(travellers_dropdown)).click();
@@ -71,11 +80,33 @@ public class Page_02_TravellersCount {
     {
         wait.until(ExpectedConditions.elementToBeClickable(departure_location)).click();
         departure_location.sendKeys(departure);
-        wait.until(ExpectedConditions.elementToBeClickable(chennai)).click();
+        // Select suggestion dynamically based on departure string
+        WebElement departureOption = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//p[contains(text(),'" + departure + "')]")
+        ));
+        departureOption.click();
 
         wait.until(ExpectedConditions.elementToBeClickable(arrival_location)).click();
         arrival_location.sendKeys(arrival);
-        wait.until(ExpectedConditions.elementToBeClickable(pune)).click();
+        //wait.until(ExpectedConditions.elementToBeClickable(pune)).click();
+        // Select suggestion dynamically based on arrival string
+        WebElement arrivalOption = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//p[contains(text(),'" + arrival + "')]")
+        ));
+        arrivalOption.click();
+    }
+
+    public void enter_dates(String fmonth, String fdate, String fyear, String tmonth, String tdate, String tyear)
+    {
+        wait.until(ExpectedConditions.elementToBeClickable(date_onward)).click();
+        WebElement onward_date = wait.until((ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@aria-label,'" +fmonth+" "+fdate+" "+fyear+"')]"))));
+        onward_date.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(date_return)).click();
+        WebElement return_date = wait.until((ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@aria-label,'" +tmonth+" "+tdate+" "+tyear+"')]"))));
+        return_date.click();
+
+
     }
 
     public int actualtraveller()

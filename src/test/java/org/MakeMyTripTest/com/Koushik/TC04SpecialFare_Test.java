@@ -19,7 +19,7 @@ public class TC04SpecialFare_Test extends BaseClass {
 
         p0.closePopUp();
         p2.setBusiness_class();
-        p1.enter_tripdetails("chennai","pune");
+        p1.enter_tripdetails("Chennai","Pune");
         p0.click_search_btn();
         p3.specialfare();
         p3.setInside_search_btn();
