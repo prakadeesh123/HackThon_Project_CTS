@@ -22,14 +22,24 @@ public class Page_05_ExcelList {
     @FindBy(css = "div[style*='width:32px'][style*='height:20px']")
     private WebElement nonstop_toggle;
 
-    //New Delhi, IN - Indira Gandhi Airport (DEL)
+    @FindBy(xpath = "//input[@type='checkbox']//following::p[normalize-space()='Air India'][1]")
+    private WebElement airindia_checkbox;
 
-    @FindBy(xpath = "//p[contains(text(),'New Delhi, IN - Indira Gandhi Airport (DEL)')]")
-    private WebElement delhi;
+    @FindBy(xpath = "//input[@type='checkbox']//following::p[normalize-space()='IndiGo'][1]")
+    private WebElement indigo_checkbox;
+
 
     public void setNonstop_toggle()
     {
         wait.until(ExpectedConditions.elementToBeClickable(nonstop_toggle)).click();
+    }
+
+    public void airline_checkbox()
+    {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", airindia_checkbox);
+        wait.until(ExpectedConditions.elementToBeClickable(airindia_checkbox)).click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", indigo_checkbox);
+        wait.until(ExpectedConditions.elementToBeClickable(indigo_checkbox)).click();
     }
 
 }
