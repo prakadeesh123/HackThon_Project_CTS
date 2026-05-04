@@ -5,6 +5,7 @@ import org.ClearTrip.com.pages.Yaswanth.FilterHotelsInNiarobia;
 import org.ClearTrip.com.pages.Yaswanth.PassengerDetailsContinuePay;
 import org.ClearTrip.com.pages.Yaswanth.SelectHotel;
 import org.ClearTrip.com.pages.Yaswanth.SelectRoomPrice;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PassengerDetailsContinuePayTest extends BaseClass {
@@ -18,6 +19,7 @@ public class PassengerDetailsContinuePayTest extends BaseClass {
         s.clickHotel();
         sp.clickBookRoom();
         pdc.fillPassDetails();
+        Assert.assertTrue(pdc.validatePaymentPage(),"validation failed");
 
     }
 

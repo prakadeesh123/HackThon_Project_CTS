@@ -17,6 +17,7 @@ public class PassengerDetailsContinuePay extends BaseClass {
     private WebDriver driver;
     private WebDriverWait wait;
 
+
     @FindBy(xpath = "//p[contains(text(),\'Mr.\')]")
     private WebElement mr;
 
@@ -41,6 +42,12 @@ public class PassengerDetailsContinuePay extends BaseClass {
     @FindBy(css = "button.sc-kAyceB.dhBISf.sc-b19c115c-0.heCgQz")
     private WebElement continueToPayment;
 
+    @FindBy(xpath = "//div[@class='flex flex-middle jc-center']/child::h4")
+    private WebElement QrCOde;
+
+    @FindBy(xpath = "//div[@dir='ltr']/child::span")
+    private WebElement navigateToFinalPage;
+
 
 
     public PassengerDetailsContinuePay(WebDriver driver){
@@ -48,7 +55,6 @@ public class PassengerDetailsContinuePay extends BaseClass {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver,this);
     }
-
     public void fillPassDetails(){
         wait.until(ExpectedConditions.elementToBeClickable(mr)).click();
         wait.until(ExpectedConditions.visibilityOf(firstName)).sendKeys("Kolathuru");
@@ -68,42 +74,14 @@ public class PassengerDetailsContinuePay extends BaseClass {
         WebElement continueTopay = wait.until(ExpectedConditions.elementToBeClickable(continueToPayment));
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", continueTopay);
         js.executeScript("arguments[0].click();",continueTopay);
-        // 1. Store the current window handle (the parent page)
-
 
     }
+    public boolean validatePaymentPage(){
 
-//    private int parsePricee(WebElement element) {
-//        String text = wait.until(ExpectedConditions.visibilityOf(element)).getText();
-//        String cleaned = text.replaceAll("[^0-9]", "");
-//        return cleaned.isEmpty() ? 0 : Integer.parseInt(cleaned);
-//    }
-//
-//    public void validatePricees(){
-//        try {
-//            SelectRoomPrice s = new SelectRoomPrice(driver);
-//            int price1 = parsePricee(s.oneRoomOneNight);
-//            int price2 = parsePricee(s.HotelTaxes);
-//            int price3 = parsePricee(s.ConvenienceFee);
-//
-//            int discount1 = parsePricee(s.discountPrices1);
-//            int discount2 = parsePricee(s.discountPrices2);
-//
-//            int actualTotalCost = parsePricee(s.totalPrice);
-//            int paymentTotal = parsePricee();
-//            System.out.println("oneroomprice :"+price1);
-//            System.out.println("HotelTaxes :"+price2);
-//            System.out.println("ConvenFee :"+price3);
-//            System.out.println("Discout1 :"+discount1);
-//            System.out.println("disc2 :"+discount2);
-//
-//            System.out.println("Actual Total from UI: " + actualTotalCost);
-//
-//
-//        } catch (Exception e) {
-//            System.err.println("Validation failed: " + e.getMessage());
-//            return;
-//        }
-//    }
+        boolean a =  wait.until(ExpectedConditions.visibilityOf(navigateToFinalPage)).isDisplayed();
+        boolean b = wait.until(ExpectedConditions.visibilityOf(QrCOde)).isDisplayed();
+        return a==b;
+    }
+
 
 }
