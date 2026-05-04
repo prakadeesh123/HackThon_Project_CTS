@@ -1,4 +1,4 @@
-package org.MakeMyTripTest.com.Koushik;
+package org.ClearTripTest.com.Koushik;
 
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.Koushik.Page_02_TravellersCount;

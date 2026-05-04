@@ -1,4 +1,4 @@
-package org.MakeMyTripTest.com.Prakadeesh;
+package org.ClearTripTest.com.Prakadeesh;
 
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.Prakadeesh.Page_01_FlightValidation;
