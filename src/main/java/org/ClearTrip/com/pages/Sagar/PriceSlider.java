@@ -38,7 +38,7 @@ public class PriceSlider {
             WebElement slider=wait.until(ExpectedConditions.elementToBeClickable(priceslider));
             Actions actions=new Actions(driver);
             actions.clickAndHold(slider)
-                    .moveByOffset(-60,0)
+                    .moveByOffset(50,0)
                     .release()
                     .perform();
             wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();

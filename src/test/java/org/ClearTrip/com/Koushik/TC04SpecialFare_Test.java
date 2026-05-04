@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/test/java/org/ClearTrip/com/Koushik/TC04SpecialFare_Test.java
 package org.ClearTrip.com.Koushik;
+========
+package org.ClearTripTest.com.Koushik;
+>>>>>>>> origin/master:src/test/java/org/ClearTripTest/com/Koushik/TC04SpecialFare_Test.java
 
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.Koushik.Page_02_TravellersCount;

@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/test/java/org/ClearTrip/com/Prakadeesh/TC03_FlightSearchTest.java
 package org.ClearTrip.com.Prakadeesh;
+========
+package org.ClearTripTest.com.Prakadeesh;
+>>>>>>>> origin/master:src/test/java/org/ClearTripTest/com/Prakadeesh/TC03_FlightSearchTest.java
 
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.Prakadeesh.Page_01_FlightValidation;
