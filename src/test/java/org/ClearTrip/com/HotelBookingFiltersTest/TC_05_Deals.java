@@ -2,7 +2,6 @@ package org.ClearTrip.com.HotelBookingFiltersTest;
 
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.HotelBookingFilters.Deals;
-import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
 import org.testng.annotations.Test;
 
 public class TC_05_Deals extends BaseClass {
