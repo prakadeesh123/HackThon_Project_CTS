@@ -4,8 +4,11 @@
 <suite name="Minimum Suite">
     <test name="All Automations">
         <classes>
-            <class name="org.MakeMyTripTest.com.Sagar.TC_01_RatingFilter"/>
-            <class name="Sagar.org.ClearTrip.com.TC_02_Guestrating"/>
+            <class name="org.ClearTrip.com.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest"/>
+            <class name="org.ClearTrip.com.HotelBookingFunctsPricesTest.SelectHotelTest"/>
+            <class name="org.ClearTrip.com.HotelBookingFunctsPricesTest.CheckAmenitiesTest"/>
+            <class name="org.ClearTrip.com.HotelBookingFunctsPricesTest.SelectRoomPriceTest"/>
+            <class name="org.ClearTrip.com.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest"/>
         </classes>
     </test>
 </suite>

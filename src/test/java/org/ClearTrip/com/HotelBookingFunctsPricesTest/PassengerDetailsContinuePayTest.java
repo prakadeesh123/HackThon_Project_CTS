@@ -20,7 +20,6 @@ public class PassengerDetailsContinuePayTest extends BaseClass {
         sp.clickBookRoom();
         pdc.fillPassDetails();
         Assert.assertTrue(pdc.validatePaymentPage(),"validation failed");
-
     }
 
 
