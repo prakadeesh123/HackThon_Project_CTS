@@ -32,7 +32,7 @@ public class Page_04_FlightFilter {
     @FindBy(xpath = "//input[@placeholder='Where to?']")
     private WebElement destinationInput;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg ibgoAF'])[2]")
+    @FindBy(xpath = "//h4[normalize-space()=\"Search flights\"]")
     private WebElement searchButton;
 
     @FindBy(xpath = "//p[contains(text(),'Chennai, IN - Chennai Airport')]")

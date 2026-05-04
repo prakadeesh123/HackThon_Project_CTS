@@ -26,7 +26,7 @@ public class Page_02_InvalidData {
     @FindBy(xpath = "//input[@placeholder='Where to?']")
     public WebElement Destination;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg ibgoAF'])[2]")
+    @FindBy(xpath = "//h4[normalize-space()=\"Search flights\"]")
     public WebElement Button;
 
     @FindBy(xpath = "//span[contains(text(),'Enter departure and arrival airports / cities')]")

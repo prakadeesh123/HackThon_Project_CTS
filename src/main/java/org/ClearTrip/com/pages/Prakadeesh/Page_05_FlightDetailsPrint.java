@@ -30,7 +30,7 @@ public class Page_05_FlightDetailsPrint {
     @FindBy(xpath = "//input[@placeholder='Where to?']")
     private WebElement destinationInput;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg ibgoAF'])[2]")
+    @FindBy(xpath = "//h4[normalize-space()=\"Search flights\"]")
     private WebElement searchButton;
 
     @FindBy(xpath = "//p[contains(text(),'Chennai, IN - Chennai Airport')]")
@@ -49,13 +49,13 @@ public class Page_05_FlightDetailsPrint {
 
     // ================= FILTERS =================
 
-    @FindBy(xpath = "(//div//p[normalize-space()='Early morning' and @class=\"sc-gEvEer ibdVph c-pointer\"])[1]")
+    @FindBy(xpath = "(//div//p[normalize-space()='Early morning'])[1]")
     private WebElement earlyMorningFilter;
 
-    @FindBy(xpath = "(//div//p[normalize-space()='Night' and @class=\"sc-gEvEer ibdVph c-pointer\"])[1]")
+    @FindBy(xpath = "(//div//p[normalize-space()='Night'])[1]")
     private WebElement NightFilter;
 
-    @FindBy(xpath = "//div//p[normalize-space()='IndiGo' and @class='sc-gEvEer ibdVph c-pointer ml-2']")
+    @FindBy(xpath = "//div//p[normalize-space()='IndiGo']")
     private WebElement indigoFilter;
 
     @FindBy(xpath = "//div[@class='sc-aXZVg iqDbdo']")

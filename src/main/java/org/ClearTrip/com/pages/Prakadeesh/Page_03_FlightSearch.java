@@ -26,13 +26,13 @@ public class Page_03_FlightSearch{
     @FindBy(xpath = "//input[@placeholder='Where to?']")
     public WebElement Destination;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg ibgoAF'])[2]")
+    @FindBy(xpath = "//h4[normalize-space()=\"Search flights\"]")
     public WebElement Button;
 
     @FindBy(xpath = "//p[contains(text(),'Round trip')]")
     private WebElement RoundTrip;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg iNidEX flex flex-middle'])[2]")
+    @FindBy(xpath = "//span[normalize-space()=\"1 Adult, Economy\"]")
     private WebElement Filter;
 
     @FindBy(xpath = "(//*[name()='path' and @d='M16 9V23M9 16H23']/ancestor::button)[1]")
