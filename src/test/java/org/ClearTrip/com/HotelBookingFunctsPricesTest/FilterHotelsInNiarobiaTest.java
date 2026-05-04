@@ -1,7 +1,7 @@
-package org.ClearTrip.com.Yaswanth;
+package org.ClearTrip.com.HotelBookingFunctsPricesTest;
 
 import org.ClearTrip.com.baseclass.BaseClass;
-import org.ClearTrip.com.pages.Yaswanth.FilterHotelsInNiarobia;
+import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

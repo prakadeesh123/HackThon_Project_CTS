@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:src/test/java/org/ClearTrip/com/Prakadeesh/TC01_FlightValidationTest.java
 package org.ClearTrip.com.Prakadeesh;
-========
-package org.ClearTripTest.com.Prakadeesh;
->>>>>>>> origin/master:src/test/java/org/ClearTripTest/com/Prakadeesh/TC01_FlightValidationTest.java
 
 
 import org.ClearTrip.com.baseclass.BaseClass;

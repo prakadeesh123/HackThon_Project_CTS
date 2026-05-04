@@ -1,4 +1,4 @@
-package org.ClearTrip.com.pages.Yaswanth;
+package org.ClearTrip.com.pages.HotelBookingFunctsPrices;
 
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.openqa.selenium.By;
@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.Set;
 
 public class PassengerDetailsContinuePay extends BaseClass {
     private WebDriver driver;

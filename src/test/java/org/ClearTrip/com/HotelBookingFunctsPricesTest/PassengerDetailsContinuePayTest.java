@@ -1,10 +1,10 @@
-package org.ClearTrip.com.Yaswanth;
+package org.ClearTrip.com.HotelBookingFunctsPricesTest;
 
 import org.ClearTrip.com.baseclass.BaseClass;
-import org.ClearTrip.com.pages.Yaswanth.FilterHotelsInNiarobia;
-import org.ClearTrip.com.pages.Yaswanth.PassengerDetailsContinuePay;
-import org.ClearTrip.com.pages.Yaswanth.SelectHotel;
-import org.ClearTrip.com.pages.Yaswanth.SelectRoomPrice;
+import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
+import org.ClearTrip.com.pages.HotelBookingFunctsPrices.PassengerDetailsContinuePay;
+import org.ClearTrip.com.pages.HotelBookingFunctsPrices.SelectHotel;
+import org.ClearTrip.com.pages.HotelBookingFunctsPrices.SelectRoomPrice;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

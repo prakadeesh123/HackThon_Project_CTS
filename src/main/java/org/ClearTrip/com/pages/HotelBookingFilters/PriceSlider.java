@@ -1,6 +1,5 @@
-package org.ClearTrip.com.pages.Sagar;
+package org.ClearTrip.com.pages.HotelBookingFilters;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
