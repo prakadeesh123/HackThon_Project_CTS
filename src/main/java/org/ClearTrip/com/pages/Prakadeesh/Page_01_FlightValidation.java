@@ -30,7 +30,7 @@ public class Page_01_FlightValidation {
     @FindBy(xpath = "//div[@class='closeit']")
     private WebElement PopUP;
 
-    @FindBy(xpath = "//p[normalize-space()=\"Hotels\"]")
+    @FindBy(xpath = "//div[@class='sc-aXZVg jTYSrJ']")
     private WebElement Hotels;
 
     @FindBy(xpath = "//p[contains(text(),'Flights')]")
