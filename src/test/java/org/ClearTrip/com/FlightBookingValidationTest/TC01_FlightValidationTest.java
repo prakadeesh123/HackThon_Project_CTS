@@ -1,8 +1,8 @@
-package org.ClearTrip.com.Prakadeesh;
+package org.ClearTrip.com.FlightBookingValidationTest;
 
 
 import org.ClearTrip.com.baseclass.BaseClass;
-import org.ClearTrip.com.pages.Prakadeesh.Page_01_FlightValidation;
+import org.ClearTrip.com.pages.FlightBookingValidations.Page_01_FlightValidation;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

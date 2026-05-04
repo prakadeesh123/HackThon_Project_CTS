@@ -1,9 +1,9 @@
-package org.ClearTrip.com.Koushik;
+package org.ClearTrip.com.FlightBookingFiltersTest;
 
 import org.ClearTrip.com.baseclass.BaseClass;
-import org.ClearTrip.com.pages.Koushik.Page_02_TravellersCount;
-import org.ClearTrip.com.pages.Koushik.Page_01_EmptyDestination;
-import org.ClearTrip.com.pages.Koushik.Page_03_FilterOnArrivalTime;
+import org.ClearTrip.com.pages.FlightBookingFilters.Page_02_TravellersCount;
+import org.ClearTrip.com.pages.FlightBookingFilters.Page_01_EmptyDestination;
+import org.ClearTrip.com.pages.FlightBookingFilters.Page_03_FilterOnArrivalTime;
 import org.testng.annotations.Test;
 
 public class TC03FilterOnArrivalTime_Test extends BaseClass {

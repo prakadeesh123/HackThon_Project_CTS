@@ -1,4 +1,4 @@
-package org.ClearTrip.com.pages.Koushik;
+package org.ClearTrip.com.pages.FlightBookingFilters;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;

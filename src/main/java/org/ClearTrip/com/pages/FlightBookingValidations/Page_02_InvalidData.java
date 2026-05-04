@@ -1,4 +1,4 @@
-package org.ClearTrip.com.pages.Prakadeesh;
+package org.ClearTrip.com.pages.FlightBookingValidations;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

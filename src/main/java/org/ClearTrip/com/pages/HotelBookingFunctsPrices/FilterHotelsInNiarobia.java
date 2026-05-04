@@ -1,12 +1,14 @@
 package org.ClearTrip.com.pages.HotelBookingFunctsPrices;
 
-import org.openqa.selenium.JavascriptExecutor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -14,6 +16,9 @@ public class FilterHotelsInNiarobia {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
+
+    private static final Logger logger =
+            LogManager.getLogger(FilterHotelsInNiarobia.class);
 
     @FindBy(xpath = "(//div[@data-testid='loginPopup']/div/div)[2]")
     private WebElement closePopUp;
@@ -39,30 +44,55 @@ public class FilterHotelsInNiarobia {
     @FindBy(css = "div.sc-aXZVg.gvuMKO.c-pointer.p-relative")
     private List<WebElement> listedOutput;
 
-
     // Constructor
     public FilterHotelsInNiarobia(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
+        logger.info("FilterHotelsInNiarobia page initialized");
     }
-    public void filterHotel(){
+
+    public void filterHotel() {
+
+        logger.info("Starting hotel filter for Nairobi");
+
         wait.until(ExpectedConditions.elementToBeClickable(closePopUp)).click();
+        logger.info("Popup closed");
+
         wait.until(ExpectedConditions.elementToBeClickable(hotelBtn)).click();
+        logger.info("Hotels tab clicked");
+
         wait.until(ExpectedConditions.visibilityOf(destination)).sendKeys("Nairobi");
+        logger.info("Entered destination: Nairobi");
+
         wait.until(ExpectedConditions.elementToBeClickable(clickDestination)).click();
+        logger.info("Selected destination from dropdown");
+
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
-
+        logger.info("Search button clicked");
     }
-    public boolean ValidateFilter(){
-        boolean a = wait.until(ExpectedConditions.visibilityOf(validLocation)).isDisplayed();
-        boolean b = wait.until(ExpectedConditions.visibilityOf(validResult)).isDisplayed();
-        boolean c = listedOutput.size() > 0 ? true:false;
-        if(a==true && b == true && c == true){
+
+    public boolean ValidateFilter() {
+
+        logger.info("Validating hotel filter results");
+
+        boolean locationVisible =
+                wait.until(ExpectedConditions.visibilityOf(validLocation)).isDisplayed();
+        logger.info("Valid location displayed: {}", locationVisible);
+
+        boolean resultHeaderVisible =
+                wait.until(ExpectedConditions.visibilityOf(validResult)).isDisplayed();
+        logger.info("Result header displayed: {}", resultHeaderVisible);
+
+        boolean hotelsListed = listedOutput.size() > 0;
+        logger.info("Hotels listed count: {}", listedOutput.size());
+
+        if (locationVisible && resultHeaderVisible && hotelsListed) {
+            logger.info("Hotel filter validation PASSED");
             return true;
+        } else {
+            logger.error("Hotel filter validation FAILED");
+            return false;
         }
-        return false;
     }
-
-
 }
