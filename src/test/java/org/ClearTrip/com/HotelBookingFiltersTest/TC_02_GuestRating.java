@@ -2,8 +2,10 @@ package org.ClearTrip.com.HotelBookingFiltersTest;
 
 
 import org.ClearTrip.com.baseclass.BaseClass;
-import org.ClearTrip.com.pages.Sagar.GuestRating;
-import org.ClearTrip.com.pages.Sagar.StarCategory;
+
+import org.ClearTrip.com.pages.HotelBookingFilters.GuestRating;
+import org.ClearTrip.com.pages.HotelBookingFilters.StarCategory;
+import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
