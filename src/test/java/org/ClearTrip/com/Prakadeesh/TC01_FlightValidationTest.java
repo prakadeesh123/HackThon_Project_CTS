@@ -18,6 +18,7 @@ public class TC01_FlightValidationTest extends BaseClass {
         p1.ClickHotel();
         p1.Flight();
         p1.slowScrollDown();
+
         Assert.assertTrue(
                 p1.Text(),
                 "Flight Page is not visible"
