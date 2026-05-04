@@ -13,14 +13,12 @@ public class TC_02_Guestrating extends BaseClass {
         FilterHotelsInNiarobia fh=new FilterHotelsInNiarobia(driver);
         fh.filterHotel();
         Assert.assertTrue(fh.ValidateFilter(),"Hotel not selected for nairobi");
-        StarCategory pg=new StarCategory(driver);
-        pg.apply_filter();
-        Assert.assertTrue(pg.validaterating(),"Filter not applied");
+        StarCategory sc=new StarCategory(driver);
+        sc.apply_filter();
+        Assert.assertTrue(sc.validaterating(),"Filter not applied");
         GuestRating gr=new GuestRating(driver);
         gr.GuestRating();
         Assert.assertTrue(gr.validaterating(),"Filter not applied");
 
     }
-
-
 }

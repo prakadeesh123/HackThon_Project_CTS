@@ -36,7 +36,7 @@ public class StarCategory {
             wait.until(ExpectedConditions.elementToBeClickable(highrating)).click();
             wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
     public boolean validaterating(){
