@@ -7,8 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+
 
 
 public class GuestRating {
@@ -30,9 +29,13 @@ public class GuestRating {
         PageFactory.initElements(driver , this);
     }
     public void GuestRating(){
-        wait.until(ExpectedConditions.elementToBeClickable(guestrating)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(highrating)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(guestrating)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(highrating)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
     public boolean validaterating(){
         return wait.until(ExpectedConditions.visibilityOf(filterapplied)).isDisplayed();
