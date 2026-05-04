@@ -63,9 +63,7 @@ public class SelectHotel {
                     break;
                 }
             }
-
             System.out.println("Switched focus to: " + driver.getTitle());
-
         } catch (Exception e) {
             System.err.println("Failed to click hotel or switch window: " + e.getMessage());
         }
@@ -73,18 +71,12 @@ public class SelectHotel {
 
     public boolean validateOpenedHotel() {
         try {
-            // 4. Capture info from the detailed hotel page (new window)
-
-            System.out.println("expectedname: "+expectedHotelName+"expectedprice :"+expectedHotelPrice);
-
-            System.out.println("actualname: "+actualHotelName+"actualprice :"+actualHotelPrice);
             boolean a = expectedHotelName == actualHotelName ? true:false;
             boolean b = expectedHotelPrice == actualHotelPrice ? true:false;
             if(a==b){
                 return true;
             }
             return false;
-
         } catch (Exception e) {
             System.err.println("Validation failed: " + e.getMessage());
             return false;

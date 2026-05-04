@@ -1,4 +1,4 @@
-package org.MakeMyTripTest.com.Yaswanth;
+package org.ClearTrip.com.Yaswanth;
 
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.Yaswanth.FilterHotelsInNiarobia;
