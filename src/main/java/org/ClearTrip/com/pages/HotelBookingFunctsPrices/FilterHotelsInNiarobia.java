@@ -1,24 +1,24 @@
 package org.ClearTrip.com.pages.HotelBookingFunctsPrices;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.List;
 
 public class FilterHotelsInNiarobia {
 
-    private static final Logger log =
-            LoggerFactory.getLogger(FilterHotelsInNiarobia.class);
-
     protected WebDriver driver;
     protected WebDriverWait wait;
+
+    private static final Logger logger =
+            LogManager.getLogger(FilterHotelsInNiarobia.class);
 
     @FindBy(xpath = "(//div[@data-testid='loginPopup']/div/div)[2]")
     private WebElement closePopUp;
@@ -49,48 +49,50 @@ public class FilterHotelsInNiarobia {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
-        log.info("FilterHotelsInNiarobia page initialized");
+        logger.info("FilterHotelsInNiarobia page initialized");
     }
 
     public void filterHotel() {
 
-        log.info("Starting hotel filtering process for Nairobi");
+        logger.info("Starting hotel filter for Nairobi");
 
         wait.until(ExpectedConditions.elementToBeClickable(closePopUp)).click();
-        log.info("Login popup closed");
+        logger.info("Popup closed");
 
         wait.until(ExpectedConditions.elementToBeClickable(hotelBtn)).click();
-        log.info("Hotels button clicked");
+        logger.info("Hotels tab clicked");
 
         wait.until(ExpectedConditions.visibilityOf(destination)).sendKeys("Nairobi");
-        log.info("Entered destination: Nairobi");
+        logger.info("Entered destination: Nairobi");
 
         wait.until(ExpectedConditions.elementToBeClickable(clickDestination)).click();
-        log.info("Selected destination from suggestion list");
+        logger.info("Selected destination from dropdown");
 
         wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
-        log.info("Search button clicked");
+        logger.info("Search button clicked");
     }
 
     public boolean ValidateFilter() {
 
-        log.info("Validating filter results");
+        logger.info("Validating hotel filter results");
 
-        boolean a = wait.until(ExpectedConditions.visibilityOf(validLocation)).isDisplayed();
-        log.info("Valid location displayed: {}", a);
+        boolean locationVisible =
+                wait.until(ExpectedConditions.visibilityOf(validLocation)).isDisplayed();
+        logger.info("Valid location displayed: {}", locationVisible);
 
-        boolean b = wait.until(ExpectedConditions.visibilityOf(validResult)).isDisplayed();
-        log.info("Valid result header displayed: {}", b);
+        boolean resultHeaderVisible =
+                wait.until(ExpectedConditions.visibilityOf(validResult)).isDisplayed();
+        logger.info("Result header displayed: {}", resultHeaderVisible);
 
-        boolean c = listedOutput.size() > 0 ? true : false;
-        log.info("Hotels listed count > 0: {}", c);
+        boolean hotelsListed = listedOutput.size() > 0;
+        logger.info("Hotels listed count: {}", listedOutput.size());
 
-        if (a == true && b == true && c == true) {
-            log.info("Hotel filter validation PASSED");
+        if (locationVisible && resultHeaderVisible && hotelsListed) {
+            logger.info("Hotel filter validation PASSED");
             return true;
+        } else {
+            logger.error("Hotel filter validation FAILED");
+            return false;
         }
-
-        log.info("Hotel filter validation FAILED");
-        return false;
     }
 }
