@@ -4,7 +4,6 @@ package org.ClearTrip.tests.HotelBookingFiltersTest;
 import org.ClearTrip.com.baseclass.BaseClass;
 
 import org.ClearTrip.com.pages.HotelBookingFilters.GuestRating;
-import org.ClearTrip.com.pages.HotelBookingFilters.StarCategory;
 import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,11 +11,9 @@ import org.testng.annotations.Test;
 public class TC_02_GuestRating extends BaseClass {
     @Test
     public void testclass01(){
+
         FilterHotelsInNiarobia fh=new FilterHotelsInNiarobia(driver);
         fh.filterHotel();
-
-//        StarCategory sc=new StarCategory(driver);
-//        sc.apply_filter();
 
         GuestRating gr=new GuestRating(driver);
         gr.GuestRating();
