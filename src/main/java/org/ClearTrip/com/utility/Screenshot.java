@@ -19,22 +19,6 @@ public class Screenshot {
         sourceFile.renameTo(targetFile);
         return testName.toString();
 
-        //2) capture the screenshot of specific section
-       /*WebElement featuredProducts=driver.findElement(By.xpath("//div[@class='product-grid home-page-product-grid']"));
-
-       File sourcefile=featuredProducts.getScreenshotAs(OutputType.FILE);
-       File targetfile=new File(System.getProperty("user.dir")+"\\screenshots\\featredproducts.png");
-       sourcefile.renameTo(targetfile); // copy sourcefile to target file
-       */
-
-        //3) capture the screenshot of webelement
-//     WebElement logo=driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
-//     File sourcefile=logo.getScreenshotAs(OutputType.FILE);
-//     File targetfile=new File(System.getProperty("user.dir")+"\\screenshots\\logo.png");
-//     sourcefile.renameTo(targetfile); // copy sourcefile to target file
-
-        //driver.quit();
-
 
 
     }
