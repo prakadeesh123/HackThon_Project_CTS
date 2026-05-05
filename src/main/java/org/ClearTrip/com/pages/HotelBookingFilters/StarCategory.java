@@ -1,4 +1,4 @@
-package org.ClearTrip.com.pages.Sagar;
+package org.ClearTrip.com.pages.HotelBookingFilters;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Ratingfilter {
+public class StarCategory {
     public WebDriver driver;
     public WebDriverWait wait;
 
@@ -25,15 +25,19 @@ public class Ratingfilter {
     @FindBy(xpath = "//p[text()='5-star']")
     private WebElement filteradded;
 
-    public Ratingfilter(WebDriver driver){
+    public StarCategory(WebDriver driver){
         this.driver=driver;
         this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver , this);
     }
     public void apply_filter(){
-        wait.until(ExpectedConditions.elementToBeClickable(filtercategory)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(highrating)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(filtercategory)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(highrating)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     public boolean validaterating(){
         return wait.until(ExpectedConditions.visibilityOf(filteradded)).isDisplayed();

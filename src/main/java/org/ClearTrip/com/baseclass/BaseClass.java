@@ -12,17 +12,17 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseClass {
-
     public WebDriver driver;
+
     @BeforeMethod
     public void setUp(){
         String browser = ConfigReader.getProperties("browser");
         String url = ConfigReader.getProperties("baseurl");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
+//        options.addArguments("--headless=new");
         if(browser.equals("chrome")){
-            driver = new ChromeDriver();
-//            driver.manage().window().maximize();
+            driver = new ChromeDriver(options);
+            driver.manage().window().maximize();
         }
         else if(browser.equals("edge")){
             driver = new EdgeDriver();
@@ -34,6 +34,7 @@ public class BaseClass {
         }
         driver.get(url);
     }
+
     @AfterMethod
     public void tearDown(ITestResult result){
         try{
@@ -49,7 +50,7 @@ public class BaseClass {
         }
         finally {
 //            if(driver != null){
-////                driver.quit();
+//                driver.quit();
 //            }
 
         }

@@ -1,4 +1,4 @@
-package org.ClearTrip.com.pages.Sagar;
+package org.ClearTrip.com.pages.HotelBookingFilters;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ import java.time.Duration;
 public class GuestRating {
     public WebDriver driver;
     public WebDriverWait wait;
-//    private static final Logger log = LogManager.getLogManager().getLogger(GuestRating.class);
+    //    private static final Logger log = LogManager.getLogManager().getLogger(GuestRating.class);
     @FindBy(xpath = "//p[text()='Guest ratings']")
     private WebElement guestrating;
     @FindBy(xpath = "//p[text()='4.5 & above']")
@@ -34,7 +34,7 @@ public class GuestRating {
             wait.until(ExpectedConditions.elementToBeClickable(highrating)).click();
             wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
     public boolean validaterating(){
