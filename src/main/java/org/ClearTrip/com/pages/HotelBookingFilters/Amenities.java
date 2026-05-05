@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
@@ -13,6 +15,7 @@ public class Amenities {
     public WebDriver driver;
     public WebDriverWait wait;
 
+    public static final Logger log=LoggerFactory.getLogger(Amenities.class);
     @FindBy(xpath = "//p[text()='All filters']")
     private WebElement filterbtn;
 
@@ -29,6 +32,7 @@ public class Amenities {
         this.driver=driver;
         this.wait=new WebDriverWait(driver , Duration.ofSeconds(10));
         PageFactory.initElements(driver , this);
+        log.info("Amenities page is initialized");
     }
     public void Anemetiescheck(){
         wait.until(ExpectedConditions.elementToBeClickable(filterbtn)).click();
