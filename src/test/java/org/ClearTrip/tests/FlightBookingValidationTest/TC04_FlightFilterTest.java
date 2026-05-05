@@ -11,14 +11,11 @@ public class TC04_FlightFilterTest extends BaseClass {
     @Test
     public void FlightFilter(){
         Page_01_FlightValidation p1 = new Page_01_FlightValidation(driver);
-
         p1.closePopUp();
         p1.PopUp();
 
         Page_04_FlightFilter p4 = new Page_04_FlightFilter(driver);
-
         p4.applyFlightFilterAndContinue();
-
         Assert.assertTrue(
                 p4.isItineraryPageDisplayed(),
                 "Itinerary page is NOT displayed after clicking Continue"

@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 public class TC02_InvalidDataTest extends BaseClass {
     @Test
     public void FlightValidation() throws InterruptedException {
-
         Page_01_FlightValidation p1 = new Page_01_FlightValidation(driver);
 
         p1.closePopUp();

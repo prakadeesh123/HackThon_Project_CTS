@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 public class TC01_FlightValidationTest extends BaseClass {
 
-
     @Test
     public void FlightPageValidation() throws InterruptedException {
 

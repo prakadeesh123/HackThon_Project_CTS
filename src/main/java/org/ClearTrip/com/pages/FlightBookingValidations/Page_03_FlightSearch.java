@@ -26,13 +26,13 @@ public class Page_03_FlightSearch{
     @FindBy(xpath = "//input[@placeholder='Where to?']")
     public WebElement Destination;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg ibgoAF'])[2]")
+    @FindBy(xpath = "//div//h4[normalize-space()=\"Search flights\"]")
     public WebElement Button;
 
     @FindBy(xpath = "//p[contains(text(),'Round trip')]")
     private WebElement RoundTrip;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg iNidEX flex flex-middle'])[2]")
+    @FindBy(xpath = "//span[normalize-space()=\"1 Adult, Economy\"]")
     private WebElement Filter;
 
     @FindBy(xpath = "(//*[name()='path' and @d='M16 9V23M9 16H23']/ancestor::button)[1]")
@@ -50,48 +50,25 @@ public class Page_03_FlightSearch{
     @FindBy(xpath = "//p[contains(text(),'Mumbai, IN - Chatrapati Shivaji Airport (BOM)')]")
     private WebElement Mumbai;
 
-    @FindBy(xpath = "//div[@data-testid='dateSelectOnward']")
-    private WebElement DateFrom;
-
-    @FindBy(xpath = "//div[@data-testid='dateSelectReturn']")
-    private WebElement DateTo;
-
-    @FindBy(xpath = "//div[@role='gridcell' and @aria-label='Tue Jun 02 2026']")
-    private WebElement Date;
-
     @FindBy(xpath = "//div[contains(@style,'cursor:pointer') and contains(@style,'border-radius:12px')]")
     private WebElement NonStop;
-
-    @FindBy(xpath = "//p[contains(text(),\"First class\")]")
-    private WebElement FirstClass;
 
     @FindBy(xpath = "//*[name()='path' and contains(@d,'M16.115')]/ancestor::div[@cursor='pointer']")
     private WebElement iconButton;
 
     public void RoundTrip() throws InterruptedException {
-
         wait.until(ExpectedConditions.elementToBeClickable(RoundTrip)).click();
         wait.until(ExpectedConditions.elementToBeClickable(Filter)).click();
         wait.until(ExpectedConditions.elementToBeClickable(Adult)).click();
         wait.until(ExpectedConditions.elementToBeClickable(Children)).click();
-
-
-
         wait.until(ExpectedConditions.elementToBeClickable(Infant)).click();
-        //wait.until(ExpectedConditions.elementToBeClickable(FirstClass)).click();
-
         wait.until(ExpectedConditions.elementToBeClickable(Source)).click();
         wait.until(ExpectedConditions.elementToBeClickable(Chennai)).click();
-
         wait.until(ExpectedConditions.elementToBeClickable(Destination)).click();
         wait.until(ExpectedConditions.elementToBeClickable(Mumbai)).click();
         wait.until(ExpectedConditions.elementToBeClickable(NonStop)).click();
-
         wait.until(ExpectedConditions.elementToBeClickable(Button)).click();
-
-
     }
-
 
     public boolean isIconDisplayed() {
         try {

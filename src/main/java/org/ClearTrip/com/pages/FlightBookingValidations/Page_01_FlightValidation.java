@@ -29,14 +29,11 @@ public class Page_01_FlightValidation {
     @FindBy(xpath = "//div[@class='closeit']")
     private WebElement PopUP;
 
-    @FindBy(xpath = "//div[@class='sc-aXZVg jTYSrJ']")
+    @FindBy(xpath = "//div//p[normalize-space()=\"Hotels\"]")
     private WebElement Hotels;
 
     @FindBy(xpath = "//p[contains(text(),'Flights')]")
     private WebElement Flight;
-
-    @FindBy(xpath = "//h3[contains(text(),'Wide Range of Airlines and Routes')]")
-    private WebElement Scroll;
 
     @FindBy(xpath = "//h2[contains(text(),'Book Domestic and International Flight Tickets at Lowest Airfares on Cleartrip')]")
     private WebElement Text;

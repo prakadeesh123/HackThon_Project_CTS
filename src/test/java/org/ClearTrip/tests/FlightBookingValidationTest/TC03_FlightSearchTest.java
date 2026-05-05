@@ -12,15 +12,11 @@ public class TC03_FlightSearchTest extends BaseClass {
     public void FlightValidation() throws InterruptedException {
 
         Page_01_FlightValidation p1 = new Page_01_FlightValidation(driver);
-
         p1.closePopUp();
         p1.PopUp();
 
-
         Page_03_FlightSearch p3 = new Page_03_FlightSearch(driver);
-
         p3.RoundTrip();
-
         Assert.assertTrue(
                 p3.isIconDisplayed(),
                 "Icon button is NOT visible on the page"

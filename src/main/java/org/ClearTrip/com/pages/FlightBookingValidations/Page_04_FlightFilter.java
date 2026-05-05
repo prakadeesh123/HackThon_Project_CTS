@@ -32,7 +32,7 @@ public class Page_04_FlightFilter {
     @FindBy(xpath = "//input[@placeholder='Where to?']")
     private WebElement destinationInput;
 
-    @FindBy(xpath = "(//div[@class='sc-aXZVg ibgoAF'])[2]")
+    @FindBy(xpath = "//div//h4[normalize-space()=\"Search flights\"]")
     private WebElement searchButton;
 
     @FindBy(xpath = "//p[contains(text(),'Chennai, IN - Chennai Airport')]")
@@ -41,23 +41,17 @@ public class Page_04_FlightFilter {
     @FindBy(xpath = "//p[contains(text(),'Mumbai, IN - Chatrapati Shivaji Airport')]")
     private WebElement mumbai;
 
-    // ================= DATE =================
-
     @FindBy(xpath = "//div[@data-testid='dateSelectOnward']")
     private WebElement departureDateField;
 
     @FindBy(xpath = "//div[@role='gridcell' and @aria-label='Tue Jun 02 2026']")
     private WebElement departureDate;
 
-    // ================= FILTERS =================
-
     @FindBy(xpath = "//div[.//p[normalize-space()='Early morning']]")
     private WebElement earlyMorningFilter;
 
-    @FindBy(xpath = "//div[.//p[normalize-space()='Afternoon']]")
+        @FindBy(xpath = "//div[.//p[normalize-space()='Afternoon']]")
     private WebElement afternoonFilter;
-
-    // ================= BUTTONS =================
 
     @FindBy(xpath = "//h4[normalize-space()='Book']/ancestor::button")
     private WebElement bookButton;
@@ -65,35 +59,24 @@ public class Page_04_FlightFilter {
     @FindBy(xpath = "//button[.//h3[normalize-space()='Continue']]")
     private WebElement continueButton;
 
-    // ================= HELPER =================
-
     private void jsScrollAndClick(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
         js.executeScript("arguments[0].click();", element);
     }
 
-    // ================= MAIN FLOW =================
-
     public void applyFlightFilterAndContinue() {
-
         wait.until(ExpectedConditions.elementToBeClickable(sourceInput)).click();
         wait.until(ExpectedConditions.elementToBeClickable(chennai)).click();
-
         wait.until(ExpectedConditions.elementToBeClickable(destinationInput)).click();
         wait.until(ExpectedConditions.elementToBeClickable(mumbai)).click();
-
         wait.until(ExpectedConditions.elementToBeClickable(departureDateField)).click();
         wait.until(ExpectedConditions.elementToBeClickable(departureDate)).click();
-
         wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
-
         jsScrollAndClick(earlyMorningFilter);
         jsScrollAndClick(afternoonFilter);
-
         wait.until(ExpectedConditions.elementToBeClickable(bookButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(continueButton)).click();
 
-        // ===== SWITCH TO NEW TAB =====
         String parentWindow = driver.getWindowHandle();
 
         wait.until(d -> driver.getWindowHandles().size() > 1);
@@ -105,8 +88,6 @@ public class Page_04_FlightFilter {
             }
         }
     }
-
-    // ================= ASSERTION METHOD =================
 
     public boolean isItineraryPageDisplayed() {
         try {
@@ -121,3 +102,4 @@ public class Page_04_FlightFilter {
         }
     }
 }
+
