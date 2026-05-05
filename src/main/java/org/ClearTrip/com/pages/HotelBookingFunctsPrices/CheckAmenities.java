@@ -17,10 +17,10 @@ public class CheckAmenities {
 
     private static final Logger logger = LogManager.getLogger(CheckAmenities.class);
 
-    @FindBy(xpath = "//p[contains(text(),'Terrace')]")
+    @FindBy(xpath = "(//p[@class='sc-fqkvVR bwtGcK pl-3'])[6]")
     private WebElement terrace;
 
-    @FindBy(xpath = "//p[contains(text(),'Library')]")
+    @FindBy(xpath = "(//p[@class='sc-fqkvVR bwtGcK pl-3'])[2]")
     private WebElement library;
 
     public CheckAmenities(WebDriver driver){
