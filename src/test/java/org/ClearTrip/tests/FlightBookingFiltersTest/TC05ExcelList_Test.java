@@ -17,11 +17,11 @@ public class TC05ExcelList_Test extends BaseClass {
 
         p0.closePopUp();
         p1.enter_tripdetails("Chennai","New Delhi");
-        p1.enter_dates("May","23","2026","Jun","20","2026");
+        p1.enter_onwarddate("May","23","2026");
+        //p1.enter_returndate("Jun","20","2026");
         p4.setNonstop_toggle();
         p0.click_search_btn();
-
-
+        p4.airline_checkbox();
 
     }
 }

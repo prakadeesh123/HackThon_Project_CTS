@@ -96,17 +96,18 @@ public class Page_02_TravellersCount {
         arrivalOption.click();
     }
 
-    public void enter_dates(String fmonth, String fdate, String fyear, String tmonth, String tdate, String tyear)
+    public void enter_onwarddate(String fmonth, String fdate, String fyear)
     {
         wait.until(ExpectedConditions.elementToBeClickable(date_onward)).click();
         WebElement onward_date = wait.until((ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@aria-label,'" +fmonth+" "+fdate+" "+fyear+"')]"))));
         onward_date.click();
+    }
 
+    public void enter_returndate(String tmonth, String tdate, String tyear)
+    {
         wait.until(ExpectedConditions.elementToBeClickable(date_return)).click();
         WebElement return_date = wait.until((ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@aria-label,'" +tmonth+" "+tdate+" "+tyear+"')]"))));
         return_date.click();
-
-
     }
 
     public int actualtraveller()
