@@ -19,7 +19,8 @@ public class BaseClass {
         String browser = ConfigReader.getProperties("browser");
         String url = ConfigReader.getProperties("baseurl");
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless=new");
+        options.addArguments("--headless=new");
+
         if(browser.equals("chrome")){
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
