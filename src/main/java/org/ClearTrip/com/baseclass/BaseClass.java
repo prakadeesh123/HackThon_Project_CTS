@@ -24,6 +24,7 @@ public class BaseClass {
                 chromeOptions.addArguments("--disable-infobars");
                 chromeOptions.addArguments("--disable-gpu");
                 driver = new ChromeDriver(chromeOptions);
+                driver.manage().window().maximize();
                 break;
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
