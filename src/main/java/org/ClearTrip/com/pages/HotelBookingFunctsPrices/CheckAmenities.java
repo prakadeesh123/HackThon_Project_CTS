@@ -29,7 +29,6 @@ public class CheckAmenities {
         PageFactory.initElements(driver, this);
         logger.info("CheckAmenities page initialized");
     }
-
     public boolean validateAmenities(){
         logger.info("Validating hotel amenities: Terrace and Library");
         boolean terraceVisible = wait.until(
