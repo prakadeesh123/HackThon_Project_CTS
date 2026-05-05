@@ -1,11 +1,13 @@
 package org.ClearTrip.com.baseclass;
 import org.ClearTrip.com.utility.ConfigReader;
 import org.ClearTrip.com.utility.LogUtil;
+import org.ClearTrip.com.utility.Screenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 public class BaseClass {
@@ -45,7 +47,13 @@ public class BaseClass {
         driver.get(ConfigReader.getProperties("baseurl"));
     }
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(ITestResult result) {
+        if(result.getStatus() == ITestResult.FAILURE){
+            Screenshot.takesScreenshot(driver,"Testcase_Failed");
+        }
+        else if(result.getStatus() == ITestResult.SUCCESS){
+            Screenshot.takesScreenshot(driver,"Testcase_Success");
+        }
         if (driver != null) {
             LogUtil.info("Closing browser");
 //            driver.quit();

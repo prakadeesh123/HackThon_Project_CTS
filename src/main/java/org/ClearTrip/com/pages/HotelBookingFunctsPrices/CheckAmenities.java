@@ -17,10 +17,10 @@ public class CheckAmenities {
 
     private static final Logger logger = LogManager.getLogger(CheckAmenities.class);
 
-    @FindBy(xpath = "//p[contains(text(),'Terrace')]")
+    @FindBy(xpath = "(//p[@class='sc-fqkvVR bwtGcK pl-3'])[6]")
     private WebElement terrace;
 
-    @FindBy(xpath = "//p[contains(text(),'Library')]")
+    @FindBy(xpath = "(//p[@class='sc-fqkvVR bwtGcK pl-3'])[2]")
     private WebElement library;
 
     public CheckAmenities(WebDriver driver){
@@ -29,7 +29,6 @@ public class CheckAmenities {
         PageFactory.initElements(driver, this);
         logger.info("CheckAmenities page initialized");
     }
-
     public boolean validateAmenities(){
         logger.info("Validating hotel amenities: Terrace and Library");
         boolean terraceVisible = wait.until(
