@@ -16,7 +16,7 @@ public class GuestRating {
     //    private static final Logger log = LogManager.getLogManager().getLogger(GuestRating.class);
     @FindBy(xpath = "//p[text()='Guest ratings']")
     private WebElement guestrating;
-    @FindBy(xpath = "//p[text()='4.5 & above']")
+    @FindBy(xpath = "//p[@class='sc-fqkvVR jJpeiQ']")
     private WebElement highrating;
     @FindBy(xpath = "//div/h4[text()='Apply']")
     private WebElement applybtn;
