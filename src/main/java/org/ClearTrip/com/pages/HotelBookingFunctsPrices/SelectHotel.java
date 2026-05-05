@@ -35,16 +35,16 @@ public class SelectHotel {
     @FindBy(xpath = "(//div[@class='sc-aXZVg gvuMKO c-pointer p-relative'])[1]")
     private WebElement firstHotel;
 
-    @FindBy(xpath = "//span[contains(text(),'Hob House')]")
+    @FindBy(xpath = "(//span[@class='sc-fqkvVR hDWMSz'])[1]")
     private WebElement firstEleNameText;
 
-    @FindBy(xpath = "//p[contains(text(),'₹7,907')]")
+    @FindBy(xpath = "(//p[@class='sc-fqkvVR hTAEcN'])[1]")
     private WebElement firstElePriceText;
 
-    @FindBy(xpath = "//h1[contains(text(),'Hob House')]")
+    @FindBy(xpath = "//h1[@class='sc-fqkvVR jXNGCQ']")
     private WebElement openedHotelNameText;
 
-    @FindBy(xpath = "//h2[contains(text(),'₹7,907')]")
+    @FindBy(xpath = "//h2[@class='sc-fqkvVR hFFAkE mr-1']")
     private WebElement openedHotelPriceText;
 
     public void clickHotel() {

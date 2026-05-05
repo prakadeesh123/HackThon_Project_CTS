@@ -1,59 +1,54 @@
 package org.ClearTrip.com.baseclass;
-
 import org.ClearTrip.com.utility.ConfigReader;
-import org.ClearTrip.com.utility.Screenshot;
+import org.ClearTrip.com.utility.LogUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.ITestResult;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 public class BaseClass {
-    public WebDriver driver;
-
+    public static WebDriver driver;
     @BeforeMethod
-    public void setUp(){
-        String browser = ConfigReader.getProperties("browser");
-        String url = ConfigReader.getProperties("baseurl");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
-
-        if(browser.equals("chrome")){
-            driver = new ChromeDriver(options);
-            driver.manage().window().maximize();
+    public void setUp() {
+        LogUtil.info("Starting browser setup");
+        String browserName = ConfigReader.getProperties("browser").toLowerCase();
+        switch (browserName) {
+            case "chrome":
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless=new");
+                chromeOptions.addArguments("--window-size=1920,1080");
+                chromeOptions.addArguments("--disable-notifications");
+                chromeOptions.addArguments("--disable-popup-blocking");
+                chromeOptions.addArguments("--disable-infobars");
+                chromeOptions.addArguments("--disable-gpu");
+                driver = new ChromeDriver(chromeOptions);
+                break;
+            case "edge":
+                EdgeOptions edgeOptions = new EdgeOptions();
+                edgeOptions.addArguments("--headless=new");
+                edgeOptions.addArguments("--window-size=1920,1080");
+                edgeOptions.addArguments("--disable-notifications");
+                edgeOptions.addArguments("--disable-popup-blocking");
+                edgeOptions.addArguments("--disable-infobars");
+                edgeOptions.addArguments("--disable-gpu");
+                driver = new EdgeDriver(edgeOptions);
+                break;
+            default:
+                throw new IllegalArgumentException(
+                        "Unsupported browser: " + browserName
+                );
         }
-        else if(browser.equals("edge")){
-            driver = new EdgeDriver();
-            driver.manage().window().maximize();
-        }
-        else{
-            driver = new FirefoxDriver();
-            driver.manage().window().maximize();
-        }
-        driver.get(url);
+        LogUtil.info("Launching application URL");
+        driver.get(ConfigReader.getProperties("baseurl"));
     }
-
     @AfterMethod
-    public void tearDown(ITestResult result){
-        try{
-            if(result.getStatus() == ITestResult.FAILURE){
-                Screenshot.takesScreenshot(driver,"_Failed");
-            }
-            else{
-                Screenshot.takesScreenshot(driver,"_Passed");
-            }
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        finally {
-//            if(driver != null){
-//                driver.quit();
-//            }
-
+    public void tearDown() {
+        if (driver != null) {
+            LogUtil.info("Closing browser");
+            driver.quit();
         }
     }
 }
+

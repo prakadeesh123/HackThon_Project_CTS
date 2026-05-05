@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class CheckAmenities {
@@ -32,19 +31,15 @@ public class CheckAmenities {
     }
 
     public boolean validateAmenities(){
-
         logger.info("Validating hotel amenities: Terrace and Library");
-
         boolean terraceVisible = wait.until(
                 ExpectedConditions.visibilityOf(terrace)
         ).isDisplayed();
         logger.info("Terrace visibility: {}", terraceVisible);
-
         boolean libraryVisible = wait.until(
                 ExpectedConditions.visibilityOf(library)
         ).isDisplayed();
         logger.info("Library visibility: {}", libraryVisible);
-
         if (terraceVisible && libraryVisible) {
             logger.info("Amenity validation PASSED");
             return true;

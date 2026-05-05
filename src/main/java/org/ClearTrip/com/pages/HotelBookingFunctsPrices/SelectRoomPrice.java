@@ -82,7 +82,7 @@ public class SelectRoomPrice {
             int discount1 = parsePrice(discountPrices1);
             int discount2 = parsePrice(discountPrices2);
 
-            int calculatedTotal = (price1 + price2 + price3+1) - (discount1 + discount2);
+            int calculatedTotal = (price1 + price2 + price3) - (discount1 + discount2);
             int actualTotalCost = parsePrice(totalPrice);
             System.out.println("oneroomprice :"+price1);
             System.out.println("HotelTaxes :"+price2);
