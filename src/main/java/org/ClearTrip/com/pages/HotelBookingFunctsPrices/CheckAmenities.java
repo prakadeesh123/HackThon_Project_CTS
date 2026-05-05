@@ -1,23 +1,22 @@
 package org.ClearTrip.com.pages.HotelBookingFunctsPrices;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
 public class CheckAmenities {
 
-    private static final Logger log =
-            LoggerFactory.getLogger(CheckAmenities.class);
-
     private WebDriver driver;
     private WebDriverWait wait;
+
+    private static final Logger logger = LogManager.getLogger(CheckAmenities.class);
 
     @FindBy(xpath = "//p[contains(text(),'Terrace')]")
     private WebElement terrace;
@@ -28,26 +27,30 @@ public class CheckAmenities {
     public CheckAmenities(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        PageFactory.initElements(driver,this);
-        log.info("CheckAmenities page initialized");
+        PageFactory.initElements(driver, this);
+        logger.info("CheckAmenities page initialized");
     }
 
     public boolean validateAmenities(){
 
-        log.info("Validating amenities availability");
+        logger.info("Validating hotel amenities: Terrace and Library");
 
-        boolean terraceVisible =
-                wait.until(ExpectedConditions.visibilityOf(terrace)).isDisplayed();
-        log.info("Terrace visibility status: {}", terraceVisible);
+        boolean terraceVisible = wait.until(
+                ExpectedConditions.visibilityOf(terrace)
+        ).isDisplayed();
+        logger.info("Terrace visibility: {}", terraceVisible);
 
-        boolean libraryVisible =
-                wait.until(ExpectedConditions.visibilityOf(library)).isDisplayed();
-        log.info("Library visibility status: {}", libraryVisible);
+        boolean libraryVisible = wait.until(
+                ExpectedConditions.visibilityOf(library)
+        ).isDisplayed();
+        logger.info("Library visibility: {}", libraryVisible);
 
-        boolean finalStatus = terraceVisible && libraryVisible;
-
-        log.info("Amenities validation result: {}", finalStatus);
-
-        return finalStatus;
+        if (terraceVisible && libraryVisible) {
+            logger.info("Amenity validation PASSED");
+            return true;
+        } else {
+            logger.error("Amenity validation FAILED");
+            return false;
+        }
     }
 }

@@ -1,6 +1,8 @@
 package org.ClearTrip.com.pages.HotelBookingFunctsPrices;
 
 import org.ClearTrip.com.baseclass.BaseClass;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -9,20 +11,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
 public class PassengerDetailsContinuePay extends BaseClass {
 
-    private static final Logger log =
-            LoggerFactory.getLogger(PassengerDetailsContinuePay.class);
-
     private WebDriver driver;
     private WebDriverWait wait;
 
-    @FindBy(xpath = "(//p[@class='sc-fqkvVR jJpeiQ'])[6]")
+    private static final Logger logger =
+            LogManager.getLogger(PassengerDetailsContinuePay.class);
+
+    @FindBy(xpath = "//p[contains(text(),'Mr.')]")
     private WebElement mr;
 
     @FindBy(css = "input#firstName")
@@ -47,7 +47,7 @@ public class PassengerDetailsContinuePay extends BaseClass {
     private WebElement continueToPayment;
 
     @FindBy(xpath = "//div[@class='flex flex-middle jc-center']/child::h4")
-    private WebElement QrCOde;
+    private WebElement qrCode;
 
     @FindBy(xpath = "//div[@dir='ltr']/child::span")
     private WebElement navigateToFinalPage;
@@ -55,68 +55,75 @@ public class PassengerDetailsContinuePay extends BaseClass {
     public PassengerDetailsContinuePay(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        PageFactory.initElements(driver,this);
-        log.info("PassengerDetailsContinuePay page initialized");
+        PageFactory.initElements(driver, this);
+        logger.info("PassengerDetailsContinuePay page initialized");
     }
 
     public void fillPassDetails(){
 
-        log.info("Starting passenger details entry");
+        logger.info("Starting passenger details entry");
 
         wait.until(ExpectedConditions.elementToBeClickable(mr)).click();
-        log.info("Selected title: Mr");
+        logger.info("Title selected: Mr");
 
-        wait.until(ExpectedConditions.visibilityOf(firstName)).sendKeys("Kolathuru");
-        log.info("Entered first name");
+        wait.until(ExpectedConditions.visibilityOf(firstName))
+                .sendKeys("Kolathuru");
+        logger.info("First name entered");
 
-        wait.until(ExpectedConditions.visibilityOf(lastName)).sendKeys("Yaswanth kumar");
-        log.info("Entered last name");
+        wait.until(ExpectedConditions.visibilityOf(lastName))
+                .sendKeys("Yaswanth kumar");
+        logger.info("Last name entered");
 
-        wait.until(ExpectedConditions.visibilityOf(mobile)).sendKeys("7093321464");
-        log.info("Entered mobile number");
+        wait.until(ExpectedConditions.visibilityOf(mobile))
+                .sendKeys("7093321464");
+        logger.info("Mobile number entered");
 
-        wait.until(ExpectedConditions.visibilityOf(email)).sendKeys("Yaswanth@gmail.com");
-        log.info("Entered email address");
+        wait.until(ExpectedConditions.visibilityOf(email))
+                .sendKeys("Yaswanth@gmail.com");
+        logger.info("Email entered");
 
-        wait.until(ExpectedConditions.visibilityOf(pan)).sendKeys("BLTPY6663A");
-        log.info("Entered PAN number");
+        wait.until(ExpectedConditions.visibilityOf(pan))
+                .sendKeys("BLTPY6663A");
+        logger.info("PAN entered");
 
-        WebElement panconsent = wait.until(
+        WebElement panConsentCheckbox = wait.until(
                 ExpectedConditions.presenceOfElementLocated(
                         By.cssSelector("input#panConsent.sc-tagGq.jUXzYv"))
         );
-        log.info("PAN consent checkbox located");
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", panConsentCheckbox);
+        logger.info("PAN consent checkbox clicked");
 
-        js.executeScript("arguments[0].click();", panconsent);
-        log.info("PAN consent checkbox clicked using JavaScript");
-
-        WebElement continueTopay =
+        WebElement continueToPayBtn =
                 wait.until(ExpectedConditions.elementToBeClickable(continueToPayment));
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});",
+                continueToPayBtn);
+        js.executeScript("arguments[0].click();", continueToPayBtn);
 
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});", continueTopay);
-        log.info("Scrolled to Continue to Payment button");
-
-        js.executeScript("arguments[0].click();", continueTopay);
-        log.info("Clicked Continue to Payment button");
+        logger.info("Clicked Continue to Payment button");
     }
 
     public boolean validatePaymentPage(){
 
-        log.info("Validating payment page");
+        logger.info("Validating payment page elements");
 
-        boolean a =
-                wait.until(ExpectedConditions.visibilityOf(navigateToFinalPage)).isDisplayed();
-        log.info("Navigation to final page visible: {}", a);
+        boolean navigationVisible =
+                wait.until(ExpectedConditions.visibilityOf(navigateToFinalPage))
+                        .isDisplayed();
+        logger.info("Final page navigation visible: {}", navigationVisible);
 
-        boolean b =
-                wait.until(ExpectedConditions.visibilityOf(QrCOde)).isDisplayed();
-        log.info("QR code visible: {}", b);
+        boolean qrCodeVisible =
+                wait.until(ExpectedConditions.visibilityOf(qrCode))
+                        .isDisplayed();
+        logger.info("QR Code visible: {}", qrCodeVisible);
 
-        boolean result = a == b;
-        log.info("Payment page validation result: {}", result);
-
-        return result;
+        if (navigationVisible && qrCodeVisible) {
+            logger.info("Payment page validation PASSED");
+            return true;
+        } else {
+            logger.error("Payment page validation FAILED");
+            return false;
+        }
     }
 }

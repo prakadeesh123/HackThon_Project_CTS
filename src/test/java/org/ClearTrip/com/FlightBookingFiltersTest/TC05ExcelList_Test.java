@@ -1,7 +1,7 @@
-package org.ClearTrip.com.Koushik;
+package org.ClearTrip.com.FlightBookingFiltersTest;
 
 import org.ClearTrip.com.baseclass.BaseClass;
-import org.ClearTrip.com.pages.Koushik.*;
+import org.ClearTrip.com.pages.FlightBookingFilters.*;
 import org.testng.annotations.Test;
 
 public class TC05ExcelList_Test extends BaseClass {
