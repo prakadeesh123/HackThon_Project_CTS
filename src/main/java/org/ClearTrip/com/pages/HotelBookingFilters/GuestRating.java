@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
 
-
 public class GuestRating {
 
     public WebDriver driver;
@@ -34,10 +33,11 @@ public class GuestRating {
 
     public GuestRating(WebDriver driver){
         this.driver=driver;
-        this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait=new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver , this);
         log.info("Guest Rating page is initialized");
     }
+
     public void GuestRating(){
         try {
 
@@ -51,14 +51,31 @@ public class GuestRating {
             log.info("High Guest rating filter is applied");
 
         } catch (Exception e) {
-
             e.printStackTrace();
+            log.info("Guest Rating is not applied");
 
         }
     }
     public boolean validaterating(){
-        return wait.until(ExpectedConditions.visibilityOf(filterapplied)).isDisplayed();
 
+        try{
 
+            log.info("Validating the rating filter is applied or not");
+            wait.until(ExpectedConditions.visibilityOf(filterapplied));
+
+            boolean elementdisplayed=filterapplied.isDisplayed();
+            log.info("Actual results matches expected result ");
+
+            return elementdisplayed;
+
+        }
+        catch (Exception e) {
+
+            e.printStackTrace();
+            log.info("Actual result mismatched expected result");
+
+            return false;
+
+        }
     }
 }

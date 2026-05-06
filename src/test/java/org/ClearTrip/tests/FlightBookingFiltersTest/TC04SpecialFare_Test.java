@@ -5,7 +5,9 @@ import org.ClearTrip.com.pages.FlightBookingFilters.Page_02_TravellersCount;
 import org.ClearTrip.com.pages.FlightBookingFilters.Page_01_EmptyDestination;
 import org.ClearTrip.com.pages.FlightBookingFilters.Page_03_FilterOnArrivalTime;
 import org.ClearTrip.com.pages.FlightBookingFilters.Page_04_Specialfare;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 public class TC04SpecialFare_Test extends BaseClass {
 
@@ -23,8 +25,12 @@ public class TC04SpecialFare_Test extends BaseClass {
         p0.click_search_btn();
         p3.specialfare();
         p3.setInside_search_btn();
-        String err_msg = p3.no_result();
-        System.out.print("The Result is: "+ err_msg);
+        p3.no_result();
 
+        String actualMsg = p3.getNoResultMessage();
+        String expectedMsg = "No flights found for MAA → PNQ";
+
+        Assert.assertEquals(actualMsg, expectedMsg,
+                "Special fare filter did not show the expected no-results message!");
     }
 }

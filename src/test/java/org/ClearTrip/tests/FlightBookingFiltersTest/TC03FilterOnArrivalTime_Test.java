@@ -4,6 +4,7 @@ import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.FlightBookingFilters.Page_02_TravellersCount;
 import org.ClearTrip.com.pages.FlightBookingFilters.Page_01_EmptyDestination;
 import org.ClearTrip.com.pages.FlightBookingFilters.Page_03_FilterOnArrivalTime;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TC03FilterOnArrivalTime_Test extends BaseClass {
@@ -21,6 +22,8 @@ public class TC03FilterOnArrivalTime_Test extends BaseClass {
         p0.click_search_btn();
         p2.filter_time();
 
+        // Assertion
+       // Assert.assertTrue(p2.isTimeFilterSelected(), "Evening checkbox filter was not applied!");
     }
 
 }

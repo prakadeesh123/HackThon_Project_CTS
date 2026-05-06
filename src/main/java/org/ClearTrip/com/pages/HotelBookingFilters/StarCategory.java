@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
 public class StarCategory {
+
     public static final Logger log= LoggerFactory.getLogger(StarCategory.class);
     public WebDriver driver;
     public WebDriverWait wait;
@@ -29,23 +30,52 @@ public class StarCategory {
     private WebElement filteradded;
 
     public StarCategory(WebDriver driver){
+
         this.driver=driver;
-        this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait=new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver , this);
         log.info("StarCategory page initialized");
+
     }
     public void apply_filter(){
         try {
+
             wait.until(ExpectedConditions.elementToBeClickable(filtercategory)).click();
+            log.info("Filter dropdown Selected ");
+
             wait.until(ExpectedConditions.elementToBeClickable(highrating)).click();
+            log.info("High rating is applied");
+
             wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
-        } catch (Exception e) {
+            log.info("All filters are applied");
+
+        }
+        catch (Exception e) {
+
             e.printStackTrace();
+            log.info("Filtes not yet applied");
             
         }
     }
     public boolean validaterating(){
-        return wait.until(ExpectedConditions.visibilityOf(filteradded)).isDisplayed();
+        try {
 
+            log.info("Validating the filters applied or not");
+            wait.until(ExpectedConditions.visibilityOf(filteradded));
+
+            boolean filter=filteradded.isDisplayed();
+            log.info("Actual results matches with Expected result");
+
+            return filter;
+
+        }
+        catch (Exception e){
+
+            e.printStackTrace();
+            log.info("Actual results mismatch with Expected result");
+
+            return false;
+
+        }
     }
 }
