@@ -5,9 +5,9 @@
     <test name="All Automations">
        <packages>
            <package name="org.ClearTrip.tests.HotelBookingFunctsPricesTest" />
-<!--           <package name="org.ClearTrip.tests.HotelBookingFiltersTest" />-->
-<!--           <package name="org.ClearTrip.tests.FlightBookingFiltersTest" />-->
-<!--           <package name="org.ClearTrip.tests.FlightBookingValidationTest" />-->
+           <package name="org.ClearTrip.tests.HotelBookingFiltersTest" />
+           <package name="org.ClearTrip.tests.FlightBookingFiltersTest" />
+           <package name="org.ClearTrip.tests.FlightBookingValidationTest" />
        </packages>
     </test>
 </suite>
