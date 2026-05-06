@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
 
-
 public class GuestRating {
 
     public WebDriver driver;
@@ -38,6 +37,7 @@ public class GuestRating {
         PageFactory.initElements(driver , this);
         log.info("Guest Rating page is initialized");
     }
+
     public void GuestRating(){
         try {
 
@@ -51,12 +51,14 @@ public class GuestRating {
             log.info("High Guest rating filter is applied");
 
         } catch (Exception e) {
-
             e.printStackTrace();
+            log.info("Guest Rating is not applied");
 
         }
     }
     public boolean validaterating(){
+
+        log.info("Validating the applied filter");
         return wait.until(ExpectedConditions.visibilityOf(filterapplied)).isDisplayed();
 
 

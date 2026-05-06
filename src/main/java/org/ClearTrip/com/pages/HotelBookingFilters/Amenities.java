@@ -12,10 +12,12 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 
 public class Amenities {
+
     public WebDriver driver;
     public WebDriverWait wait;
 
-    public static final Logger log=LoggerFactory.getLogger(Amenities.class);
+    public static final Logger log =LoggerFactory.getLogger(Amenities.class);
+
     @FindBy(xpath = "//p[text()='All filters']")
     private WebElement filterbtn;
 
@@ -35,9 +37,24 @@ public class Amenities {
         log.info("Amenities page is initialized");
     }
     public void Anemetiescheck(){
-        wait.until(ExpectedConditions.elementToBeClickable(filterbtn)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(airport)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(parking)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
+
+        try {
+
+            wait.until(ExpectedConditions.elementToBeClickable(filterbtn)).click();
+            log.info("Filter button opened");
+
+            wait.until(ExpectedConditions.elementToBeClickable(airport)).click();
+            log.info("Airport filter selected");
+
+            wait.until(ExpectedConditions.elementToBeClickable(parking)).click();
+            log.info("Parking filter is selected");
+
+            wait.until(ExpectedConditions.elementToBeClickable(applybtn)).click();
+            log.info("All filters applied successfully");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            log.info("Filters not applied");
+        }
     }
 }
