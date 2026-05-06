@@ -17,9 +17,7 @@ public class SelectHotel {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    private static final Logger logger =
-            LogManager.getLogger(SelectHotel.class);
-
+    private static final Logger logger = LogManager.getLogger(SelectHotel.class);
     private String expectedHotelName;
     private String expectedHotelPrice;
     private String actualHotelName;
