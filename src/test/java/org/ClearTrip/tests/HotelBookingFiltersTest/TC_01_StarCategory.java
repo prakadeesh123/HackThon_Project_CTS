@@ -21,7 +21,10 @@ public class TC_01_StarCategory extends BaseClass {
 
         StarCategory pg=new StarCategory(driver);
         pg.apply_filter();
-        Assert.assertTrue(pg.validaterating(),"Filter not applied");
+
+        Assert.assertTrue(
+                pg.validaterating(),
+                "Filter not applied");
     }
 }
 

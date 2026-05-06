@@ -66,13 +66,13 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest -->
-      <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC05ExcelList_Test">
+      <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="excel_task"/>
         </methods>
-      </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC05ExcelList_Test -->
+      </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test -->
       <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals">
         <methods>
           <include name="Dealfilter"/>

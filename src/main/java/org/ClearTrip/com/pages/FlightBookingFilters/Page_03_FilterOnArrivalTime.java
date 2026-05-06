@@ -9,17 +9,20 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Page_03_FilterOnArrivalTime {
 
     private WebDriver driver;
     private WebDriverWait wait;
+    public static final Logger log = LoggerFactory.getLogger(Page_03_FilterOnArrivalTime.class);
 
-    public Page_03_FilterOnArrivalTime(WebDriver driver)
-    {
+    public Page_03_FilterOnArrivalTime(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
+        log.info("Page_03_FilterOnArrivalTime initialized");
     }
 
     @FindBy(xpath = "//span[contains(text(),'Adult')]/following-sibling::span//*[local-name()='svg']")
@@ -31,19 +34,25 @@ public class Page_03_FilterOnArrivalTime {
     @FindBy(xpath = "//p[normalize-space(text())='Landing in Pune']/following::input /following::p[normalize-space(text())='Evening']")
     private WebElement time_filter;
 
-    public void filter_time()
-    {
+    public void filter_time() {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(time_filter)).click();
+            log.info("Evening time filter applied");
         } catch (ElementClickInterceptedException e) {
-            // Fallback: force click with JS
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", time_filter);
+            log.info("Evening time filter applied via JS fallback");
         }
     }
 
-    public void setBusiness_class()
-    {
+    public void setBusiness_class() {
         wait.until(ExpectedConditions.elementToBeClickable(travellers_dropdown)).click();
         wait.until(ExpectedConditions.elementToBeClickable(business_class)).click();
+        log.info("Business class selected");
+    }
+
+    public boolean isTimeFilterSelected() {
+        boolean selected = wait.until(ExpectedConditions.visibilityOf(time_filter)).isSelected();
+        log.info("Evening time filter selected state: {}", selected);
+        return selected;
     }
 }

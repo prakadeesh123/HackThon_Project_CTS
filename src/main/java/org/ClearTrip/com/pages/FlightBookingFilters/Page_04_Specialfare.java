@@ -5,12 +5,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.Duration;
 
 public class Page_04_Specialfare {
 
     private WebDriver driver;
     private WebDriverWait wait;
+
+    public static final Logger log = LoggerFactory.getLogger(Page_04_Specialfare.class);
 
     public Page_04_Specialfare(WebDriver driver)
     {
@@ -38,9 +43,15 @@ public class Page_04_Specialfare {
         wait.until(ExpectedConditions.elementToBeClickable(inside_search_btn)).click();
     }
 
-    public String no_result()
+    public void no_result()
     {
+
+        log.info("The Result is: "+ wait.until(ExpectedConditions.visibilityOf(no_result)).getText());
+    }
+
+    public String getNoResultMessage() {
         return wait.until(ExpectedConditions.visibilityOf(no_result)).getText();
     }
+
 
 }
