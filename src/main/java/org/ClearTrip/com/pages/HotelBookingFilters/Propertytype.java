@@ -39,7 +39,7 @@ public class Propertytype {
     public Propertytype(WebDriver driver){
 
         this.driver=driver;
-        this.wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+        this.wait=new WebDriverWait(driver, Duration.ofSeconds(25));
         PageFactory.initElements(driver,this);
         log.info("Property Type page is initialized");
 
