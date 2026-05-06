@@ -2,9 +2,10 @@ package org.ClearTrip.tests.FlightBookingFiltersTest;
 
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.FlightBookingFilters.*;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC05ExcelList_Test extends BaseClass {
+public class TC05AirlineFilter_Test extends BaseClass {
 
     @Test
     public void excel_task()
@@ -13,7 +14,7 @@ public class TC05ExcelList_Test extends BaseClass {
         Page_02_TravellersCount p1 = new Page_02_TravellersCount(driver);
         Page_03_FilterOnArrivalTime p2 = new Page_03_FilterOnArrivalTime(driver);
         Page_04_Specialfare p3 = new Page_04_Specialfare(driver);
-        Page_05_ExcelList p4 = new Page_05_ExcelList(driver);
+        Page_05_AirlineFilter p4 = new Page_05_AirlineFilter(driver);
 
         p0.closePopUp();
         p1.enter_tripdetails("Chennai","New Delhi");
@@ -23,5 +24,10 @@ public class TC05ExcelList_Test extends BaseClass {
         p0.click_search_btn();
         p4.airline_checkbox();
 
+      //  Assert.assertTrue(p4.isAirIndiaSelected(), "Air India checkbox should be selected!");
+      // Assert.assertTrue(p4.isIndigoSelected(), "IndiGo checkbox should be selected!");
     }
-}
+
+
+    }
+
