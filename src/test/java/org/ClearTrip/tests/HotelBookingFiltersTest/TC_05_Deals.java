@@ -6,8 +6,10 @@ import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
 import org.testng.annotations.Test;
 
 public class TC_05_Deals extends BaseClass {
+
     @Test
     public void Dealfilter(){
+
         FilterHotelsInNiarobia fn=new FilterHotelsInNiarobia(driver);
         fn.filterHotel();
 
