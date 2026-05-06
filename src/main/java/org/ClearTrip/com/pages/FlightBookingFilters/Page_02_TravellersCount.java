@@ -15,12 +15,11 @@ import java.time.Duration;
 public class Page_02_TravellersCount {
     private WebDriver driver;
     private WebDriverWait wait;
-
     public static final Logger log = LoggerFactory.getLogger(Page_02_TravellersCount.class);
 
     public Page_02_TravellersCount(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
         log.info("Page_02_TravellersCount initialized");
     }
@@ -64,17 +63,14 @@ public class Page_02_TravellersCount {
     public void increase_travellers_count(int adult, int child, int infant) {
         wait.until(ExpectedConditions.elementToBeClickable(travellers_dropdown)).click();
         log.info("Travellers dropdown opened");
-
         for (int i = 0; i < adult; i++) {
             wait.until(ExpectedConditions.elementToBeClickable(adult_plus)).click();
         }
         log.info("Adults increased by {}", adult);
-
         for (int i = 0; i < child; i++) {
             wait.until(ExpectedConditions.elementToBeClickable(child_plus)).click();
         }
         log.info("Children increased by {}", child);
-
         for (int i = 0; i < infant; i++) {
             wait.until(ExpectedConditions.elementToBeClickable(infant_plus)).click();
         }

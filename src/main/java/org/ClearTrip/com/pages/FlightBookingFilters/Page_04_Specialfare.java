@@ -14,13 +14,12 @@ public class Page_04_Specialfare {
 
     private WebDriver driver;
     private WebDriverWait wait;
-
     public static final Logger log = LoggerFactory.getLogger(Page_04_Specialfare.class);
 
     public Page_04_Specialfare(WebDriver driver)
     {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
     }
 
@@ -45,13 +44,10 @@ public class Page_04_Specialfare {
 
     public void no_result()
     {
-
         log.info("The Result is: "+ wait.until(ExpectedConditions.visibilityOf(no_result)).getText());
     }
 
     public String getNoResultMessage() {
         return wait.until(ExpectedConditions.visibilityOf(no_result)).getText();
     }
-
-
 }

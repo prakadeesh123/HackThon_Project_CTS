@@ -32,7 +32,7 @@ public class StarCategory {
     public StarCategory(WebDriver driver){
 
         this.driver=driver;
-        this.wait=new WebDriverWait(driver, Duration.ofSeconds(15));
+        this.wait=new WebDriverWait(driver, Duration.ofSeconds(20));
         PageFactory.initElements(driver , this);
         log.info("StarCategory page initialized");
 
