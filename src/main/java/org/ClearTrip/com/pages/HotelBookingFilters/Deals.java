@@ -29,9 +29,12 @@ public class Deals {
     @FindBy(xpath = "//span[text()='Jackpot deals']")
     private WebElement jackpotdeal;
 
+    @FindBy(xpath = "//p[text()='Sort by: Price: Low to High']")
+    private WebElement validation;
+
     public Deals(WebDriver driver){
         this.driver=driver;
-        this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait=new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
         log.info("Deals page is initialized");
     }
@@ -54,6 +57,26 @@ public class Deals {
         catch(Exception e){
             e.printStackTrace();
             log.info("Filters not yet applied");
+        }
+    }
+    public boolean validation() {
+
+        try{
+            log.info("Validating the Expected result");
+            wait.until(ExpectedConditions.visibilityOf(validation));
+
+            boolean elementdisplayed =validation.isDisplayed();
+            log.info("Actual conditions met the expected conditions");
+
+            return elementdisplayed;
+
+        }
+        catch (Exception e) {
+
+            e.printStackTrace();
+            log.error("Actual conditions not met the expected conditions");
+
+            return false;
         }
     }
 

@@ -6,18 +6,24 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
-public class Page_03_FlightSearch{
+public class Page_03_FlightSearch {
 
     WebDriver driver;
     WebDriverWait wait;
+
+    public static final Logger log =
+            LoggerFactory.getLogger(Page_03_FlightSearch.class);
 
     public Page_03_FlightSearch(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
+        log.info("Page_03_FlightSearch page initialized");
     }
 
     @FindBy(xpath = "//input[@placeholder='Where from?']")
@@ -26,13 +32,13 @@ public class Page_03_FlightSearch{
     @FindBy(xpath = "//input[@placeholder='Where to?']")
     public WebElement Destination;
 
-    @FindBy(xpath = "//div//h4[normalize-space()=\"Search flights\"]")
+    @FindBy(xpath = "//div//h4[normalize-space()='Search flights']")
     public WebElement Button;
 
     @FindBy(xpath = "//p[contains(text(),'Round trip')]")
     private WebElement RoundTrip;
 
-    @FindBy(xpath = "//span[normalize-space()=\"1 Adult, Economy\"]")
+    @FindBy(xpath = "//span[normalize-space()='1 Adult, Economy']")
     private WebElement Filter;
 
     @FindBy(xpath = "(//*[name()='path' and @d='M16 9V23M9 16H23']/ancestor::button)[1]")
@@ -56,26 +62,48 @@ public class Page_03_FlightSearch{
     @FindBy(xpath = "//*[name()='path' and contains(@d,'M16.115')]/ancestor::div[@cursor='pointer']")
     private WebElement iconButton;
 
-    public void RoundTrip() throws InterruptedException {
+    public void RoundTrip() {
+        log.info("Selecting round trip flight options");
+
         wait.until(ExpectedConditions.elementToBeClickable(RoundTrip)).click();
+        log.info("Round trip selected");
+
         wait.until(ExpectedConditions.elementToBeClickable(Filter)).click();
+        log.info("Passenger filter opened");
+
         wait.until(ExpectedConditions.elementToBeClickable(Adult)).click();
+        log.info("Adult count increased");
+
         wait.until(ExpectedConditions.elementToBeClickable(Children)).click();
+        log.info("Children count increased");
+
         wait.until(ExpectedConditions.elementToBeClickable(Infant)).click();
+        log.info("Infant count increased");
+
         wait.until(ExpectedConditions.elementToBeClickable(Source)).click();
         wait.until(ExpectedConditions.elementToBeClickable(Chennai)).click();
+        log.info("Source selected as Chennai");
+
         wait.until(ExpectedConditions.elementToBeClickable(Destination)).click();
         wait.until(ExpectedConditions.elementToBeClickable(Mumbai)).click();
+        log.info("Destination selected as Mumbai");
+
         wait.until(ExpectedConditions.elementToBeClickable(NonStop)).click();
+        log.info("Non-stop filter applied");
+
         wait.until(ExpectedConditions.elementToBeClickable(Button)).click();
+        log.info("Search flights button clicked");
     }
 
     public boolean isIconDisplayed() {
         try {
-            return wait.until(ExpectedConditions.visibilityOf(iconButton)).isDisplayed();
+            boolean isDisplayed =
+                    wait.until(ExpectedConditions.visibilityOf(iconButton)).isDisplayed();
+            log.info("Flight search results icon displayed: {}", isDisplayed);
+            return isDisplayed;
         } catch (Exception e) {
+            log.error("Flight search results icon not displayed", e);
             return false;
         }
     }
-
 }

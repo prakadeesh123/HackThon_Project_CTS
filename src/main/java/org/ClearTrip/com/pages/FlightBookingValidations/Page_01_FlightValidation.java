@@ -9,6 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
@@ -17,10 +19,13 @@ public class Page_01_FlightValidation {
     WebDriver driver;
     WebDriverWait wait;
 
+     public static final Logger log = LoggerFactory.getLogger(Page_01_FlightValidation.class);
+
     public Page_01_FlightValidation(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
+        log.info("Page_01_FlightValidation page initialized");
     }
 
     @FindBy(xpath = "//*[local-name()='svg' and @data-testid='closeIcon']")
@@ -29,7 +34,7 @@ public class Page_01_FlightValidation {
     @FindBy(xpath = "//div[@class='closeit']")
     private WebElement PopUP;
 
-    @FindBy(xpath = "//div//p[normalize-space()=\"Hotels\"]")
+    @FindBy(xpath = "//div//p[normalize-space()='Hotels']")
     private WebElement Hotels;
 
     @FindBy(xpath = "//p[contains(text(),'Flights')]")
@@ -38,37 +43,44 @@ public class Page_01_FlightValidation {
     @FindBy(xpath = "//h2[contains(text(),'Book Domestic and International Flight Tickets at Lowest Airfares on Cleartrip')]")
     private WebElement Text;
 
-    public void closePopUp(){
+    public void closePopUp() {
+        log.info("Closing initial popup");
         wait.until(ExpectedConditions.elementToBeClickable(closePopUp)).click();
     }
-    public void PopUp(){
+
+    public void PopUp() {
+        log.info("Closing secondary popup");
         wait.until(ExpectedConditions.elementToBeClickable(PopUP)).click();
     }
-    public void ClickHotel(){
+
+    public void ClickHotel() {
+        log.info("Clicking on Hotels tab");
         wait.until(ExpectedConditions.elementToBeClickable(Hotels)).click();
     }
-    public void Flight(){
+
+    public void Flight() {
+        log.info("Clicking on Flights tab");
         wait.until(ExpectedConditions.elementToBeClickable(Flight)).click();
     }
 
     public void slowScrollDown() {
+        log.info("Performing slow scroll down");
 
         Actions actions = new Actions(driver);
-
         for (int i = 0; i < 3; i++) {
             actions.sendKeys(Keys.PAGE_DOWN).perform();
             try {
                 Thread.sleep(400);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                log.error("Scroll interrupted", e);
             }
         }
     }
 
-    public Boolean Text(){
-        return wait.until(ExpectedConditions.visibilityOf(Text)).isDisplayed();
+    public Boolean Text() {
+        boolean isDisplayed =
+                wait.until(ExpectedConditions.visibilityOf(Text)).isDisplayed();
+        log.info("Flight page heading displayed: {}", isDisplayed);
+        return isDisplayed;
     }
-
 }
-
-
