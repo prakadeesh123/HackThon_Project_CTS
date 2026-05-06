@@ -648,7 +648,7 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 ... Removed 24 stack frames]]>
     </failure>
   </testcase> <!-- validateSelectHotel -->
-  <testcase classname="org.ClearTrip.tests.FlightBookingFiltersTest.TC05ExcelList_Test" name="excel_task" time="17.678">
+  <testcase classname="org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test" name="excel_task" time="17.678">
     <failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element &amp;lt;svg data-testid=&amp;quot;closeIcon&amp;quot; class=&amp;quot; c-pointer c-neutral-900&amp;quot; width=&amp;quot;22&amp;quot; height=&amp;quot;22&amp;quot; viewBox=&amp;quot;0 0 24 24&amp;quot; fill=&amp;quot;none&amp;quot; xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot;&amp;gt;...&amp;lt;/svg&amp;gt; is not clickable at point (732, 21). Other element would receive the click: &amp;lt;h4 color=&amp;quot;#1A1A1A&amp;quot; text-decoration=&amp;quot;&amp;quot; font-size=&amp;quot;14px&amp;quot; font-style=&amp;quot;none&amp;quot; lineheight=&amp;quot;20px&amp;quot; font-weight=&amp;quot;600&amp;quot; class=&amp;quot;sc-gsTDHW dawiUr&amp;quot; css=&amp;quot;[object Object]&amp;quot;&amp;gt;...&amp;lt;/h4&amp;gt;
   (Session info: chrome=146.0.7680.178)
 Build info: version: &amp;apos;4.41.0&amp;apos;, revision: &amp;apos;9fc754f&amp;apos;
@@ -679,7 +679,7 @@ at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
 at org.ClearTrip.com.pages.FlightBookingFilters.Page_01_EmptyDestination.closePopUp(Page_01_EmptyDestination.java:37)
-at org.ClearTrip.tests.FlightBookingFiltersTest.TC05ExcelList_Test.excel_task(TC05ExcelList_Test.java:18)
+at org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test.excel_task(TC05ExcelList_Test.java:18)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
