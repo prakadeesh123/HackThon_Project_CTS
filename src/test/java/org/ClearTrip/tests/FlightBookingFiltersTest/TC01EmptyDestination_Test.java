@@ -13,9 +13,7 @@ public class TC01EmptyDestination_Test extends BaseClass {
         Page_01_EmptyDestination p0 = new Page_01_EmptyDestination(driver);
         Page_02_TravellersCount p1 = new Page_02_TravellersCount(driver);
 
-        // Step 1: Close popup + print error msg
         String error_msg = p0.destination_error();
-
         // Assertion
         Assert.assertEquals(error_msg, "Enter departure and arrival airports / cities",
                 "Error message did not match expected text!");

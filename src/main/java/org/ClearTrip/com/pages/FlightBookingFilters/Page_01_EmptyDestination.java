@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 public class Page_01_EmptyDestination {
     protected WebDriver driver;
     protected WebDriverWait wait;
-
     public static final Logger log = LoggerFactory.getLogger(Page_01_EmptyDestination.class);
 
     // Close popup button
@@ -31,7 +30,7 @@ public class Page_01_EmptyDestination {
 
     public Page_01_EmptyDestination(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
         log.info("Page_01_EmptyDestination initialized");
     }
