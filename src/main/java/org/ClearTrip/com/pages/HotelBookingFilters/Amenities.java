@@ -30,9 +30,16 @@ public class Amenities {
     @FindBy(xpath = "//button[@class='sc-kAyceB ZTUrw']")
     private WebElement applybtn;
 
+    @FindBy(xpath="//p[text()='Airport shuttle service']")
+    private WebElement dealvalidation1;
+
+    @FindBy(xpath = "//p[text()='Parking']")
+    private WebElement dealvalidation2;
+
+
     public Amenities(WebDriver driver){
         this.driver=driver;
-        this.wait=new WebDriverWait(driver , Duration.ofSeconds(10));
+        this.wait=new WebDriverWait(driver , Duration.ofSeconds(20));
         PageFactory.initElements(driver , this);
         log.info("Amenities page is initialized");
     }
@@ -55,6 +62,26 @@ public class Amenities {
         catch (Exception e) {
             e.printStackTrace();
             log.info("Filters not applied");
+        }
+    }
+    public boolean validation() {
+
+        try {
+
+            wait.until(ExpectedConditions.visibilityOf(dealvalidation1));
+            wait.until(ExpectedConditions.visibilityOf(dealvalidation2));
+
+            boolean isDeal1Displayed = dealvalidation1.isDisplayed();
+            boolean isDeal2Displayed = dealvalidation2.isDisplayed();
+
+            log.info("Airport Shuttle Service Displayed: " + isDeal1Displayed);
+            log.info("Parking Displayed: " + isDeal2Displayed);
+
+            return isDeal1Displayed && isDeal2Displayed;
+
+        } catch (Exception e) {
+            log.error("Deal validation failed", e);
+            return false;
         }
     }
 }

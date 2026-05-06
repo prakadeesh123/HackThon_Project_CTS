@@ -18,7 +18,10 @@ public class TC_02_GuestRating extends BaseClass {
 
         GuestRating gr=new GuestRating(driver);
         gr.GuestRating();
-        Assert.assertTrue(gr.validaterating(),"Filter not applied");
+
+        Assert.assertTrue(
+                gr.validaterating(),
+                "Filter not applied");
 
     }
 }

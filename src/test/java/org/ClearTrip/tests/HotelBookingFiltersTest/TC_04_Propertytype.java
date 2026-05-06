@@ -3,6 +3,7 @@ package org.ClearTrip.tests.HotelBookingFiltersTest;
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.HotelBookingFilters.Propertytype;
 import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TC_04_Propertytype extends BaseClass {
@@ -15,5 +16,9 @@ public class TC_04_Propertytype extends BaseClass {
 
         Propertytype pf=new Propertytype(driver);
         pf.applyproperties();
+
+        Assert.assertTrue(
+                pf.validation(),
+                "Filters not applied");
     }
 }
