@@ -31,6 +31,9 @@ public class Page_05_AirlineFilter {
     @FindBy(xpath = "//input[@type='checkbox']//following::p[normalize-space()='IndiGo'][1]")
     private WebElement indigo_checkbox;
 
+    @FindBy(xpath = "//p[normalize-space()='Flight Details']/preceding::p[normalize-space()='IndiGo'][1]")
+    private WebElement indigoFlightDetails;
+
     public void setNonstop_toggle() {
         wait.until(ExpectedConditions.elementToBeClickable(nonstop_toggle)).click();
         log.info("Non-stop toggle applied");
@@ -57,4 +60,15 @@ public class Page_05_AirlineFilter {
         log.info("IndiGo checkbox selected state: {}", selected);
         return selected;
     }
+
+
+    public boolean isIndigoFlightPresent() {
+        try {
+            boolean displayed = wait.until(ExpectedConditions.visibilityOf(indigoFlightDetails)).isDisplayed();
+            return displayed;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

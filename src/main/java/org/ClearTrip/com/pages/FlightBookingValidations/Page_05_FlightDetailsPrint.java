@@ -2,17 +2,16 @@ package org.ClearTrip.com.pages.FlightBookingValidations;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.time.Duration;
@@ -25,12 +24,18 @@ public class Page_05_FlightDetailsPrint {
     WebDriverWait wait;
     JavascriptExecutor js;
 
+    public static final Logger log =
+            LoggerFactory.getLogger(Page_05_FlightDetailsPrint.class);
+
     public Page_05_FlightDetailsPrint(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         this.js = (JavascriptExecutor) driver;
         PageFactory.initElements(driver, this);
+        log.info("Page_05_FlightDetailsPrint page initialized");
     }
+
+    // ======================= LOCATORS =======================
 
     @FindBy(xpath = "//input[@placeholder='Where from?']")
     private WebElement sourceInput;
@@ -57,35 +62,43 @@ public class Page_05_FlightDetailsPrint {
     private WebElement earlyMorningFilter;
 
     @FindBy(xpath = "(//div//p[normalize-space()='Night'])[1]")
-    private WebElement NightFilter;
+    private WebElement nightFilter;
 
     @FindBy(xpath = "(//div//p[normalize-space()='IndiGo'])[1]")
     private WebElement indigoFilter;
 
     @FindBy(xpath = "//p[normalize-space()='Price']")
-    private WebElement Price;
+    private WebElement priceSort;
+
+    // ======================= UTIL =======================
 
     private void jsScrollAndClick(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
         js.executeScript("arguments[0].click();", element);
+        log.info("Scrolled and clicked element using JavaScript");
     }
+
+    // ======================= EXCEL =======================
 
     private void writeToExcel(List<String[]> flightData) {
 
         String filePath = "testdata/FlightDetails.xlsx";
+        log.info("Writing {} flight records to Excel", flightData.size());
 
         Workbook workbook = new XSSFWorkbook();
         Sheet sheet = workbook.createSheet("Flight Details");
-        int rowNum = 0;
-        Row header = sheet.createRow(rowNum++);
+
         String[] headers = {
                 "Airline", "Flight Number", "Departure",
                 "Arrival", "Duration", "Refund Type", "Price"
         };
 
+        Row headerRow = sheet.createRow(0);
         for (int i = 0; i < headers.length; i++) {
-            header.createCell(i).setCellValue(headers[i]);
+            headerRow.createCell(i).setCellValue(headers[i]);
         }
+
+        int rowNum = 1;
         for (String[] data : flightData) {
             Row row = sheet.createRow(rowNum++);
             for (int i = 0; i < data.length; i++) {
@@ -96,52 +109,70 @@ public class Page_05_FlightDetailsPrint {
         try (FileOutputStream fos = new FileOutputStream(new File(filePath))) {
             workbook.write(fos);
             workbook.close();
+            log.info("Excel file created successfully at {}", filePath);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Failed to write Excel file", e);
         }
     }
 
-    public void FlightDetails() {
+    // ======================= MAIN LOGIC =======================
+
+    public int fetchAndSaveFlightDetails() {
+
+        log.info("Starting flight details extraction");
+
         wait.until(ExpectedConditions.elementToBeClickable(sourceInput)).click();
         wait.until(ExpectedConditions.elementToBeClickable(chennai)).click();
+
         wait.until(ExpectedConditions.elementToBeClickable(destinationInput)).click();
         wait.until(ExpectedConditions.elementToBeClickable(mumbai)).click();
+
         wait.until(ExpectedConditions.elementToBeClickable(departureDateField)).click();
         wait.until(ExpectedConditions.elementToBeClickable(departureDate)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
-        jsScrollAndClick(earlyMorningFilter);
-        jsScrollAndClick(NightFilter);
-        wait.until(ExpectedConditions.elementToBeClickable(indigoFilter)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(Price)).click();
 
-        List<WebElement> flightCards = wait.until(
-                ExpectedConditions.visibilityOfAllElementsLocatedBy(
-                        By.xpath("//div[contains(@class,'bg-white')]")
-                )
-        );
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+        log.info("Search flights clicked");
+
+        jsScrollAndClick(earlyMorningFilter);
+        jsScrollAndClick(nightFilter);
+
+        wait.until(ExpectedConditions.elementToBeClickable(indigoFilter)).click();
+        log.info("IndiGo filter applied");
+
+        wait.until(ExpectedConditions.elementToBeClickable(priceSort)).click();
+        log.info("Price sorting applied");
+
+        By flightCardLocator =
+                By.xpath("//div[contains(@class,'bg-white') and .//h2[contains(text(),'₹')]]");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(flightCardLocator));
+
+        List<WebElement> flightCards = driver.findElements(flightCardLocator);
+        log.info("Visible flight cards found: {}", flightCards.size());
 
         List<String[]> excelData = new ArrayList<>();
 
         for (WebElement flight : flightCards) {
             try {
-                String airline = flight.findElement(By.xpath(".//p[@font-weight='500']")).getText();
-                String flightNo = flight.findElement(By.xpath(".//p[@font-size='10px']")).getText();
-                String departTime = flight.findElements(By.xpath(".//p[@font-size='16px']")).get(0).getText();
-                String arriveTime = flight.findElements(By.xpath(".//p[@font-size='16px']")).get(1).getText();
-                String duration = flight.findElement(By.xpath(".//p[contains(text(),'h')]")).getText();
-                String price = flight.findElement(By.xpath(".//h2[contains(text(),'₹')]")).getText();
-                String refund = flight.findElement(By.xpath(".//p[contains(text(),'Refundable')]")).getText();
-
                 excelData.add(new String[]{
-                        airline, flightNo, departTime,
-                        arriveTime, duration, refund, price
+                        flight.findElement(By.xpath(".//p[@font-weight='500']")).getText(),
+                        flight.findElement(By.xpath(".//p[@font-size='10px']")).getText(),
+                        flight.findElements(By.xpath(".//p[@font-size='16px']")).get(0).getText(),
+                        flight.findElements(By.xpath(".//p[@font-size='16px']")).get(1).getText(),
+                        flight.findElement(By.xpath(".//p[contains(text(),'h')]")).getText(),
+                        flight.findElement(By.xpath(".//p[contains(text(),'Refundable')]")).getText(),
+                        flight.findElement(By.xpath(".//h2[contains(text(),'₹')]")).getText()
                 });
-
             } catch (Exception e) {
-                //
+                log.warn("Skipped one flight card due to missing data");
             }
         }
-        writeToExcel(excelData);
-    }
 
+        if (!excelData.isEmpty()) {
+            writeToExcel(excelData);
+        }
+
+        log.info("Total valid flights captured: {}", excelData.size());
+        return excelData.size();
+    }
 }

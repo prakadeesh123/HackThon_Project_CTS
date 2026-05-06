@@ -9,14 +9,23 @@ import org.testng.annotations.Test;
 public class TC05_FlightDetailsPrintTest extends BaseClass {
 
     @Test
-    public void FlightFilter() {
-        Page_01_FlightValidation p1 = new Page_01_FlightValidation(driver);
-        p1.closePopUp();
-        p1.PopUp();
+    public void FlightDetailsPrintTest() {
 
-        Page_05_FlightDetailsPrint p5 = new Page_05_FlightDetailsPrint(driver);
-        p5.FlightDetails();
+        Page_01_FlightValidation homePage =
+                new Page_01_FlightValidation(driver);
 
+        homePage.closePopUp();
+        homePage.PopUp();
+
+        Page_05_FlightDetailsPrint flightDetailsPage =
+                new Page_05_FlightDetailsPrint(driver);
+
+        int flightCount =
+                flightDetailsPage.fetchAndSaveFlightDetails();
+
+        Assert.assertTrue(
+                flightCount > 0,
+                "FAILED: No flight details were captured or written to Excel"
+        );
     }
-
 }
