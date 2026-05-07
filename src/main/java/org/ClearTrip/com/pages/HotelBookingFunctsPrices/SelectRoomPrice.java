@@ -17,7 +17,7 @@ public class SelectRoomPrice {
     @FindBy(css = "p.sc-fqkvVR.jJpeiQ.flex.flex-row.flex-middle")
     private WebElement selectRoomType;
 
-    @FindBy(xpath = "//p[contains(text(),'Deluxe Twin Room, 2 Twin Beds, Non Smoking')]")
+    @FindBy(xpath = "(//p[@class='sc-fqkvVR bwtGcK'])[5]")
     private WebElement roomTypeName;
 
     @FindBy(xpath = "(//button[@class='sc-kAyceB cWeWJs'])[1]")
@@ -44,7 +44,7 @@ public class SelectRoomPrice {
 
     public SelectRoomPrice(WebDriver driver){
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver,this);
     }
 

@@ -19,8 +19,6 @@ public class Screenshot {
         sourceFile.renameTo(targetFile);
         return testName.toString();
 
-
-
     }
 
 }

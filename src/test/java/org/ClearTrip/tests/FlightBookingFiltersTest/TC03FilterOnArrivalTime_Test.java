@@ -15,7 +15,6 @@ public class TC03FilterOnArrivalTime_Test extends BaseClass {
         Page_01_EmptyDestination p0 = new Page_01_EmptyDestination(driver);
         Page_02_TravellersCount p1 = new Page_02_TravellersCount(driver);
         Page_03_FilterOnArrivalTime p2 = new Page_03_FilterOnArrivalTime(driver);
-
         p0.closePopUp();
         p2.setBusiness_class();
         p1.enter_tripdetails("Chennai","Pune");
@@ -23,7 +22,6 @@ public class TC03FilterOnArrivalTime_Test extends BaseClass {
         p2.filter_time();
 
         // Assertion
-       // Assert.assertTrue(p2.isTimeFilterSelected(), "Evening checkbox filter was not applied!");
+       Assert.assertTrue(p2.isTimeRangeDisplayed(), "Evening checkbox filter was not applied!");
     }
-
 }

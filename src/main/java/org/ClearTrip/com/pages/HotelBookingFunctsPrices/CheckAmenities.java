@@ -14,10 +14,9 @@ public class CheckAmenities {
 
     private WebDriver driver;
     private WebDriverWait wait;
-
     private static final Logger logger = LogManager.getLogger(CheckAmenities.class);
 
-    @FindBy(xpath = "(//p[@class='sc-fqkvVR bwtGcK pl-3'])[6]")
+    @FindBy(xpath = "(//p[@class='sc-fqkvVR bwtGcK pl-3'])[1]")
     private WebElement terrace;
 
     @FindBy(xpath = "(//p[@class='sc-fqkvVR bwtGcK pl-3'])[2]")
@@ -29,6 +28,7 @@ public class CheckAmenities {
         PageFactory.initElements(driver, this);
         logger.info("CheckAmenities page initialized");
     }
+
     public boolean validateAmenities(){
         logger.info("Validating hotel amenities: Terrace and Library");
         boolean terraceVisible = wait.until(

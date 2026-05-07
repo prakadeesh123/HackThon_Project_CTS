@@ -18,6 +18,5 @@ public class CheckAmenitiesTest extends BaseClass {
         s.clickHotel();
         Assert.assertTrue(c.validateAmenities(),"validation failed");
 
-
     }
 }

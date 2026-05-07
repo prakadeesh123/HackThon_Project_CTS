@@ -2,6 +2,7 @@ package org.ClearTrip.com.pages.HotelBookingFunctsPrices;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,7 +21,7 @@ public class FilterHotelsInNiarobia {
     private static final Logger logger =
             LogManager.getLogger(FilterHotelsInNiarobia.class);
 
-    @FindBy(xpath = "(//div[@data-testid='loginPopup']/div/div)[2]")
+    @FindBy(xpath = "//div[@class='pb-1 px-1 flex flex-middle nmx-1']")
     private WebElement closePopUp;
 
     @FindBy(xpath = "//p[text()='Hotels']")
@@ -56,7 +57,9 @@ public class FilterHotelsInNiarobia {
 
         logger.info("Starting hotel filter for Nairobi");
 
-        wait.until(ExpectedConditions.elementToBeClickable(closePopUp)).click();
+        WebElement element = wait.until(ExpectedConditions.visibilityOf(closePopUp));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        element.click();
         logger.info("Popup closed");
 
         wait.until(ExpectedConditions.elementToBeClickable(hotelBtn)).click();
@@ -75,7 +78,6 @@ public class FilterHotelsInNiarobia {
     public boolean ValidateFilter() {
 
         logger.info("Validating hotel filter results");
-
         boolean locationVisible =
                 wait.until(ExpectedConditions.visibilityOf(validLocation)).isDisplayed();
         logger.info("Valid location displayed: {}", locationVisible);
