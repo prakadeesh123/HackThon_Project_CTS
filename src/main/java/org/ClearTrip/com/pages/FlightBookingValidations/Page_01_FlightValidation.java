@@ -28,7 +28,7 @@ public class Page_01_FlightValidation {
         log.info("Page_01_FlightValidation page initialized");
     }
 
-    @FindBy(xpath = "//*[local-name()='svg' and @data-testid='closeIcon']")
+    @FindBy(xpath = "//div[@class='pb-1 px-1 flex flex-middle nmx-1']")
     public WebElement closePopUp;
 
     @FindBy(xpath = "//div[@class='closeit']")

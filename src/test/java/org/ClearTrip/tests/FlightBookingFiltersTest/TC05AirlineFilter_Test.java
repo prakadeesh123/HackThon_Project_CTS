@@ -24,8 +24,8 @@ public class TC05AirlineFilter_Test extends BaseClass {
         p0.click_search_btn();
         p4.airline_checkbox();
 
-      //  Assert.assertTrue(p4.isAirIndiaSelected(), "Air India checkbox should be selected!");
-      // Assert.assertTrue(p4.isIndigoSelected(), "IndiGo checkbox should be selected!");
+        //Assertion
+        Assert.assertTrue(p4.isIndigoFlightPresent(), "IndiGo flight tied to Flight Details should be present!");
     }
 
 

@@ -21,12 +21,10 @@ public class TC02TravellersCount_Test extends BaseClass{
 
         p0.closePopUp();
         p1.increase_travellers_count(1,2,2);
-        p1.enter_tripdetails("MAA","PNQ");
+        p1.enter_tripdetails("Chennai","Pune");
         p0.click_search_btn();
-
         int actual_count = p1.actualtraveller();
         int expected_count = 6;
-
         if (actual_count == expected_count) {
             log.info("Traveller count matches: " + actual_count);
         } else {

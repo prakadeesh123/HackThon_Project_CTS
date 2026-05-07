@@ -19,10 +19,9 @@ public class PassengerDetailsContinuePay extends BaseClass {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    private static final Logger logger =
-            LogManager.getLogger(PassengerDetailsContinuePay.class);
+    private static final Logger logger = LogManager.getLogger(PassengerDetailsContinuePay.class);
 
-    @FindBy(xpath = "//p[contains(text(),'Mr.')]")
+    @FindBy(xpath = "(//p[@class='sc-fqkvVR jJpeiQ'])[8]")
     private WebElement mr;
 
     @FindBy(css = "input#firstName")
@@ -58,49 +57,35 @@ public class PassengerDetailsContinuePay extends BaseClass {
         PageFactory.initElements(driver, this);
         logger.info("PassengerDetailsContinuePay page initialized");
     }
-
     public void fillPassDetails(){
 
         logger.info("Starting passenger details entry");
-
         wait.until(ExpectedConditions.elementToBeClickable(mr)).click();
         logger.info("Title selected: Mr");
 
-        wait.until(ExpectedConditions.visibilityOf(firstName))
-                .sendKeys("Kolathuru");
+        wait.until(ExpectedConditions.visibilityOf(firstName)).sendKeys("Kolathuru");
         logger.info("First name entered");
 
-        wait.until(ExpectedConditions.visibilityOf(lastName))
-                .sendKeys("Yaswanth kumar");
+        wait.until(ExpectedConditions.visibilityOf(lastName)).sendKeys("Yaswanth kumar");
         logger.info("Last name entered");
 
-        wait.until(ExpectedConditions.visibilityOf(mobile))
-                .sendKeys("7093321464");
+        wait.until(ExpectedConditions.visibilityOf(mobile)).sendKeys("7093321464");
         logger.info("Mobile number entered");
 
-        wait.until(ExpectedConditions.visibilityOf(email))
-                .sendKeys("Yaswanth@gmail.com");
+        wait.until(ExpectedConditions.visibilityOf(email)).sendKeys("Yaswanth@gmail.com");
         logger.info("Email entered");
 
-        wait.until(ExpectedConditions.visibilityOf(pan))
-                .sendKeys("BLTPY6663A");
+        wait.until(ExpectedConditions.visibilityOf(pan)).sendKeys("BLTPY6663A");
         logger.info("PAN entered");
-
-        WebElement panConsentCheckbox = wait.until(
-                ExpectedConditions.presenceOfElementLocated(
-                        By.cssSelector("input#panConsent.sc-tagGq.jUXzYv"))
-        );
+        WebElement panConsentCheckbox = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("input#panConsent.sc-tagGq.jUXzYv")));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", panConsentCheckbox);
         logger.info("PAN consent checkbox clicked");
 
-        WebElement continueToPayBtn =
-                wait.until(ExpectedConditions.elementToBeClickable(continueToPayment));
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});",
-                continueToPayBtn);
+        WebElement continueToPayBtn = wait.until(ExpectedConditions.elementToBeClickable(continueToPayment));
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", continueToPayBtn);
         js.executeScript("arguments[0].click();", continueToPayBtn);
-
         logger.info("Clicked Continue to Payment button");
     }
 
@@ -108,14 +93,10 @@ public class PassengerDetailsContinuePay extends BaseClass {
 
         logger.info("Validating payment page elements");
 
-        boolean navigationVisible =
-                wait.until(ExpectedConditions.visibilityOf(navigateToFinalPage))
-                        .isDisplayed();
+        boolean navigationVisible = wait.until(ExpectedConditions.visibilityOf(navigateToFinalPage)).isDisplayed();
         logger.info("Final page navigation visible: {}", navigationVisible);
 
-        boolean qrCodeVisible =
-                wait.until(ExpectedConditions.visibilityOf(qrCode))
-                        .isDisplayed();
+        boolean qrCodeVisible = wait.until(ExpectedConditions.visibilityOf(qrCode)).isDisplayed();
         logger.info("QR Code visible: {}", qrCodeVisible);
 
         if (navigationVisible && qrCodeVisible) {

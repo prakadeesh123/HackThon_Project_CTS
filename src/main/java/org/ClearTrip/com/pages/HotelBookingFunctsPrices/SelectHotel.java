@@ -2,6 +2,7 @@ package org.ClearTrip.com.pages.HotelBookingFunctsPrices;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,9 +18,7 @@ public class SelectHotel {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    private static final Logger logger =
-            LogManager.getLogger(SelectHotel.class);
-
+    private static final Logger logger = LogManager.getLogger(SelectHotel.class);
     private String expectedHotelName;
     private String expectedHotelPrice;
     private String actualHotelName;
@@ -51,6 +50,8 @@ public class SelectHotel {
 
         try {
             logger.info("Attempting to select first hotel");
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(0, 30)");
 
             expectedHotelName =
                     wait.until(ExpectedConditions.visibilityOf(firstEleNameText)).getText();
@@ -72,13 +73,10 @@ public class SelectHotel {
                     break;
                 }
             }
-
             logger.info("Switched to hotel details page: {}", driver.getTitle());
 
-            actualHotelName =
-                    wait.until(ExpectedConditions.visibilityOf(openedHotelNameText)).getText();
-            actualHotelPrice =
-                    wait.until(ExpectedConditions.visibilityOf(openedHotelPriceText)).getText();
+            actualHotelName = wait.until(ExpectedConditions.visibilityOf(openedHotelNameText)).getText();
+            actualHotelPrice = wait.until(ExpectedConditions.visibilityOf(openedHotelPriceText)).getText();
 
             logger.info("Actual Hotel Name: {}", actualHotelName);
             logger.info("Actual Hotel Price: {}", actualHotelPrice);
@@ -91,12 +89,9 @@ public class SelectHotel {
     public boolean validateOpenedHotel() {
 
         logger.info("Validating opened hotel details");
-
         try {
-            boolean nameMatch =
-                    expectedHotelName.equals(actualHotelName);
-            boolean priceMatch =
-                    expectedHotelPrice.equals(actualHotelPrice);
+            boolean nameMatch = expectedHotelName.equals(actualHotelName);
+            boolean priceMatch = expectedHotelPrice.equals(actualHotelPrice);
 
             logger.info("Hotel name match: {}", nameMatch);
             logger.info("Hotel price match: {}", priceMatch);

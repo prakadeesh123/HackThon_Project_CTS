@@ -26,7 +26,6 @@ public class TC04SpecialFare_Test extends BaseClass {
         p3.specialfare();
         p3.setInside_search_btn();
         p3.no_result();
-
         String actualMsg = p3.getNoResultMessage();
         String expectedMsg = "No flights found for MAA → PNQ";
 

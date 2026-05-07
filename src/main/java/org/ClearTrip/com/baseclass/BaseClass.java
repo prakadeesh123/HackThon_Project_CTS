@@ -10,6 +10,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 public class BaseClass {
     public static WebDriver driver;
     @BeforeMethod
@@ -30,7 +31,7 @@ public class BaseClass {
                 break;
             case "edge":
                 EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.addArguments("--headless=new");
+//                edgeOptions.addArguments("--headless=new");
                 edgeOptions.addArguments("--window-size=1920,1080");
                 edgeOptions.addArguments("--disable-notifications");
                 edgeOptions.addArguments("--disable-popup-blocking");
@@ -39,24 +40,27 @@ public class BaseClass {
                 driver = new EdgeDriver(edgeOptions);
                 break;
             default:
-                throw new IllegalArgumentException(
-                        "Unsupported browser: " + browserName
-                );
+                throw new IllegalArgumentException("Unsupported browser: " + browserName);
         }
         LogUtil.info("Launching application URL");
         driver.get(ConfigReader.getProperties("baseurl"));
     }
     @AfterMethod
     public void tearDown(ITestResult result) {
-        if(result.getStatus() == ITestResult.FAILURE){
-            Screenshot.takesScreenshot(driver,"Testcase_Failed");
+        String methodName = result.getMethod().getMethodName();
+        String timestamp = new java.text.SimpleDateFormat("yyyyMMdd_HHmmss").format(new java.util.Date());
+        if (result.getStatus() == ITestResult.FAILURE) {
+            LogUtil.error("Test Failed: " + methodName);
+            Screenshot.takesScreenshot(driver, methodName + "_FAILED_" + timestamp);
         }
-        else if(result.getStatus() == ITestResult.SUCCESS){
-            Screenshot.takesScreenshot(driver,"Testcase_Success");
+        else if (result.getStatus() == ITestResult.SUCCESS) {
+            LogUtil.info("Test Passed: " + methodName);
+            Screenshot.takesScreenshot(driver, methodName + "_PASSED_" + timestamp);
         }
         if (driver != null) {
-            LogUtil.info("Closing browser");
-//            driver.quit();
+            LogUtil.info("Closing browser for: " + methodName);
+            driver.manage().deleteAllCookies();
+            driver.quit();
         }
     }
 }
