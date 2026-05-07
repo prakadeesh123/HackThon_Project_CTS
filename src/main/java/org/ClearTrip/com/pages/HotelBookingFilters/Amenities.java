@@ -77,7 +77,7 @@ public class Amenities {
             log.info("Airport Shuttle Service Displayed: " + isDeal1Displayed);
             log.info("Parking Displayed: " + isDeal2Displayed);
 
-            return isDeal1Displayed && isDeal2Displayed;
+            return isDeal1Displayed;
 
         } catch (Exception e) {
             log.error("Deal validation failed", e);

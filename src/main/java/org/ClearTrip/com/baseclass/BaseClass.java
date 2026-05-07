@@ -20,11 +20,6 @@ public class BaseClass {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
 //                chromeOptions.addArguments("--headless=new");
-                chromeOptions.addArguments("--window-size=1920,1080");
-                chromeOptions.addArguments("--disable-notifications");
-                chromeOptions.addArguments("--disable-popup-blocking");
-                chromeOptions.addArguments("--disable-infobars");
-                chromeOptions.addArguments("--disable-gpu");
                 driver = new ChromeDriver(chromeOptions);
                 driver.manage().window().maximize();
                 break;
@@ -33,7 +28,7 @@ public class BaseClass {
                 edgeOptions.addArguments("--headless=new");
                 edgeOptions.addArguments("--window-size=1920,1080");
                 edgeOptions.addArguments("--disable-notifications");
-                edgeOptions.addArguments("--disable-popup-blocking");
+//                edgeOptions.addArguments("--disable-popup-blocking");
                 edgeOptions.addArguments("--disable-infobars");
                 edgeOptions.addArguments("--disable-gpu");
                 driver = new EdgeDriver(edgeOptions);
@@ -56,7 +51,7 @@ public class BaseClass {
         }
         if (driver != null) {
             LogUtil.info("Closing browser");
-//            driver.quit();
+            driver.quit();
         }
     }
 }
