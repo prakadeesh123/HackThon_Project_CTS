@@ -1,5 +1,4 @@
 package org.ClearTrip.com.pages.FlightBookingFilters;
-
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

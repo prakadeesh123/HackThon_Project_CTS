@@ -47,7 +47,6 @@ public class SelectRoomPrice {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver,this);
     }
-
     public void clickBookRoom(){
         try {
             wait.until(ExpectedConditions.elementToBeClickable(selectRoomType)).click();
@@ -72,7 +71,6 @@ public class SelectRoomPrice {
         String cleaned = text.replaceAll("[^0-9]", "");
         return cleaned.isEmpty() ? 0 : Integer.parseInt(cleaned);
     }
-
     public boolean validatePrices(){
         try {
             int price1 = parsePrice(oneRoomOneNight);
@@ -84,17 +82,16 @@ public class SelectRoomPrice {
 
             int calculatedTotal = (price1 + price2 + price3) - (discount1 + discount2);
             int actualTotalCost = parsePrice(totalPrice);
+
             System.out.println("oneroomprice :"+price1);
             System.out.println("HotelTaxes :"+price2);
             System.out.println("ConvenFee :"+price3);
             System.out.println("Discout1 :"+discount1);
             System.out.println("disc2 :"+discount2);
-
             System.out.println("Calculated Total: " + calculatedTotal);
             System.out.println("Actual Total from UI: " + actualTotalCost);
 
             return calculatedTotal == actualTotalCost;
-
         } catch (Exception e) {
             System.err.println("Validation failed: " + e.getMessage());
             return false;

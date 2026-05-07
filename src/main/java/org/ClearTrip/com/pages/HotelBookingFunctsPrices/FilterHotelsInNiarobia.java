@@ -18,8 +18,7 @@ public class FilterHotelsInNiarobia {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    private static final Logger logger =
-            LogManager.getLogger(FilterHotelsInNiarobia.class);
+    private static final Logger logger = LogManager.getLogger(FilterHotelsInNiarobia.class);
 
     @FindBy(xpath = "//div[@class='pb-1 px-1 flex flex-middle nmx-1']")
     private WebElement closePopUp;
@@ -54,9 +53,7 @@ public class FilterHotelsInNiarobia {
     }
 
     public void filterHotel() {
-
         logger.info("Starting hotel filter for Nairobi");
-
         WebElement element = wait.until(ExpectedConditions.visibilityOf(closePopUp));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         element.click();
@@ -76,7 +73,6 @@ public class FilterHotelsInNiarobia {
     }
 
     public boolean ValidateFilter() {
-
         logger.info("Validating hotel filter results");
         boolean locationVisible =
                 wait.until(ExpectedConditions.visibilityOf(validLocation)).isDisplayed();

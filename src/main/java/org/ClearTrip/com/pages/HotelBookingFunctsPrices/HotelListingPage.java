@@ -17,13 +17,12 @@ public class HotelListingPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    private static final Logger logger =
-            LogManager.getLogger(HotelListingPage.class);
+    private static final Logger logger = LogManager.getLogger(HotelListingPage.class);
 
     @FindBy(css = "span.sc-fqkvVR.hDWMSz")
     private List<WebElement> hotelNames;
 
-    @FindBy(css = "span.price")  // ✅ UPDATE THIS LOCATOR
+    @FindBy(css = "span.price")
     private List<WebElement> prices;
 
     public HotelListingPage(WebDriver driver) {
@@ -34,45 +33,27 @@ public class HotelListingPage {
 
     public void storeHotelData() {
 
-        // ✅ Parent container for EACH hotel card (IMPORTANT)
         By hotelCardLocator = By.xpath("//div[@class='sc-aXZVg gvuMKO c-pointer p-relative']");
-        // ⚠️ Update this if needed after inspect
-
         wait.until(ExpectedConditions.presenceOfElementLocated(hotelCardLocator));
-
         List<WebElement> hotelCards = driver.findElements(hotelCardLocator);
-
         List<HotelData> hotelList = new ArrayList<>();
-
         for (WebElement card : hotelCards) {
 
             try {
-                // ✅ Find elements INSIDE the card (correct way)
-                String name = card.findElement(
-                                By.cssSelector("span.sc-fqkvVR.hDWMSz"))
-                        .getText();
-
-                String price = card.findElement(
-                                By.xpath("//p[@class='sc-fqkvVR hTAEcN']"))
-                        .getText();
-
+                String name = card.findElement(By.cssSelector("span.sc-fqkvVR.hDWMSz")).getText();
+                String price = card.findElement(By.xpath("//p[@class='sc-fqkvVR hTAEcN']")).getText();
                 hotelList.add(new HotelData(name, price));
 
             } catch (Exception e) {
                 System.out.println("Skipping one hotel card");
             }
         }
-
-        // ✅ DEBUG
         System.out.println("Captured hotels: " + hotelList.size());
-
         if (hotelList.isEmpty()) {
-            System.out.println("❌ No data captured. Fix locators.");
+            System.out.println(" No data captured. Fix locators.");
             return;
         }
-
         ExcelUtils.writeHotelData(hotelList);
-
-        System.out.println("✅ Data written to Excel");
+        System.out.println("Data written to Excel");
     }
 }

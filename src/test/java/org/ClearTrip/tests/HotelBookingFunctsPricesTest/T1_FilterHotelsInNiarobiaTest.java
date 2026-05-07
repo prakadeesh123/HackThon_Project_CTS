@@ -5,7 +5,7 @@ import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class FilterHotelsInNiarobiaTest extends BaseClass {
+public class T1_FilterHotelsInNiarobiaTest extends BaseClass {
     @Test
     public void assertionPerform(){
         FilterHotelsInNiarobia fN = new FilterHotelsInNiarobia(driver);

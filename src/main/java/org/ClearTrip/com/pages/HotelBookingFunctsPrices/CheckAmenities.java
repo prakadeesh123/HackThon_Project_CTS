@@ -31,14 +31,12 @@ public class CheckAmenities {
 
     public boolean validateAmenities(){
         logger.info("Validating hotel amenities: Terrace and Library");
-        boolean terraceVisible = wait.until(
-                ExpectedConditions.visibilityOf(terrace)
-        ).isDisplayed();
+        boolean terraceVisible = wait.until(ExpectedConditions.visibilityOf(terrace)).isDisplayed();
         logger.info("Terrace visibility: {}", terraceVisible);
-        boolean libraryVisible = wait.until(
-                ExpectedConditions.visibilityOf(library)
-        ).isDisplayed();
+
+        boolean libraryVisible = wait.until(ExpectedConditions.visibilityOf(library)).isDisplayed();
         logger.info("Library visibility: {}", libraryVisible);
+
         if (terraceVisible && libraryVisible) {
             logger.info("Amenity validation PASSED");
             return true;

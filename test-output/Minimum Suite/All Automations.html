@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>All Automations</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>18/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 06 17:52:02 IST 2026</td>
+<td>Started on:</td><td>Thu May 07 12:50:47 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>793 seconds (793904 ms)</td>
+<tr><td>Total time:</td><td>942 seconds (942801 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,120 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities.Amenities()'><b>Amenities</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities</td>
-<td><div><pre>java.lang.AssertionError:  Amenities filter is NOT applied correctly expected [true] but found [false]
-	at org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities.Amenities(TC_03_Amenities.java:20)
+<td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory.testclass()'><b>testclass</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //h1[text()=&apos;Showing hotels in Nairobi&apos;]&apos;
+(tried for 10 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia.ValidateFilter(FilterHotelsInNiarobia.java:85)
+	at org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory.testclass(TC_01_StarCategory.java:20)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace569302238", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace569302238'><pre>java.lang.AssertionError:  Amenities filter is NOT applied correctly expected [true] but found [false]
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[text()=&apos;Showing hotels in Nairobi&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [66712fcfb8288c5bd80e66d607b04792, findElement {value=//h1[text()=&apos;Showing hotels in Nairobi&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63470}, goog:processID: 416, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63470/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 66712fcfb8288c5bd80e66d607b04792
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 27 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1801878707", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1801878707'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //h1[text()=&apos;Showing hotels in Nairobi&apos;]&apos;
+(tried for 10 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia.ValidateFilter(FilterHotelsInNiarobia.java:85)
+	at org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory.testclass(TC_01_StarCategory.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[text()=&apos;Showing hotels in Nairobi&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [66712fcfb8288c5bd80e66d607b04792, findElement {value=//h1[text()=&apos;Showing hotels in Nairobi&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63470}, goog:processID: 416, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63470/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 66712fcfb8288c5bd80e66d607b04792
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 27 more
+</pre></div></td>
+<td>22</td>
+<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@67c33749</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype.propertyfilter()'><b>propertyfilter</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype</td>
+<td><div><pre>java.lang.AssertionError: Filters not applied expected [true] but found [false]
+	at org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype.propertyfilter(TC_04_Propertytype.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace145364322", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace145364322'><pre>java.lang.AssertionError: Filters not applied expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities.Amenities(TC_03_Amenities.java:20)
+	at org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype.propertyfilter(TC_04_Propertytype.java:20)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -114,36 +216,179 @@ function toggleAllBoxes() {
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 </pre></div></td>
-<td>36</td>
-<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@67c33749</td></tr>
+<td>38</td>
+<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@3b6ddd1d</td></tr>
 <tr>
-<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest.FlightValidation()'><b>FlightValidation</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[local-name()=&apos;svg&apos; and @data-testid=&apos;closeIcon&apos;]&quot;}.
+<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest.validatePassengerDCP()'><b>validatePassengerDCP</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@dir=&apos;ltr&apos;]/child::span&apos;
+(tried for 10 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at org.ClearTrip.com.pages.HotelBookingFunctsPrices.PassengerDetailsContinuePay.validatePaymentPage(PassengerDetailsContinuePay.java:96)
+	at org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest.validatePassengerDCP(T5_PassengerDetailsContinuePayTest.java:22)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@dir=&apos;ltr&apos;]/child::span&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [06992a69d86fd2c595bd352ada12910a, findElement {value=//div[@dir=&apos;ltr&apos;]/child::span, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57054}, goog:processID: 11980, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57054/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 06992a69d86fd2c595bd352ada12910a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 27 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2076326363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2076326363'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@dir=&apos;ltr&apos;]/child::span&apos;
+(tried for 10 seconds with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+	at org.ClearTrip.com.pages.HotelBookingFunctsPrices.PassengerDetailsContinuePay.validatePaymentPage(PassengerDetailsContinuePay.java:96)
+	at org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest.validatePassengerDCP(T5_PassengerDetailsContinuePayTest.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@dir=&apos;ltr&apos;]/child::span&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [06992a69d86fd2c595bd352ada12910a, findElement {value=//div[@dir=&apos;ltr&apos;]/child::span, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57054}, goog:processID: 11980, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57054/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 06992a69d86fd2c595bd352ada12910a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 27 more
+</pre></div></td>
+<td>139</td>
+<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest@1e683a3e</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest.validateSelectRoomPrice()'><b>validateSelectRoomPrice</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest</td>
+<td><div><pre>java.lang.AssertionError: Validation failed expected [true] but found [false]
+	at org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest.validateSelectRoomPrice(T4_SelectRoomPriceTest.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace778498493", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace778498493'><pre>java.lang.AssertionError: Validation failed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest.validateSelectRoomPrice(T4_SelectRoomPriceTest.java:20)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</pre></div></td>
+<td>48</td>
+<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest@15aab8c6</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest.FlightFilter()'><b>FlightFilter</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for org.ClearTrip.com.pages.FlightBookingValidations.Page_04_FlightFilter$$Lambda/0x000001e82c35b5e8@5b9ca528
 (tried for 15 seconds with 500 milliseconds interval)
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49240}, goog:processID: 3076, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49240/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b87890a48eca96910a8f36cd0a5de689
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54219}, goog:processID: 9716, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54219/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 590ca10a1d0c020f8d3d6f12606bb5dc
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at org.ClearTrip.com.pages.FlightBookingValidations.Page_01_FlightValidation.closePopUp(Page_01_FlightValidation.java:48)
-	at org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest.FlightValidation(TC02_InvalidDataTest.java:14)
+	at org.ClearTrip.com.pages.FlightBookingValidations.Page_04_FlightFilter.applyFlightFilterAndContinue(Page_04_FlightFilter.java:105)
+	at org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest.FlightFilter(TC04_FlightFilterTest.java:18)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1298780808", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1298780808'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[local-name()=&apos;svg&apos; and @data-testid=&apos;closeIcon&apos;]&quot;}.
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1329271270", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1329271270'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for org.ClearTrip.com.pages.FlightBookingValidations.Page_04_FlightFilter$$Lambda/0x000001e82c35b5e8@5b9ca528
 (tried for 15 seconds with 500 milliseconds interval)
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49240}, goog:processID: 3076, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49240/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b87890a48eca96910a8f36cd0a5de689
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54219}, goog:processID: 9716, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54219/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 590ca10a1d0c020f8d3d6f12606bb5dc
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-	at org.ClearTrip.com.pages.FlightBookingValidations.Page_01_FlightValidation.closePopUp(Page_01_FlightValidation.java:48)
-	at org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest.FlightValidation(TC02_InvalidDataTest.java:14)
+	at org.ClearTrip.com.pages.FlightBookingValidations.Page_04_FlightFilter.applyFlightFilterAndContinue(Page_04_FlightFilter.java:105)
+	at org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest.FlightFilter(TC04_FlightFilterTest.java:18)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -170,21 +415,56 @@ Session ID: b87890a48eca96910a8f36cd0a5de689
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 </pre></div></td>
-<td>15</td>
-<td>org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@437da279</td></tr>
+<td>27</td>
+<td>org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@942a29c</td></tr>
 <tr>
-<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest.validateSelectHotel()'><b>validateSelectHotel</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest</td>
-<td><div><pre>java.lang.AssertionError: Validation Failed expected [true] but found [false]
-	at org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest.validateSelectHotel(SelectHotelTest.java:16)
+<td title='org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test.excel_task()'><b>excel_task</b><br>Test class: org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1e61e0cb4dca5307b4b65e89356c976b, clickElement {id=f.57A5F72F0FA0B78F07627A87819C24D8.d.3A0E96A7FF617971BF124712A92089F3.e.116}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54133}, goog:processID: 24144, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54133/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1e61e0cb4dca5307b4b65e89356c976b)] -&gt; xpath: //p[contains(text(),&apos;New Delhi&apos;)]]
+Session ID: 1e61e0cb4dca5307b4b65e89356c976b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.ClearTrip.com.pages.FlightBookingFilters.Page_02_TravellersCount.enter_tripdetails(Page_02_TravellersCount.java:94)
+	at org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test.excel_task(TC05AirlineFilter_Test.java:20)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1676709791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1676709791'><pre>java.lang.AssertionError: Validation Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest.validateSelectHotel(SelectHotelTest.java:16)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1421378119", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1421378119'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1e61e0cb4dca5307b4b65e89356c976b, clickElement {id=f.57A5F72F0FA0B78F07627A87819C24D8.d.3A0E96A7FF617971BF124712A92089F3.e.116}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54133}, goog:processID: 24144, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54133/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1e61e0cb4dca5307b4b65e89356c976b)] -&gt; xpath: //p[contains(text(),&apos;New Delhi&apos;)]]
+Session ID: 1e61e0cb4dca5307b4b65e89356c976b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.ClearTrip.com.pages.FlightBookingFilters.Page_02_TravellersCount.enter_tripdetails(Page_02_TravellersCount.java:94)
+	at org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test.excel_task(TC05AirlineFilter_Test.java:20)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -211,8 +491,8 @@ Session ID: b87890a48eca96910a8f36cd0a5de689
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
 </pre></div></td>
-<td>10</td>
-<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest@20f5239f</td></tr>
+<td>0</td>
+<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@437da279</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -223,95 +503,80 @@ Session ID: b87890a48eca96910a8f36cd0a5de689
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest.validatePassengerDCP()'><b>validatePassengerDCP</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest</td>
+<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest.FlightDetailsPrintTest()'><b>FlightDetailsPrintTest</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest</td>
 <td></td>
-<td>32</td>
-<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest@49912c99</td></tr>
+<td>14</td>
+<td>org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@a38c7fe</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest.validateExcelSheet()'><b>validateExcelSheet</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest</td>
+<td></td>
+<td>13</td>
+<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest@4a7f959b</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating.testclass01()'><b>testclass01</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating</td>
+<td></td>
+<td>15</td>
+<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@3bf9ce3e</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test.filerArrivalTime()'><b>filerArrivalTime</b><br>Test class: org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test</td>
+<td></td>
+<td>13</td>
+<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@434a63ab</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest.assertionPerform()'><b>assertionPerform</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest</td>
+<td></td>
+<td>26</td>
+<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest@4e268090</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest.validateAmenities()'><b>validateAmenities</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest</td>
+<td></td>
+<td>16</td>
+<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest@20f5239f</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest.validateSelectHotel()'><b>validateSelectHotel</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest</td>
+<td></td>
+<td>18</td>
+<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest@49912c99</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities.Amenities()'><b>Amenities</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities</td>
+<td></td>
+<td>12</td>
+<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@f736069</td></tr>
 <tr>
 <td title='org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test.specialfare()'><b>specialfare</b><br>Test class: org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test</td>
 <td></td>
-<td>16</td>
-<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@d5b810e</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest.FlightValidation()'><b>FlightValidation</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest</td>
-<td></td>
-<td>8</td>
-<td>org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@47e2e487</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype.propertyfilter()'><b>propertyfilter</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype</td>
-<td></td>
-<td>10</td>
-<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@3bf9ce3e</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest.FlightPageValidation()'><b>FlightPageValidation</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest</td>
-<td></td>
-<td>18</td>
-<td>org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@6404f418</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test.excel_task()'><b>excel_task</b><br>Test class: org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test</td>
-<td></td>
-<td>12</td>
-<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@434a63ab</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory.testclass()'><b>testclass</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory</td>
-<td></td>
-<td>10</td>
-<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@1e683a3e</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest.validateAmenities()'><b>validateAmenities</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest</td>
-<td></td>
-<td>16</td>
-<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest@c03cf28</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest.FlightDetailsPrintTest()'><b>FlightDetailsPrintTest</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest</td>
-<td></td>
-<td>12</td>
-<td>org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@72e5a8e</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest.validateSelectRoomPrice()'><b>validateSelectRoomPrice</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest</td>
-<td></td>
 <td>23</td>
-<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest@15aab8c6</td></tr>
+<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@6404f418</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest.FlightValidation()'><b>FlightValidation</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest</td>
+<td></td>
+<td>0</td>
+<td>org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@4b0d79fc</td></tr>
 <tr>
 <td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals.Dealfilter()'><b>Dealfilter</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals</td>
 <td></td>
-<td>11</td>
-<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f736069</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest.assertionPerform()'><b>assertionPerform</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest</td>
-<td></td>
-<td>9</td>
-<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest@1ba9117e</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest.validateExcelSheet()'><b>validateExcelSheet</b><br>Test class: org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest</td>
-<td></td>
-<td>11</td>
-<td>org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest@1613674b</td></tr>
+<td>12</td>
+<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@1e04fa0a</td></tr>
 <tr>
 <td title='org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test.testCruiseFlow()'><b>testCruiseFlow</b><br>Test class: org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test</td>
 <td></td>
 <td>1</td>
-<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@3b6ddd1d</td></tr>
+<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@5ba3f27a</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest.FlightValidation()'><b>FlightValidation</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest</td>
+<td></td>
+<td>10</td>
+<td>org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@72e5a8e</td></tr>
+<tr>
+<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest.FlightPageValidation()'><b>FlightPageValidation</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest</td>
+<td></td>
+<td>24</td>
+<td>org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@47e2e487</td></tr>
 <tr>
 <td title='org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test.travellers_count()'><b>travellers_count</b><br>Test class: org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test</td>
 <td></td>
-<td>12</td>
-<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1e04fa0a</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating.testclass01()'><b>testclass01</b><br>Test class: org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating</td>
-<td></td>
-<td>11</td>
-<td>org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@4a7f959b</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test.filerArrivalTime()'><b>filerArrivalTime</b><br>Test class: org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test</td>
-<td></td>
-<td>11</td>
-<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@5ba3f27a</td></tr>
-<tr>
-<td title='org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest.FlightFilter()'><b>FlightFilter</b><br>Test class: org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest</td>
-<td></td>
-<td>15</td>
-<td>org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@4b0d79fc</td></tr>
+<td>13</td>
+<td>org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@d5b810e</td></tr>
 </table><p>
 </body>
 </html>

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class HotelListingPageTest extends BaseClass {
+public class T6_HotelListingPageTest extends BaseClass {
 
     @Test
     public void validateExcelSheet() {

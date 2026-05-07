@@ -3,27 +3,48 @@
 <suite name="Failed suite [Minimum Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="All Automations(failed)">
     <classes>
-      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities">
+      <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test">
         <methods>
           <include name="tearDown"/>
-          <include name="Amenities"/>
+          <include name="excel_task"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities -->
-      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest">
+      </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test -->
+      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="validateSelectHotel"/>
+          <include name="testclass"/>
         </methods>
-      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest -->
-      <class name="org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest">
+      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory -->
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest">
         <methods>
           <include name="tearDown"/>
-          <include name="FlightValidation"/>
+          <include name="setUp"/>
+          <include name="validateSelectRoomPrice"/>
+        </methods>
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest -->
+      <class name="org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="FlightFilter"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest -->
+      </class> <!-- org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest -->
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="validatePassengerDCP"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest -->
+      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="propertyfilter"/>
+        </methods>
+      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype -->
     </classes>
   </test> <!-- All Automations(failed) -->
 </suite> <!-- Failed suite [Minimum Suite] -->
