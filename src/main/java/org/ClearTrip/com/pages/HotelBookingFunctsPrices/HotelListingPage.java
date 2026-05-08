@@ -52,15 +52,15 @@ public class HotelListingPage {
                 hotelList.add(new HotelData(name, price));
 
             } catch (Exception e) {
-                System.out.println("Skipping one hotel card");
+                logger.info("Skipping one hotel card");
             }
         }
         System.out.println("Captured hotels: " + hotelList.size());
         if (hotelList.isEmpty()) {
-            System.out.println(" No data captured. Fix locators.");
+            logger.info(" No data captured. Fix locators.");
             return;
         }
         ExcelUtils.writeHotelData(hotelList);
-        System.out.println("Data written to Excel");
+        logger.info("Data written to Excel");
     }
 }
