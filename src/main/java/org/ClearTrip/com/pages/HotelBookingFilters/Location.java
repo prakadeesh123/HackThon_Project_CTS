@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.time.Duration;
 
@@ -16,7 +15,6 @@ public class Location {
     WebDriver driver;
     WebDriverWait wait;
 
-//    private static Logger log= LoggerFactory.getLogger(Location.class);
 
     @FindBy(xpath = "//p[text()='All filters']")
     private WebElement filterbtn;
