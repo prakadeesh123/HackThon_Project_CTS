@@ -18,9 +18,9 @@ public class FilterHotelsInNiarobia {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    private static final Logger logger =
-            LogManager.getLogger(FilterHotelsInNiarobia.class);
+    private static final Logger logger = LogManager.getLogger(FilterHotelsInNiarobia.class);
 
+    //Locators
     @FindBy(xpath = "//div[@class='pb-1 px-1 flex flex-middle nmx-1']")
     private WebElement closePopUp;
 
@@ -54,29 +54,31 @@ public class FilterHotelsInNiarobia {
     }
 
     public void filterHotel() {
+        try{
+            logger.info("Starting hotel filter for Nairobi");
+            WebElement element = wait.until(ExpectedConditions.visibilityOf(closePopUp));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            element.click();
+            logger.info("Popup closed");
 
-        logger.info("Starting hotel filter for Nairobi");
+            wait.until(ExpectedConditions.elementToBeClickable(hotelBtn)).click();
+            logger.info("Hotels tab clicked");
 
-        WebElement element = wait.until(ExpectedConditions.visibilityOf(closePopUp));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-        element.click();
-        logger.info("Popup closed");
+            wait.until(ExpectedConditions.visibilityOf(destination)).sendKeys("Nairobi");
+            logger.info("Entered destination: Nairobi");
 
-        wait.until(ExpectedConditions.elementToBeClickable(hotelBtn)).click();
-        logger.info("Hotels tab clicked");
+            wait.until(ExpectedConditions.elementToBeClickable(clickDestination)).click();
+            logger.info("Selected destination from dropdown");
 
-        wait.until(ExpectedConditions.visibilityOf(destination)).sendKeys("Nairobi");
-        logger.info("Entered destination: Nairobi");
-
-        wait.until(ExpectedConditions.elementToBeClickable(clickDestination)).click();
-        logger.info("Selected destination from dropdown");
-
-        wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
-        logger.info("Search button clicked");
+            wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
+            logger.info("Search button clicked");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
-
+    //Validating the filter
     public boolean ValidateFilter() {
-
         logger.info("Validating hotel filter results");
         boolean locationVisible =
                 wait.until(ExpectedConditions.visibilityOf(validLocation)).isDisplayed();

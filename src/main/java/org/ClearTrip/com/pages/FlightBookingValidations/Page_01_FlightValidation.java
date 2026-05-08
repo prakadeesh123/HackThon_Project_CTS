@@ -65,7 +65,6 @@ public class Page_01_FlightValidation {
 
     public void slowScrollDown() {
         log.info("Performing slow scroll down");
-
         Actions actions = new Actions(driver);
         for (int i = 0; i < 3; i++) {
             actions.sendKeys(Keys.PAGE_DOWN).perform();
@@ -76,7 +75,6 @@ public class Page_01_FlightValidation {
             }
         }
     }
-
     public Boolean Text() {
         boolean isDisplayed =
                 wait.until(ExpectedConditions.visibilityOf(Text)).isDisplayed();

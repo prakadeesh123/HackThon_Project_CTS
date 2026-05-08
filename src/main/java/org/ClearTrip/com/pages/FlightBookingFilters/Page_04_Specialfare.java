@@ -16,8 +16,7 @@ public class Page_04_Specialfare {
     private WebDriverWait wait;
     public static final Logger log = LoggerFactory.getLogger(Page_04_Specialfare.class);
 
-    public Page_04_Specialfare(WebDriver driver)
-    {
+    public Page_04_Specialfare(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         PageFactory.initElements(driver, this);
@@ -32,21 +31,15 @@ public class Page_04_Specialfare {
     @FindBy(xpath = "//h1[contains(text() , 'No flights found for MAA → PNQ')]")
     private WebElement no_result;
 
-    public void specialfare()
-    {
+    public void specialfare() {
         wait.until(ExpectedConditions.elementToBeClickable(student_opt)).click();
     }
-
-    public void setInside_search_btn()
-    {
+    public void setInside_search_btn() {
         wait.until(ExpectedConditions.elementToBeClickable(inside_search_btn)).click();
     }
-
-    public void no_result()
-    {
+    public void no_result() {
         log.info("The Result is: "+ wait.until(ExpectedConditions.visibilityOf(no_result)).getText());
     }
-
     public String getNoResultMessage() {
         return wait.until(ExpectedConditions.visibilityOf(no_result)).getText();
     }

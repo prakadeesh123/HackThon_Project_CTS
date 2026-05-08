@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="21" passed="18" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-06T17:52:02 IST" name="Minimum Suite" finished-at="2026-05-06T18:05:16 IST" duration-ms="793904">
+  <suite started-at="2026-05-08T09:02:20 IST" name="Minimum Suite" finished-at="2026-05-08T09:13:27 IST" duration-ms="666780">
     <groups>
     </groups>
-    <test started-at="2026-05-06T17:52:02 IST" name="All Automations" finished-at="2026-05-06T18:05:16 IST" duration-ms="793904">
+    <test started-at="2026-05-08T09:02:20 IST" name="All Automations" finished-at="2026-05-08T09:13:27 IST" duration-ms="666780">
       <class name="org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@6404f418]" started-at="2026-05-06T17:53:28 IST" name="setUp" finished-at="2026-05-06T17:53:46 IST" duration-ms="17826" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@47d9a273]" started-at="2026-05-08T09:03:53 IST" name="setUp" finished-at="2026-05-08T09:04:05 IST" duration-ms="12147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="FlightPageValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@6404f418]" started-at="2026-05-06T17:53:46 IST" name="FlightPageValidation" finished-at="2026-05-06T17:54:05 IST" duration-ms="18842" status="PASS">
+        <test-method signature="FlightPageValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@47d9a273]" started-at="2026-05-08T09:04:05 IST" name="FlightPageValidation" finished-at="2026-05-08T09:04:23 IST" duration-ms="18021" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FlightPageValidation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@6404f418]" started-at="2026-05-06T17:54:05 IST" name="tearDown" finished-at="2026-05-06T17:54:09 IST" duration-ms="3712" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@47d9a273]" started-at="2026-05-08T09:04:23 IST" name="tearDown" finished-at="2026-05-08T09:04:27 IST" duration-ms="4133" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=FlightPageValidation status=SUCCESS method=TC01_FlightValidationTest.FlightPageValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@6404f418] output={null}]]]>
+                <![CDATA[[TestResult name=FlightPageValidation status=SUCCESS method=TC01_FlightValidationTest.FlightPageValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest@47d9a273] output={null}]]]>
               </value>
             </param>
           </params>
@@ -27,79 +27,41 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingValidationTest.TC01_FlightValidationTest -->
-      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest@20f5239f]" started-at="2026-05-06T18:02:42 IST" name="setUp" finished-at="2026-05-06T18:02:54 IST" duration-ms="11680" status="PASS">
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest@247d8ae]" started-at="2026-05-08T09:04:27 IST" name="setUp" finished-at="2026-05-08T09:04:39 IST" duration-ms="11853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateSelectHotel()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest@20f5239f]" started-at="2026-05-06T18:02:54 IST" name="validateSelectHotel" finished-at="2026-05-06T18:03:04 IST" duration-ms="10238" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Validation Failed expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Validation Failed expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest.validateSelectHotel(SelectHotelTest.java:16)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="validateSelectHotel()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest@247d8ae]" started-at="2026-05-08T09:04:39 IST" name="validateSelectHotel" finished-at="2026-05-08T09:05:03 IST" duration-ms="24358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateSelectHotel -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest@20f5239f]" started-at="2026-05-06T18:03:04 IST" name="tearDown" finished-at="2026-05-06T18:03:09 IST" duration-ms="4385" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest@247d8ae]" started-at="2026-05-08T09:05:03 IST" name="tearDown" finished-at="2026-05-08T09:05:08 IST" duration-ms="4917" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateSelectHotel status=FAILURE method=SelectHotelTest.validateSelectHotel()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest@20f5239f] output={null}]]]>
+                <![CDATA[[TestResult name=validateSelectHotel status=SUCCESS method=T2_SelectHotelTest.validateSelectHotel()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest@247d8ae] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectHotelTest -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest -->
       <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f736069]" started-at="2026-05-06T18:03:09 IST" name="setUp" finished-at="2026-05-06T18:03:21 IST" duration-ms="12272" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f5acb9d]" started-at="2026-05-08T09:11:41 IST" name="setUp" finished-at="2026-05-08T09:11:51 IST" duration-ms="10725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Dealfilter()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f736069]" started-at="2026-05-06T18:03:21 IST" name="Dealfilter" finished-at="2026-05-06T18:03:33 IST" duration-ms="11672" status="PASS">
+        <test-method signature="Dealfilter()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f5acb9d]" started-at="2026-05-08T09:11:51 IST" name="Dealfilter" finished-at="2026-05-08T09:12:06 IST" duration-ms="14883" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Dealfilter -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f736069]" started-at="2026-05-06T18:03:33 IST" name="tearDown" finished-at="2026-05-06T18:03:38 IST" duration-ms="5397" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f5acb9d]" started-at="2026-05-08T09:12:06 IST" name="tearDown" finished-at="2026-05-08T09:12:14 IST" duration-ms="7584" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Dealfilter status=SUCCESS method=TC_05_Deals.Dealfilter()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f736069] output={null}]]]>
+                <![CDATA[[TestResult name=Dealfilter status=SUCCESS method=TC_05_Deals.Dealfilter()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals@f5acb9d] output={null}]]]>
               </value>
             </param>
           </params>
@@ -107,41 +69,20 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_05_Deals -->
-      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest@49912c99]" started-at="2026-05-06T18:00:15 IST" name="setUp" finished-at="2026-05-06T18:00:28 IST" duration-ms="13165" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validatePassengerDCP()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest@49912c99]" started-at="2026-05-06T18:00:28 IST" name="validatePassengerDCP" finished-at="2026-05-06T18:01:00 IST" duration-ms="32000" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatePassengerDCP -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest@49912c99]" started-at="2026-05-06T18:01:00 IST" name="tearDown" finished-at="2026-05-06T18:01:06 IST" duration-ms="5906" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validatePassengerDCP status=SUCCESS method=PassengerDetailsContinuePayTest.validatePassengerDCP()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest@49912c99] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.PassengerDetailsContinuePayTest -->
       <class name="org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@47e2e487]" started-at="2026-05-06T17:59:48 IST" name="setUp" finished-at="2026-05-06T18:00:00 IST" duration-ms="11974" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@783a467b]" started-at="2026-05-08T09:07:48 IST" name="setUp" finished-at="2026-05-08T09:07:59 IST" duration-ms="10964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="FlightValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@47e2e487]" started-at="2026-05-06T18:00:00 IST" name="FlightValidation" finished-at="2026-05-06T18:00:09 IST" duration-ms="8639" status="PASS">
+        <test-method signature="FlightValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@783a467b]" started-at="2026-05-08T09:07:59 IST" name="FlightValidation" finished-at="2026-05-08T09:08:09 IST" duration-ms="10053" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FlightValidation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@47e2e487]" started-at="2026-05-06T18:00:09 IST" name="tearDown" finished-at="2026-05-06T18:00:15 IST" duration-ms="5673" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@783a467b]" started-at="2026-05-08T09:08:09 IST" name="tearDown" finished-at="2026-05-08T09:08:12 IST" duration-ms="2773" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=FlightValidation status=SUCCESS method=TC03_FlightSearchTest.FlightValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@47e2e487] output={null}]]]>
+                <![CDATA[[TestResult name=FlightValidation status=SUCCESS method=TC03_FlightSearchTest.FlightValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest@783a467b] output={null}]]]>
               </value>
             </param>
           </params>
@@ -149,70 +90,41 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingValidationTest.TC03_FlightSearchTest -->
-      <class name="org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@437da279]" started-at="2026-05-06T17:55:29 IST" name="setUp" finished-at="2026-05-06T17:57:32 IST" duration-ms="123047" status="PASS">
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest@29d89d5d]" started-at="2026-05-08T09:06:23 IST" name="setUp" finished-at="2026-05-08T09:06:35 IST" duration-ms="12103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="FlightValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@437da279]" started-at="2026-05-06T17:57:32 IST" name="FlightValidation" finished-at="2026-05-06T17:57:48 IST" duration-ms="15282" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[local-name()='svg' and @data-testid='closeIcon']"}.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49240}, goog:processID: 3076, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49240/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b87890a48eca96910a8f36cd0a5de689]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[local-name()='svg' and @data-testid='closeIcon']"}.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49240}, goog:processID: 3076, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49240/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b87890a48eca96910a8f36cd0a5de689
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-at org.ClearTrip.com.pages.FlightBookingValidations.Page_01_FlightValidation.closePopUp(Page_01_FlightValidation.java:48)
-at org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest.FlightValidation(TC02_InvalidDataTest.java:14)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="validateAmenities()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest@29d89d5d]" started-at="2026-05-08T09:06:35 IST" name="validateAmenities" finished-at="2026-05-08T09:06:48 IST" duration-ms="13366" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FlightValidation -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@437da279]" started-at="2026-05-06T17:57:48 IST" name="tearDown" finished-at="2026-05-06T17:57:50 IST" duration-ms="2603" status="PASS">
+        </test-method> <!-- validateAmenities -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest@29d89d5d]" started-at="2026-05-08T09:06:48 IST" name="tearDown" finished-at="2026-05-08T09:06:52 IST" duration-ms="4131" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=FlightValidation status=FAILURE method=TC02_InvalidDataTest.FlightValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@437da279] output={null}]]]>
+                <![CDATA[[TestResult name=validateAmenities status=SUCCESS method=T3_CheckAmenitiesTest.validateAmenities()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest@29d89d5d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest -->
+      <class name="org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@59505b48]" started-at="2026-05-08T09:06:07 IST" name="setUp" finished-at="2026-05-08T09:06:19 IST" duration-ms="12494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="FlightValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@59505b48]" started-at="2026-05-08T09:06:19 IST" name="FlightValidation" finished-at="2026-05-08T09:06:20 IST" duration-ms="907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FlightValidation -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@59505b48]" started-at="2026-05-08T09:06:20 IST" name="tearDown" finished-at="2026-05-08T09:06:23 IST" duration-ms="2442" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FlightValidation status=SUCCESS method=TC02_InvalidDataTest.FlightValidation()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest@59505b48] output={null}]]]>
               </value>
             </param>
           </params>
@@ -221,19 +133,19 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingValidationTest.TC02_InvalidDataTest -->
       <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1e04fa0a]" started-at="2026-05-06T17:55:01 IST" name="setUp" finished-at="2026-05-06T17:55:14 IST" duration-ms="13374" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1de76cc7]" started-at="2026-05-08T09:05:38 IST" name="setUp" finished-at="2026-05-08T09:05:53 IST" duration-ms="14406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="travellers_count()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1e04fa0a]" started-at="2026-05-06T17:55:14 IST" name="travellers_count" finished-at="2026-05-06T17:55:26 IST" duration-ms="12312" status="PASS">
+        <test-method signature="travellers_count()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1de76cc7]" started-at="2026-05-08T09:05:53 IST" name="travellers_count" finished-at="2026-05-08T09:06:04 IST" duration-ms="11132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- travellers_count -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1e04fa0a]" started-at="2026-05-06T17:55:26 IST" name="tearDown" finished-at="2026-05-06T17:55:29 IST" duration-ms="3027" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1de76cc7]" started-at="2026-05-08T09:06:04 IST" name="tearDown" finished-at="2026-05-08T09:06:07 IST" duration-ms="3039" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=travellers_count status=SUCCESS method=TC02TravellersCount_Test.travellers_count()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1e04fa0a] output={null}]]]>
+                <![CDATA[[TestResult name=travellers_count status=SUCCESS method=TC02TravellersCount_Test.travellers_count()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test@1de76cc7] output={null}]]]>
               </value>
             </param>
           </params>
@@ -242,19 +154,82 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC02TravellersCount_Test -->
       <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@434a63ab]" started-at="2026-05-06T18:03:38 IST" name="setUp" finished-at="2026-05-06T18:03:50 IST" duration-ms="12151" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@67f639d3]" started-at="2026-05-08T09:12:14 IST" name="setUp" finished-at="2026-05-08T09:12:26 IST" duration-ms="11952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="excel_task()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@434a63ab]" started-at="2026-05-06T18:03:50 IST" name="excel_task" finished-at="2026-05-06T18:04:02 IST" duration-ms="12105" status="PASS">
+        <test-method signature="excel_task()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@67f639d3]" started-at="2026-05-08T09:12:26 IST" name="excel_task" finished-at="2026-05-08T09:12:27 IST" duration-ms="817" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [649c870d8bc3afd3975282b322f0b52d, clickElement {id=f.F3FE3BF1351836B46C36D5F025D4A3C3.d.1D073C3A9921EF5146915EC7252AB8AE.e.72}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60108}, goog:processID: 6524, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60108/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (649c870d8bc3afd3975282b322f0b52d)] -> xpath: //p[contains(text(),'New Delhi')]]
+Session ID: 649c870d8bc3afd3975282b322f0b52d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [649c870d8bc3afd3975282b322f0b52d, clickElement {id=f.F3FE3BF1351836B46C36D5F025D4A3C3.d.1D073C3A9921EF5146915EC7252AB8AE.e.72}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60108}, goog:processID: 6524, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60108/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (649c870d8bc3afd3975282b322f0b52d)] -> xpath: //p[contains(text(),'New Delhi')]]
+Session ID: 649c870d8bc3afd3975282b322f0b52d
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at org.ClearTrip.com.pages.FlightBookingFilters.Page_02_TravellersCount.enter_tripdetails(Page_02_TravellersCount.java:94)
+at org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test.excel_task(TC05AirlineFilter_Test.java:20)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- excel_task -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@434a63ab]" started-at="2026-05-06T18:04:02 IST" name="tearDown" finished-at="2026-05-06T18:04:07 IST" duration-ms="4510" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@67f639d3]" started-at="2026-05-08T09:12:27 IST" name="tearDown" finished-at="2026-05-08T09:12:30 IST" duration-ms="3638" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=excel_task status=SUCCESS method=TC05AirlineFilter_Test.excel_task()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@434a63ab] output={null}]]]>
+                <![CDATA[[TestResult name=excel_task status=FAILURE method=TC05AirlineFilter_Test.excel_task()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test@67f639d3] output={null}]]]>
               </value>
             </param>
           </params>
@@ -262,41 +237,20 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC05AirlineFilter_Test -->
-      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest@1ba9117e]" started-at="2026-05-06T17:54:09 IST" name="setUp" finished-at="2026-05-06T17:54:20 IST" duration-ms="10989" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="assertionPerform()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest@1ba9117e]" started-at="2026-05-06T17:54:20 IST" name="assertionPerform" finished-at="2026-05-06T17:54:29 IST" duration-ms="9415" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assertionPerform -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest@1ba9117e]" started-at="2026-05-06T17:54:29 IST" name="tearDown" finished-at="2026-05-06T17:54:33 IST" duration-ms="3699" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=assertionPerform status=SUCCESS method=FilterHotelsInNiarobiaTest.assertionPerform()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest@1ba9117e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.FilterHotelsInNiarobiaTest -->
       <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@3b6ddd1d]" started-at="2026-05-06T17:53:10 IST" name="setUp" finished-at="2026-05-06T17:53:23 IST" duration-ms="13093" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@6fd83fc1]" started-at="2026-05-08T09:03:37 IST" name="setUp" finished-at="2026-05-08T09:03:48 IST" duration-ms="11151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testCruiseFlow()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@3b6ddd1d]" started-at="2026-05-06T17:53:23 IST" name="testCruiseFlow" finished-at="2026-05-06T17:53:25 IST" duration-ms="1425" status="PASS">
+        <test-method signature="testCruiseFlow()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@6fd83fc1]" started-at="2026-05-08T09:03:48 IST" name="testCruiseFlow" finished-at="2026-05-08T09:03:49 IST" duration-ms="1510" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCruiseFlow -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@3b6ddd1d]" started-at="2026-05-06T17:53:25 IST" name="tearDown" finished-at="2026-05-06T17:53:28 IST" duration-ms="3370" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@6fd83fc1]" started-at="2026-05-08T09:03:49 IST" name="tearDown" finished-at="2026-05-08T09:03:53 IST" duration-ms="3388" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testCruiseFlow status=SUCCESS method=TC01EmptyDestination_Test.testCruiseFlow()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@3b6ddd1d] output={null}]]]>
+                <![CDATA[[TestResult name=testCruiseFlow status=SUCCESS method=TC01EmptyDestination_Test.testCruiseFlow()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test@6fd83fc1] output={null}]]]>
               </value>
             </param>
           </params>
@@ -304,20 +258,41 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC01EmptyDestination_Test -->
-      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@1e683a3e]" started-at="2026-05-06T17:52:42 IST" name="setUp" finished-at="2026-05-06T17:52:55 IST" duration-ms="13048" status="PASS">
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest@28f3b248]" started-at="2026-05-08T09:12:57 IST" name="setUp" finished-at="2026-05-08T09:13:14 IST" duration-ms="17277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testclass()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@1e683a3e]" started-at="2026-05-06T17:52:55 IST" name="testclass" finished-at="2026-05-06T17:53:05 IST" duration-ms="10427" status="PASS">
+        <test-method signature="validateExcelSheet()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest@28f3b248]" started-at="2026-05-08T09:13:14 IST" name="validateExcelSheet" finished-at="2026-05-08T09:13:22 IST" duration-ms="8198" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testclass -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@1e683a3e]" started-at="2026-05-06T17:53:05 IST" name="tearDown" finished-at="2026-05-06T17:53:10 IST" duration-ms="4896" status="PASS">
+        </test-method> <!-- validateExcelSheet -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest@28f3b248]" started-at="2026-05-08T09:13:22 IST" name="tearDown" finished-at="2026-05-08T09:13:27 IST" duration-ms="4671" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testclass status=SUCCESS method=TC_01_StarCategory.testclass()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@1e683a3e] output={null}]]]>
+                <![CDATA[[TestResult name=validateExcelSheet status=SUCCESS method=T6_HotelListingPageTest.validateExcelSheet()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest@28f3b248] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest -->
+      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@16a0ee18]" started-at="2026-05-08T09:02:57 IST" name="setUp" finished-at="2026-05-08T09:03:18 IST" duration-ms="20286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testclass()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@16a0ee18]" started-at="2026-05-08T09:03:18 IST" name="testclass" finished-at="2026-05-08T09:03:31 IST" duration-ms="13724" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testclass -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@16a0ee18]" started-at="2026-05-08T09:03:31 IST" name="tearDown" finished-at="2026-05-08T09:03:37 IST" duration-ms="5199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testclass status=SUCCESS method=TC_01_StarCategory.testclass()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory@16a0ee18] output={null}]]]>
               </value>
             </param>
           </params>
@@ -325,41 +300,20 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory -->
-      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest@15aab8c6]" started-at="2026-05-06T18:04:35 IST" name="setUp" finished-at="2026-05-06T18:04:49 IST" duration-ms="13279" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validateSelectRoomPrice()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest@15aab8c6]" started-at="2026-05-06T18:04:49 IST" name="validateSelectRoomPrice" finished-at="2026-05-06T18:05:12 IST" duration-ms="23417" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateSelectRoomPrice -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest@15aab8c6]" started-at="2026-05-06T18:05:12 IST" name="tearDown" finished-at="2026-05-06T18:05:16 IST" duration-ms="4195" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateSelectRoomPrice status=SUCCESS method=SelectRoomPriceTest.validateSelectRoomPrice()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest@15aab8c6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.SelectRoomPriceTest -->
       <class name="org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@72e5a8e]" started-at="2026-05-06T18:04:07 IST" name="setUp" finished-at="2026-05-06T18:04:19 IST" duration-ms="12181" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@3012646b]" started-at="2026-05-08T09:12:30 IST" name="setUp" finished-at="2026-05-08T09:12:42 IST" duration-ms="11352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="FlightDetailsPrintTest()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@72e5a8e]" started-at="2026-05-06T18:04:19 IST" name="FlightDetailsPrintTest" finished-at="2026-05-06T18:04:32 IST" duration-ms="12995" status="PASS">
+        <test-method signature="FlightDetailsPrintTest()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@3012646b]" started-at="2026-05-08T09:12:42 IST" name="FlightDetailsPrintTest" finished-at="2026-05-08T09:12:53 IST" duration-ms="11610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FlightDetailsPrintTest -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@72e5a8e]" started-at="2026-05-06T18:04:32 IST" name="tearDown" finished-at="2026-05-06T18:04:35 IST" duration-ms="3295" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@3012646b]" started-at="2026-05-08T09:12:53 IST" name="tearDown" finished-at="2026-05-08T09:12:57 IST" duration-ms="3368" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=FlightDetailsPrintTest status=SUCCESS method=TC05_FlightDetailsPrintTest.FlightDetailsPrintTest()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@72e5a8e] output={null}]]]>
+                <![CDATA[[TestResult name=FlightDetailsPrintTest status=SUCCESS method=TC05_FlightDetailsPrintTest.FlightDetailsPrintTest()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest@3012646b] output={null}]]]>
               </value>
             </param>
           </params>
@@ -367,62 +321,109 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingValidationTest.TC05_FlightDetailsPrintTest -->
-      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest@1613674b]" started-at="2026-05-06T17:57:50 IST" name="setUp" finished-at="2026-05-06T17:58:12 IST" duration-ms="21697" status="PASS">
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest@3c73951]" started-at="2026-05-08T09:10:55 IST" name="setUp" finished-at="2026-05-08T09:11:07 IST" duration-ms="11873" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateExcelSheet()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest@1613674b]" started-at="2026-05-06T17:58:12 IST" name="validateExcelSheet" finished-at="2026-05-06T17:58:24 IST" duration-ms="11901" status="PASS">
+        <test-method signature="validatePassengerDCP()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest@3c73951]" started-at="2026-05-08T09:11:07 IST" name="validatePassengerDCP" finished-at="2026-05-08T09:11:35 IST" duration-ms="28727" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@dir='ltr']/child::span'
+(tried for 10 seconds with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@dir='ltr']/child::span'
+(tried for 10 seconds with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
+at org.ClearTrip.com.pages.HotelBookingFunctsPrices.PassengerDetailsContinuePay.validatePaymentPage(PassengerDetailsContinuePay.java:99)
+at org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest.validatePassengerDCP(T5_PassengerDetailsContinuePayTest.java:22)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@dir='ltr']/child::span"}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5bd33c8af517ab8b5bc3f2f299296a28, findElement {using=xpath, value=//div[@dir='ltr']/child::span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\2481415\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57242}, goog:processID: 7180, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57242/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5bd33c8af517ab8b5bc3f2f299296a28
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:365)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:351)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:348)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+... 27 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateExcelSheet -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest@1613674b]" started-at="2026-05-06T17:58:24 IST" name="tearDown" finished-at="2026-05-06T17:58:28 IST" duration-ms="4603" status="PASS">
+        </test-method> <!-- validatePassengerDCP -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest@3c73951]" started-at="2026-05-08T09:11:35 IST" name="tearDown" finished-at="2026-05-08T09:11:41 IST" duration-ms="5477" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateExcelSheet status=SUCCESS method=HotelListingPageTest.validateExcelSheet()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest@1613674b] output={null}]]]>
+                <![CDATA[[TestResult name=validatePassengerDCP status=FAILURE method=T5_PassengerDetailsContinuePayTest.validatePassengerDCP()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest@3c73951] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.HotelListingPageTest -->
-      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest@c03cf28]" started-at="2026-05-06T17:52:02 IST" name="setUp" finished-at="2026-05-06T17:52:19 IST" duration-ms="16929" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validateAmenities()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest@c03cf28]" started-at="2026-05-06T17:52:19 IST" name="validateAmenities" finished-at="2026-05-06T17:52:36 IST" duration-ms="16277" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAmenities -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest@c03cf28]" started-at="2026-05-06T17:52:36 IST" name="tearDown" finished-at="2026-05-06T17:52:42 IST" duration-ms="6405" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateAmenities status=SUCCESS method=CheckAmenitiesTest.validateAmenities()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest@c03cf28] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.CheckAmenitiesTest -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest -->
       <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@d5b810e]" started-at="2026-05-06T18:01:36 IST" name="setUp" finished-at="2026-05-06T18:01:50 IST" duration-ms="14543" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@32502377]" started-at="2026-05-08T09:09:44 IST" name="setUp" finished-at="2026-05-08T09:09:55 IST" duration-ms="11767" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="specialfare()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@d5b810e]" started-at="2026-05-06T18:01:50 IST" name="specialfare" finished-at="2026-05-06T18:02:06 IST" duration-ms="16006" status="PASS">
+        <test-method signature="specialfare()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@32502377]" started-at="2026-05-08T09:09:55 IST" name="specialfare" finished-at="2026-05-08T09:10:20 IST" duration-ms="24745" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- specialfare -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@d5b810e]" started-at="2026-05-06T18:02:06 IST" name="tearDown" finished-at="2026-05-06T18:02:09 IST" duration-ms="3248" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@32502377]" started-at="2026-05-08T09:10:20 IST" name="tearDown" finished-at="2026-05-08T09:10:24 IST" duration-ms="3978" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=specialfare status=SUCCESS method=TC04SpecialFare_Test.specialfare()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@d5b810e] output={null}]]]>
+                <![CDATA[[TestResult name=specialfare status=SUCCESS method=TC04SpecialFare_Test.specialfare()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test@32502377] output={null}]]]>
               </value>
             </param>
           </params>
@@ -431,19 +432,19 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test -->
       <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@4a7f959b]" started-at="2026-05-06T17:54:33 IST" name="setUp" finished-at="2026-05-06T17:54:45 IST" duration-ms="12444" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@5562c41e]" started-at="2026-05-08T09:05:08 IST" name="setUp" finished-at="2026-05-08T09:05:22 IST" duration-ms="14026" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testclass01()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@4a7f959b]" started-at="2026-05-06T17:54:45 IST" name="testclass01" finished-at="2026-05-06T17:54:56 IST" duration-ms="11197" status="PASS">
+        <test-method signature="testclass01()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@5562c41e]" started-at="2026-05-08T09:05:22 IST" name="testclass01" finished-at="2026-05-08T09:05:33 IST" duration-ms="10748" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testclass01 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@4a7f959b]" started-at="2026-05-06T17:54:56 IST" name="tearDown" finished-at="2026-05-06T17:55:01 IST" duration-ms="4216" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@5562c41e]" started-at="2026-05-08T09:05:33 IST" name="tearDown" finished-at="2026-05-08T09:05:38 IST" duration-ms="5215" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testclass01 status=SUCCESS method=TC_02_GuestRating.testclass01()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@4a7f959b] output={null}]]]>
+                <![CDATA[[TestResult name=testclass01 status=SUCCESS method=TC_02_GuestRating.testclass01()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating@5562c41e] output={null}]]]>
               </value>
             </param>
           </params>
@@ -451,20 +452,41 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating -->
-      <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@5ba3f27a]" started-at="2026-05-06T17:59:22 IST" name="setUp" finished-at="2026-05-06T17:59:33 IST" duration-ms="11129" status="PASS">
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest@e1de817]" started-at="2026-05-08T09:02:21 IST" name="setUp" finished-at="2026-05-08T09:02:38 IST" duration-ms="17649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="filerArrivalTime()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@5ba3f27a]" started-at="2026-05-06T17:59:33 IST" name="filerArrivalTime" finished-at="2026-05-06T17:59:45 IST" duration-ms="11965" status="PASS">
+        <test-method signature="assertionPerform()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest@e1de817]" started-at="2026-05-08T09:02:38 IST" name="assertionPerform" finished-at="2026-05-08T09:02:51 IST" duration-ms="12727" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- filerArrivalTime -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@5ba3f27a]" started-at="2026-05-06T17:59:45 IST" name="tearDown" finished-at="2026-05-06T17:59:48 IST" duration-ms="3722" status="PASS">
+        </test-method> <!-- assertionPerform -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest@e1de817]" started-at="2026-05-08T09:02:51 IST" name="tearDown" finished-at="2026-05-08T09:02:57 IST" duration-ms="6353" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=filerArrivalTime status=SUCCESS method=TC03FilterOnArrivalTime_Test.filerArrivalTime()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@5ba3f27a] output={null}]]]>
+                <![CDATA[[TestResult name=assertionPerform status=SUCCESS method=T1_FilterHotelsInNiarobiaTest.assertionPerform()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest@e1de817] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest -->
+      <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@3c7f66c4]" started-at="2026-05-08T09:07:20 IST" name="setUp" finished-at="2026-05-08T09:07:31 IST" duration-ms="11907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="filerArrivalTime()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@3c7f66c4]" started-at="2026-05-08T09:07:31 IST" name="filerArrivalTime" finished-at="2026-05-08T09:07:45 IST" duration-ms="13110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filerArrivalTime -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@3c7f66c4]" started-at="2026-05-08T09:07:45 IST" name="tearDown" finished-at="2026-05-08T09:07:48 IST" duration-ms="3624" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=filerArrivalTime status=SUCCESS method=TC03FilterOnArrivalTime_Test.filerArrivalTime()[pri:0, instance:org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test@3c7f66c4] output={null}]]]>
               </value>
             </param>
           </params>
@@ -472,43 +494,43 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC03FilterOnArrivalTime_Test -->
-      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@3bf9ce3e]" started-at="2026-05-06T18:01:06 IST" name="setUp" finished-at="2026-05-06T18:01:19 IST" duration-ms="13423" status="PASS">
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest@3059cbc]" started-at="2026-05-08T09:08:12 IST" name="setUp" finished-at="2026-05-08T09:08:24 IST" duration-ms="11877" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="propertyfilter()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@3bf9ce3e]" started-at="2026-05-06T18:01:19 IST" name="propertyfilter" finished-at="2026-05-06T18:01:30 IST" duration-ms="10510" status="PASS">
+        <test-method signature="validateSelectRoomPrice()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest@3059cbc]" started-at="2026-05-08T09:08:24 IST" name="validateSelectRoomPrice" finished-at="2026-05-08T09:08:45 IST" duration-ms="21480" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- propertyfilter -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@3bf9ce3e]" started-at="2026-05-06T18:01:30 IST" name="tearDown" finished-at="2026-05-06T18:01:36 IST" duration-ms="5969" status="PASS">
+        </test-method> <!-- validateSelectRoomPrice -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest@3059cbc]" started-at="2026-05-08T09:08:45 IST" name="tearDown" finished-at="2026-05-08T09:08:50 IST" duration-ms="4790" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=propertyfilter status=SUCCESS method=TC_04_Propertytype.propertyfilter()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@3bf9ce3e] output={null}]]]>
+                <![CDATA[[TestResult name=validateSelectRoomPrice status=SUCCESS method=T4_SelectRoomPriceTest.validateSelectRoomPrice()[pri:0, instance:org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest@3059cbc] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype -->
-      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@67c33749]" started-at="2026-05-06T17:58:28 IST" name="setUp" finished-at="2026-05-06T17:58:40 IST" duration-ms="11759" status="PASS">
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest -->
+      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@a530d0a]" started-at="2026-05-08T09:08:50 IST" name="setUp" finished-at="2026-05-08T09:09:02 IST" duration-ms="11423" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Amenities()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@67c33749]" started-at="2026-05-06T17:58:40 IST" name="Amenities" finished-at="2026-05-06T17:59:16 IST" duration-ms="36013" status="FAIL">
+        <test-method signature="propertyfilter()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@a530d0a]" started-at="2026-05-08T09:09:02 IST" name="propertyfilter" finished-at="2026-05-08T09:09:39 IST" duration-ms="37159" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[ Amenities filter is NOT applied correctly expected [true] but found [false]]]>
+              <![CDATA[Filters not applied expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError:  Amenities filter is NOT applied correctly expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: Filters not applied expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities.Amenities(TC_03_Amenities.java:20)
+at org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype.propertyfilter(TC_04_Propertytype.java:20)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -539,33 +561,33 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Amenities -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@67c33749]" started-at="2026-05-06T17:59:16 IST" name="tearDown" finished-at="2026-05-06T17:59:22 IST" duration-ms="5291" status="PASS">
+        </test-method> <!-- propertyfilter -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@a530d0a]" started-at="2026-05-08T09:09:39 IST" name="tearDown" finished-at="2026-05-08T09:09:44 IST" duration-ms="4957" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Amenities status=FAILURE method=TC_03_Amenities.Amenities()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@67c33749] output={null}]]]>
+                <![CDATA[[TestResult name=propertyfilter status=FAILURE method=TC_04_Propertytype.propertyfilter()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype@a530d0a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_04_Propertytype -->
       <class name="org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@4b0d79fc]" started-at="2026-05-06T18:02:09 IST" name="setUp" finished-at="2026-05-06T18:02:24 IST" duration-ms="14105" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@121314f7]" started-at="2026-05-08T09:10:24 IST" name="setUp" finished-at="2026-05-08T09:10:35 IST" duration-ms="10659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="FlightFilter()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@4b0d79fc]" started-at="2026-05-06T18:02:24 IST" name="FlightFilter" finished-at="2026-05-06T18:02:39 IST" duration-ms="15664" status="PASS">
+        <test-method signature="FlightFilter()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@121314f7]" started-at="2026-05-08T09:10:35 IST" name="FlightFilter" finished-at="2026-05-08T09:10:51 IST" duration-ms="15734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FlightFilter -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@4b0d79fc]" started-at="2026-05-06T18:02:39 IST" name="tearDown" finished-at="2026-05-06T18:02:42 IST" duration-ms="3297" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@121314f7]" started-at="2026-05-08T09:10:51 IST" name="tearDown" finished-at="2026-05-08T09:10:55 IST" duration-ms="4078" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=FlightFilter status=SUCCESS method=TC04_FlightFilterTest.FlightFilter()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@4b0d79fc] output={null}]]]>
+                <![CDATA[[TestResult name=FlightFilter status=SUCCESS method=TC04_FlightFilterTest.FlightFilter()[pri:0, instance:org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest@121314f7] output={null}]]]>
               </value>
             </param>
           </params>
@@ -573,6 +595,27 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- org.ClearTrip.tests.FlightBookingValidationTest.TC04_FlightFilterTest -->
+      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@20ccf40b]" started-at="2026-05-08T09:06:52 IST" name="setUp" finished-at="2026-05-08T09:07:03 IST" duration-ms="11210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Amenities()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@20ccf40b]" started-at="2026-05-08T09:07:03 IST" name="Amenities" finished-at="2026-05-08T09:07:15 IST" duration-ms="12048" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Amenities -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@20ccf40b]" started-at="2026-05-08T09:07:15 IST" name="tearDown" finished-at="2026-05-08T09:07:20 IST" duration-ms="4172" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Amenities status=SUCCESS method=TC_03_Amenities.Amenities()[pri:0, instance:org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities@20ccf40b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities -->
     </test> <!-- All Automations -->
   </suite> <!-- Minimum Suite -->
 </testng-results>

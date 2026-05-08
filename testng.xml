@@ -2,6 +2,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Minimum Suite">
+    <listeners>
+        <listener class-name="org.ClearTrip.com.utility.ExtentReportManager"/>
+    </listeners>
     <test name="All Automations">
        <packages>
            <package name="org.ClearTrip.tests.HotelBookingFunctsPricesTest" />

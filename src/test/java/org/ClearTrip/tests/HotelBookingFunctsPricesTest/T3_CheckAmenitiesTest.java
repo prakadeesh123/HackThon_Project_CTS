@@ -1,18 +1,22 @@
 package org.ClearTrip.tests.HotelBookingFunctsPricesTest;
 
 import org.ClearTrip.com.baseclass.BaseClass;
+import org.ClearTrip.com.pages.HotelBookingFunctsPrices.CheckAmenities;
 import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
 import org.ClearTrip.com.pages.HotelBookingFunctsPrices.SelectHotel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SelectHotelTest extends BaseClass {
+public class T3_CheckAmenitiesTest extends BaseClass {
+
     @Test
-    public void validateSelectHotel(){
-        SelectHotel sH = new SelectHotel(driver);
+    public void validateAmenities(){
         FilterHotelsInNiarobia f = new FilterHotelsInNiarobia(driver);
+        SelectHotel s = new SelectHotel(driver);
+        CheckAmenities c = new CheckAmenities(driver);
         f.filterHotel();
-        sH.clickHotel();
-        Assert.assertTrue(sH.validateOpenedHotel(),"Validation Failed");
+        s.clickHotel();
+        Assert.assertTrue(c.validateAmenities(),"validation failed");
+
     }
 }
