@@ -14,18 +14,11 @@ public class T6_HotelListingPageTest extends BaseClass {
     @Test
     public void validateExcelSheet() {
 
-        FilterHotelsInNiarobia filterPage =
-                new FilterHotelsInNiarobia(driver);
-
+        FilterHotelsInNiarobia filterPage = new FilterHotelsInNiarobia(driver);
         filterPage.filterHotel();
-
-        HotelListingPage page =
-                new HotelListingPage(driver);
-
+        HotelListingPage page = new HotelListingPage(driver);
         page.storeHotelData();
-
         List<HotelData> data = ExcelUtils.readHotelData();
-
         Assert.assertTrue(!data.isEmpty(),
                 "Excel is empty");
     }

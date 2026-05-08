@@ -19,29 +19,36 @@ public class HotelListingPage {
 
     private static final Logger logger = LogManager.getLogger(HotelListingPage.class);
 
+    //Locators
     @FindBy(css = "span.sc-fqkvVR.hDWMSz")
     private List<WebElement> hotelNames;
 
     @FindBy(css = "span.price")
     private List<WebElement> prices;
 
+    @FindBy(xpath = "//div[@class='sc-aXZVg gvuMKO c-pointer p-relative']")
+    private List<WebElement> hotelCards;
+
+    @FindBy(css = "span.sc-fqkvVR.hDWMSz")
+    private WebElement namee;
+
+    @FindBy(xpath = "//p[@class='sc-fqkvVR hTAEcN']")
+    private WebElement pricee;
+
+    //Constructor
     public HotelListingPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
 
+    // StoreHotelData
     public void storeHotelData() {
-
-        By hotelCardLocator = By.xpath("//div[@class='sc-aXZVg gvuMKO c-pointer p-relative']");
-        wait.until(ExpectedConditions.presenceOfElementLocated(hotelCardLocator));
-        List<WebElement> hotelCards = driver.findElements(hotelCardLocator);
         List<HotelData> hotelList = new ArrayList<>();
         for (WebElement card : hotelCards) {
-
             try {
-                String name = card.findElement(By.cssSelector("span.sc-fqkvVR.hDWMSz")).getText();
-                String price = card.findElement(By.xpath("//p[@class='sc-fqkvVR hTAEcN']")).getText();
+                String name = namee.getText();
+                String price = pricee.getText();
                 hotelList.add(new HotelData(name, price));
 
             } catch (Exception e) {

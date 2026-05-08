@@ -47,22 +47,18 @@ public class SelectHotel {
     private WebElement openedHotelPriceText;
 
     public void clickHotel() {
-
         try {
             logger.info("Attempting to select first hotel");
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(0, 30)");
 
-            expectedHotelName =
-                    wait.until(ExpectedConditions.visibilityOf(firstEleNameText)).getText();
-            expectedHotelPrice =
-                    wait.until(ExpectedConditions.visibilityOf(firstElePriceText)).getText();
+            expectedHotelName = wait.until(ExpectedConditions.visibilityOf(firstEleNameText)).getText();
+            expectedHotelPrice = wait.until(ExpectedConditions.visibilityOf(firstElePriceText)).getText();
 
             logger.info("Expected Hotel Name: {}", expectedHotelName);
             logger.info("Expected Hotel Price: {}", expectedHotelPrice);
 
             String parentWindow = driver.getWindowHandle();
-
             wait.until(ExpectedConditions.elementToBeClickable(firstHotel)).click();
             logger.info("Hotel clicked, waiting for new window");
 

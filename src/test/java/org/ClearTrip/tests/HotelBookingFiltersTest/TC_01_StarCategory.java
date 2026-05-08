@@ -1,7 +1,5 @@
 package org.ClearTrip.tests.HotelBookingFiltersTest;
 
-
-
 import org.ClearTrip.com.baseclass.BaseClass;
 import org.ClearTrip.com.pages.HotelBookingFilters.StarCategory;
 import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
@@ -9,9 +7,7 @@ import org.ClearTrip.com.pages.HotelBookingFunctsPrices.FilterHotelsInNiarobia;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 public class TC_01_StarCategory extends BaseClass {
-
     @Test
     public void testclass(){
 
