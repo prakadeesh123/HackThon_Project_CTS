@@ -6,41 +6,13 @@
   </listeners>
   <test thread-count="5" name="All Automations(failed)">
     <classes>
-      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities">
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest">
         <methods>
           <include name="tearDown"/>
-          <include name="Amenities"/>
+          <include name="validatePassengerDCP"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_03_Amenities -->
-      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="testclass"/>
-        </methods>
-      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory -->
-      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_07_CheckAvailableAmenities">
-        <methods>
-          <include name="tearDown"/>
-          <include name="validateGamenities"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_07_CheckAvailableAmenities -->
-      <class name="org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test">
-        <methods>
-          <include name="tearDown"/>
-          <include name="specialfare"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- org.ClearTrip.tests.FlightBookingFiltersTest.TC04SpecialFare_Test -->
-      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="validateSelectHotel"/>
-        </methods>
-      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest -->
       <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest">
         <methods>
           <include name="tearDown"/>
@@ -48,13 +20,13 @@
           <include name="validateSelectRoomPrice"/>
         </methods>
       </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest -->
-      <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating">
+      <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testclass01"/>
+          <include name="validateAmenities"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating -->
+      </class> <!-- org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest -->
     </classes>
   </test> <!-- All Automations(failed) -->
 </suite> <!-- Failed suite [Minimum Suite] -->
