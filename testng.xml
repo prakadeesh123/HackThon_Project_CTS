@@ -24,10 +24,12 @@
             <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.Holidaystest" />
             <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T1_FilterHotelsInNiarobiaTest" />
             <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T2_SelectHotelTest" />
+            <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest" />
 <!--            <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T3_CheckAmenitiesTest" />-->
 <!--            <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T4_SelectRoomPriceTest" />-->
 <!--            <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T5_PassengerDetailsContinuePayTest" />-->
-            <class name="org.ClearTrip.tests.HotelBookingFunctsPricesTest.T6_HotelListingPageTest" />
+
+
 
 <!--            <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_01_StarCategory" />-->
 <!--            <class name="org.ClearTrip.tests.HotelBookingFiltersTest.TC_02_GuestRating" />-->
