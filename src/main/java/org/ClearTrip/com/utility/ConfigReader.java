@@ -2,7 +2,7 @@ package org.ClearTrip.com.utility;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class ConfigReader {
+public class    ConfigReader {
     private static Properties prop = new Properties();
     static{
         try{

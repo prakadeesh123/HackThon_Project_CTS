@@ -18,7 +18,6 @@ public class Screenshot {
         File targetFile = new File(System.getProperty("user.dir")+"\\screenshots\\"+testName+".png");
         sourceFile.renameTo(targetFile);
         return testName.toString();
-
     }
 
 }

@@ -13,8 +13,7 @@ public class ExtentReportManager implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
 
-        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(
-                System.getProperty("user.dir") + "/reports/ExtentReport.html");
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/ExtentReport.html");
 
         sparkReporter.config().setDocumentTitle("Automation Report");
         sparkReporter.config().setReportName("Functional Testing");
